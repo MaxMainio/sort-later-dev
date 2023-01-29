@@ -84,6 +84,19 @@ p{
 
 
 
+#student-print{
+    display: none;
+}
+
+#student-print img{
+    aspect-ratio: 1024 / 1327;
+    width: 100%;
+}
+
+
+
+
+
 
 .student-print{
     display: none;
@@ -99,9 +112,9 @@ p{
 }
 
 
-.student-type{
+/* .student-type{
     color: var(--primary-1-1);
-}
+} */
 
 
 
@@ -200,7 +213,7 @@ h1, h2, p{
         column-gap: 10px;
         padding: 20px;
 
-        background-color: var(--quaternary-1-1);
+        /* background-color: var(--quaternary-1-1); */
     }
 
     @page{
@@ -214,6 +227,13 @@ h1, h2, p{
     .print{
         display: block;
         height: 100%;
+    }
+
+    #student-print{
+        display: block;
+        position: relative;
+        height: 100%;
+        width: 100%;
     }
 
     .student-print{
