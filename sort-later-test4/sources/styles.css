@@ -70,6 +70,19 @@ p{
 
 
 
+
+
+
+#bg{
+    display: none;
+}
+
+
+
+
+
+
+/* THIS IS THE TEXT THAT WILL BE PRINTED */
 .print{
     height: calc(100% / 5);
     display: none;
@@ -88,8 +101,7 @@ p{
     display: none;
 }
 
-#student-print img{
-    aspect-ratio: 1024 / 1327;
+#student-work{
     width: 100%;
 }
 
@@ -98,23 +110,79 @@ p{
 
 
 
-.student-print{
-    display: none;
+
+
+
+
+
+
+
+
+
+
+
+.aspectratio-1{
+    aspect-ratio: 1024 / 1327;
 }
 
-.student-print img{
-    aspect-ratio: 1024 / 1327;
-    width: 100%;
+.aspectratio-2{
+    aspect-ratio: 1638 / 1080;
 }
+
+.aspectratio-3{
+    aspect-ratio: 1 / 1;
+}
+
+
+
+
+
+
+
 
 .sixtonine{
     grid-column: 6 / 9;
 }
 
 
-/* .student-type{
-    color: var(--primary-1-1);
-} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+.rows-twotofour{
+    grid-row: 2 / 4;
+}
+
+.rows-fourtosix{
+    grid-row: 4 / 6;
+}
+
+.rows-onetofour{
+    grid-row: 1 / 4;
+}
+
+
+
+.zindex{
+    z-index: 10;
+}
+
+
+
+
+
+
+
+
 
 
 
@@ -135,25 +203,6 @@ h1, h2, p{
 
 
 
-.first{
-    filter: var(--secondary-1-2);
-}
-
-.second{
-    filter: var(--primary-1-2);
-}
-
-.third{
-    filter: var(--tertiary-1-2);
-}
-
-.fourth{
-    filter: var(--secondary-1-2);
-}
-
-.fifth{
-    filter: var(--other-2);
-}
 
 
 
@@ -163,6 +212,14 @@ h1, h2, p{
 
 
 
+
+
+
+
+
+
+
+/* LAYOUT OPTIONS */
 .onetotwo{
     grid-column: 1;
 }
@@ -196,9 +253,146 @@ h1, h2, p{
 }
 
 
+
+
+
+
+.fivetonine{
+    grid-column: 5 / 9;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* BACKGROUND COLORS */
 .bg-1{
     background-color: var(--quaternary-1-1);
 }
+
+.bg-2{
+    background-color: var(--quaternary-2-1);
+}
+
+.bg-3{
+    background-color: var(--quaternary-3-1);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* TEXT COLORS */
+.first-1{
+    filter: var(--secondary-1-2);
+}
+
+.second-1{
+    filter: var(--primary-1-2);
+}
+
+.third-1{
+    filter: var(--tertiary-1-2);
+}
+
+.fourth-1{
+    filter: var(--secondary-1-2);
+}
+
+.fifth-1{
+    filter: var(--other-2);
+}
+
+
+
+.first-2{
+    filter: var(--secondary-2-2);
+}
+
+.second-2{
+    filter: var(--primary-2-2);
+}
+
+.third-2{
+    filter: var(--tertiary-2-2);
+}
+
+.fourth-2{
+    filter: var(--secondary-2-2);
+}
+
+.fifth-2{
+    filter: var(--other-2);
+}
+
+
+
+.first-3{
+    filter: var(--secondary-3-2);
+}
+
+.second-3{
+    filter: var(--primary-3-2);
+}
+
+.third-3{
+    filter: var(--tertiary-3-2);
+}
+
+.fourth-3{
+    filter: var(--secondary-3-2);
+}
+
+.fifth-3{
+    filter: var(--other-2);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
