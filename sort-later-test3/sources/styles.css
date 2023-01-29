@@ -1,3 +1,13 @@
+/* HTML */
+:root{
+    --primary-1: #579BB1;
+    --seconday-1: #E1D7C6;
+    --tertiary-1: #E1D7C6;
+    --quaternary-1: #F8F4EA;
+}
+
+
+
 *{
     margin: 0;
 }
@@ -73,6 +83,8 @@ img{
         grid-template-columns: repeat(8, 1fr);
         grid-template-rows: repeat(5, 1fr);
         padding: 20px;
+
+        background-color: var(--quaternary-1);
     }
 
     @page{
@@ -88,27 +100,4 @@ img{
         height: 100%;
         filter: invert(52%) sepia(5%) saturate(3410%) hue-rotate(148deg) brightness(107%) contrast(92%);
     }
-
-
-
-
-    /* .print.first{
-        grid-column: 1 / 5;
-    }
-
-    .print.second{
-        grid-column: 1 / 5;
-    }
-
-    .print.third{
-        grid-column: 1 / 5;
-    }
-
-    .print.fourth{
-        grid-column: 1 / 5;
-    }
-
-    .print.fifth{
-        grid-column: 1 / 5;
-    } */
 }
