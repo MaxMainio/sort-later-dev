@@ -210,7 +210,7 @@ function posterTwo(){
             document.querySelector('h2').classList.remove('second-2');
         
             studentWork.src = '';
-            studentWork.classList.remove('aspectratio-1');
+            studentWork.classList.remove('aspectratio-2');
         }, 1)
     }, 10)
 }
