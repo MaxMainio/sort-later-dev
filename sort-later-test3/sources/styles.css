@@ -1,13 +1,48 @@
 /* HTML */
 :root{
+    /* COLOR PALETTE 1 */
     --primary-1-1: #579BB1;
     --primary-1-2: invert(52%) sepia(5%) saturate(3410%) hue-rotate(148deg) brightness(107%) contrast(92%);
-    --seconday-1-1: #E1D7C6;
-    --seconday-1-2: invert(82%) sepia(18%) saturate(193%) hue-rotate(359deg) brightness(108%) contrast(83%);
-    --tertiary-1-1: #E1D7C6;
-    --tertiary-1-2: invert(91%) sepia(14%) saturate(237%) hue-rotate(359deg) brightness(94%) contrast(91%);
+
+    --secondary-1-1: #E1D7C6;
+    --secondary-1-2: invert(82%) sepia(18%) saturate(193%) hue-rotate(359deg) brightness(108%) contrast(83%);
+
+    --tertiary-1-1: #ECE8DD;
+    --tertiary-1-2: invert(95%) sepia(12%) saturate(149%) hue-rotate(4deg) brightness(97%) contrast(93%);
+
     --quaternary-1-1: #F8F4EA;
     --quaternary-1-2: invert(96%) sepia(17%) saturate(671%) hue-rotate(305deg) brightness(111%) contrast(94%);
+
+    /* COLOR PALETTE 2 */
+    --primary-2-1: #F3EFE0;
+    --primary-2-2: invert(100%) sepia(14%) saturate(1099%) hue-rotate(325deg) brightness(99%) contrast(92%);
+
+    --secondary-2-1: #434242;
+    --secondary-2-2: invert(21%) sepia(55%) saturate(16%) hue-rotate(51deg) brightness(99%) contrast(90%);
+
+    --tertiary-2-1: #222222;
+    --tertiary-2-2: invert(10%) sepia(15%) saturate(5%) hue-rotate(333deg) brightness(99%) contrast(92%);
+
+    --quaternary-2-1: #22A39F;
+    --quaternary-2-2: invert(53%) sepia(61%) saturate(536%) hue-rotate(129deg) brightness(90%) contrast(85%);
+
+    /* COLOR PALETTE 3 */
+    --primary-3-1: #EFF5F5;
+    --primary-3-2: invert(100%) sepia(37%) saturate(291%) hue-rotate(86deg) brightness(104%) contrast(92%);
+
+    --secondary-3-1: #D6E4E5;
+    --secondary-3-2: invert(96%) sepia(30%) saturate(272%) hue-rotate(158deg) brightness(93%) contrast(92%);
+
+    --tertiary-3-1: #497174;
+    --tertiary-3-2: invert(40%) sepia(23%) saturate(529%) hue-rotate(136deg) brightness(95%) contrast(92%);
+
+    --quaternary-3-1: #EB6440;
+    --quaternary-3-2: invert(58%) sepia(44%) saturate(6317%) hue-rotate(339deg) brightness(100%) contrast(85%);
+
+
+
+    --other-1: #B3FFAE;
+    --other-2: invert(96%) sepia(4%) saturate(3127%) hue-rotate(52deg) brightness(106%) contrast(103%);
 }
 
 
@@ -40,7 +75,7 @@ p{
     display: none;
 }
 
-img{
+.print img{
     height: 100%;
     width: 100%;
 }
@@ -50,27 +85,52 @@ img{
 
 
 
+.student-print{
+    display: none;
+}
+
+.student-print img{
+    aspect-ratio: 1024 / 1327;
+    width: 100%;
+}
+
+.sixtonine{
+    grid-column: 6 / 9;
+}
+
+
+
+
+
+h1, h2, p{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+
+
+
 
 
 
 .first{
-    grid-column: 1 / 5;
+    filter: var(--secondary-1-2);
 }
 
 .second{
-    grid-column: 1 / 5;
+    filter: var(--primary-1-2);
 }
 
 .third{
-    grid-column: 1 / 5;
+    filter: var(--tertiary-1-2);
 }
 
 .fourth{
-    grid-column: 1 / 5;
+    filter: var(--secondary-1-2);
 }
 
 .fifth{
-    grid-column: 1 / 5;
+    filter: var(--other-2);
 }
 
 
@@ -126,6 +186,7 @@ img{
         display: grid;
         grid-template-columns: repeat(8, 1fr);
         grid-template-rows: repeat(5, 1fr);
+        column-gap: 10px;
         padding: 20px;
 
         background-color: var(--quaternary-1-1);
@@ -142,6 +203,12 @@ img{
     .print{
         display: block;
         height: 100%;
-        filter: var(--primary-1-2);
+    }
+
+    .student-print{
+        display: block;
+        position: relative;
+        height: 100%;
+        width: 100%;
     }
 }
