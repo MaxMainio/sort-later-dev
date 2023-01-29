@@ -1,9 +1,13 @@
 /* HTML */
 :root{
-    --primary-1: #579BB1;
-    --seconday-1: #E1D7C6;
-    --tertiary-1: #E1D7C6;
-    --quaternary-1: #F8F4EA;
+    --primary-1-1: #579BB1;
+    --primary-1-2: invert(52%) sepia(5%) saturate(3410%) hue-rotate(148deg) brightness(107%) contrast(92%);
+    --seconday-1-1: #E1D7C6;
+    --seconday-1-2: invert(82%) sepia(18%) saturate(193%) hue-rotate(359deg) brightness(108%) contrast(83%);
+    --tertiary-1-1: #E1D7C6;
+    --tertiary-1-2: invert(91%) sepia(14%) saturate(237%) hue-rotate(359deg) brightness(94%) contrast(91%);
+    --quaternary-1-1: #F8F4EA;
+    --quaternary-1-2: invert(96%) sepia(17%) saturate(671%) hue-rotate(305deg) brightness(111%) contrast(94%);
 }
 
 
@@ -49,24 +53,64 @@ img{
 
 
 
-.print.first{
+.first{
     grid-column: 1 / 5;
 }
 
-.print.second{
+.second{
     grid-column: 1 / 5;
 }
 
-.print.third{
+.third{
     grid-column: 1 / 5;
 }
 
-.print.fourth{
+.fourth{
     grid-column: 1 / 5;
 }
 
-.print.fifth{
+.fifth{
     grid-column: 1 / 5;
+}
+
+
+
+
+
+
+
+
+
+.onetotwo{
+    grid-column: 1;
+}
+
+.onetothree{
+    grid-column: 1 / 3;
+}
+
+.onetofour{
+    grid-column: 1 / 4;
+}
+
+.onetofive{
+    grid-column: 1 / 5;
+}
+
+.onetosix{
+    grid-column: 1 / 6;
+}
+
+.onetoseven{
+    grid-column: 1 / 7;
+}
+
+.onetoeight{
+    grid-column: 1 / 8;
+}
+
+.onetonine{
+    grid-column: 1 / 9;
 }
 
 
@@ -84,7 +128,7 @@ img{
         grid-template-rows: repeat(5, 1fr);
         padding: 20px;
 
-        background-color: var(--quaternary-1);
+        background-color: var(--quaternary-1-1);
     }
 
     @page{
@@ -98,6 +142,6 @@ img{
     .print{
         display: block;
         height: 100%;
-        filter: invert(52%) sepia(5%) saturate(3410%) hue-rotate(148deg) brightness(107%) contrast(92%);
+        filter: var(--primary-1-2);
     }
 }
