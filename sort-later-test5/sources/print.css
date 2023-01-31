@@ -1,0 +1,105 @@
+/* HTML */
+:root{
+    --primary: #00ff00;
+    --secondary: #00ff00;
+    --tertiary: #00ff00;
+    --quaternary: #00ff00;
+}
+
+*{
+    margin: 0;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.digital{
+    height: calc(100% / 7);
+}
+
+p{
+    display: inline-block;
+    transform-origin: 0 0;
+    white-space: nowrap;
+}
+
+
+
+
+
+
+
+
+
+/* THIS IS THE TEXT THAT WILL BE PRINTED */
+.print{
+    height: calc(100% / 5);
+    display: none;
+}
+
+.print img{
+    height: 100%;
+    width: 100%;
+}
+
+#student-print{
+    display: none;
+}
+
+#student-work{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+
+
+
+
+
+
+
+h1, h2, p{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+
+
+
+
+
+
+
+@media print{
+    body{
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        column-gap: 10px;
+        padding: 20px;
+    }
+
+    @page{
+        margin: 0;
+    }
+
+    .digital{
+        display: none;
+    }
+
+    .print{
+        display: block;
+        height: 100%;
+    }
+
+    #student-print{
+        display: block;
+        position: relative;
+        height: 100%;
+        width: 100%;
+    }
+}
