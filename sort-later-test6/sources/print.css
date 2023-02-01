@@ -18,12 +18,7 @@ body{
 }
 
 .digital{
-    /* height: calc(100% / 7); */
-    height: 10%;
-}
-
-#large{
-    height: 40%;
+    height: calc(100% / 7);
 }
 
 p{
@@ -69,4 +64,42 @@ p{
 
 h1, h2, p{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+
+
+
+
+
+
+
+@media print{
+    body{
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        column-gap: 10px;
+        padding: 20px;
+    }
+
+    @page{
+        margin: 0;
+    }
+
+    .digital{
+        display: none;
+    }
+
+    .print{
+        display: block;
+        height: 100%;
+    }
+
+    #student-print{
+        display: block;
+        position: relative;
+        height: 100%;
+        width: 100%;
+    }
 }
