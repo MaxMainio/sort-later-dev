@@ -23,16 +23,46 @@ window.onload = (event) => {
 
 
 function generateGradient(){
-    var mainSelector = 'gradient' + Math.round(Math.random() * 4);
-    // console.log(mainSelector);
-    var subSelector = Math.round(Math.random() * eval(mainSelector).length);
-    // console.log(eval(mainSelector) + [subSelector]);
-    var selected = eval(mainSelector) + [subSelector];
-    // console.log(selected);
-    return(selected);
+    // GETS RANDOM GRADIENT BY NAME AS STRING
+    var gradTag = 'gradient' + Math.floor(Math.random() * 4.99);
+    // ARRAY OF THE INDIVIDUAL COLORS OF SELECTED GRADIENT
+    var gradColors = eval(gradTag);
+    // NUMBER OF COLORS IN SELECTED GRADIENT
+    var gradSteps = gradColors.length;
+
+
+    var min = 0;
+    var max = 100;
+
+    var offset = 0;
+
+    for (let i = 0; i < gradSteps; i ++) {
+        var wiggleRoom = 10 * (gradSteps - i);
+        // console.log(wiggleRoom);
+
+        min = 0 + offset;
+        // console.log(min);
+
+        max = 100;
+        max = max - wiggleRoom;
+        // console.log(max);
+
+        placement = randomIntFromInterval(min, max);
+        console.log(placement);
+
+        offset = placement + 10;
+        // console.log(offset);
+    }
+
+
+    console.log(gradTag);
+    console.log(gradColors);
+    console.log(gradSteps);
 }
 
-
+function randomIntFromInterval(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) + min)
+}
 
 
 
