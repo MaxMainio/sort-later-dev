@@ -34,5 +34,17 @@
     "path": "cat-wu/cat-wu-roots",
     "workAmount": 7,
     "extension": ".jpg"
+  },
+  {
+    "emailAddress": "hlee40@risd.edu",
+    "fullName": "Jacob Hwan Lee",
+    "prefferedName": "Jacob Hwan Lee",
+    "website": "jacobhwanlee.com",
+    "workTitle": "Interview with Ros Knopov",
+    "year": 2022,
+    "workType": "Print",
+    "path": "jacob-hwan-lee/jacob-hwan-lee-interview-with-ros-knopov",
+    "workAmount": 5,
+    "extension": ".jpg"
   }
 ]
