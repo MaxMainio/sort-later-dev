@@ -22,7 +22,25 @@ window.onload = (event) => {
 
 
 
-addEventListener('click', e => {
+// addEventListener('click', e => {
+//     fetch('https://maxmainio.github.io/sort-later-dev/updated-1/sources/sort-later-work-key.json')
+//     .then((response) => response.json())
+//     .then((json) => {
+//         var selectedWork = json[randomIntFromInterval(0, json.length - 1)];
+//         console.log(selectedWork);
+
+//         var imgNumber = generateImgPath(selectedWork.workAmount);
+//         var imgPath = 'assets/work/' + selectedWork.path + imgNumber + selectedWork.extension;
+//         console.log(imgPath);
+
+//         backGround.innerHTML += '<img src="' + imgPath + '" class="student-work">'
+//         backGround.innerHTML += '<h1 class="student-title">' + selectedWork.prefferedName + '</h1>'
+//     });
+// });
+
+
+
+window.addEventListener('beforeprint', (event) => {
     fetch('https://maxmainio.github.io/sort-later-dev/updated-1/sources/sort-later-work-key.json')
     .then((response) => response.json())
     .then((json) => {
@@ -33,16 +51,20 @@ addEventListener('click', e => {
         var imgPath = 'assets/work/' + selectedWork.path + imgNumber + selectedWork.extension;
         console.log(imgPath);
 
-        backGround.innerHTML += '<img src="' + imgPath + '" class="student-work">'
-        backGround.innerHTML += '<h1 class="student-title">' + selectedWork.prefferedName + '</h1>'
-    });
+        // backGround.innerHTML += '<img src="' + imgPath + '" class="student-work">'
+        // backGround.innerHTML += '<h1 class="student-title">' + selectedWork.prefferedName + '</h1>'
 
-    backGround.style.background = generateGradient();
+        // GENERATE GRADIENT FOR BACKGROUND OF PRINT
+        document.getElementById('body').style.background = generateGradient();
+        document.getElementById('work-img').src = imgPath;
+        document.getElementById('work-title').innerHTML = selectedWork.workTitle.toString();
+        document.getElementById('student-name').innerHTML = selectedWork.prefferedName.toString();
+    });
 });
 
-
-
-
+window.addEventListener('afterprint', (event) => {
+    
+});
 
 
 
