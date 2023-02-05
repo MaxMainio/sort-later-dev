@@ -27,11 +27,11 @@ window.addEventListener('beforeprint', (event) => {
     .then((response) => response.json())
     .then((json) => {
         var selectedWork = json[randomIntFromInterval(0, json.length - 1)];
-        console.log(selectedWork);
+        // console.log(selectedWork);
 
         var imgNumber = generateImgPath(selectedWork.workAmount);
         var imgPath = 'assets/work/' + selectedWork.path + imgNumber + selectedWork.extension;
-        console.log(imgPath);
+        // console.log(imgPath);
 
         // GENERATE GRADIENT FOR BACKGROUND OF PRINT
         document.getElementById('body').style.background = generateGradient();
