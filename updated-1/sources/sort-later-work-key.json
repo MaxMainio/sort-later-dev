@@ -1,38 +1,38 @@
 [
   {
-    "email-address": "mbeidler@risd.edu",
+    "emailAddress": "mbeidler@risd.edu",
     "full-name": "Max Beidler",
-    "preffered-name": "Max Beidler",
+    "prefferedName": "Max Beidler",
     "website": "maxmain.io",
-    "work-title": "Best of Weekly",
+    "workTitle": "Best of Weekly",
     "year": 2023,
-    "work-type": "digital",
+    "workType": "digital",
     "path": "max-beidler/max-beidler-best-of-weekly",
-    "work-number": 1,
+    "workAmount": 1,
     "extension": ".png"
   },
   {
-    "email-address": "hwisor@risd.edu",
+    "emailAddress": "hwisor@risd.edu",
     "full-name": "Hope Wisor",
-    "preffered-name": "Hope Wisor",
+    "prefferedName": "Hope Wisor",
     "website": "hopewisor.com",
-    "work-title": "Family Values",
+    "workTitle": "Family Values",
     "year": 2021,
-    "work-type": "poster",
+    "workType": "poster",
     "path": "hope-wisor/hope-wisor-family-values-poster",
-    "work-number": 2,
+    "workAmount": 2,
     "extension": ".png"
   },
   {
-    "email-address": "qwu01@risd.edu",
+    "emailAddress": "qwu01@risd.edu",
     "full-name": "Catherine Wu",
-    "preffered-name": "Cat Wu",
+    "prefferedName": "Cat Wu",
     "website": "catwu.info",
-    "work-title": "Roots 根",
+    "workTitle": "Roots 根",
     "year": 2022,
-    "work-type": "identity",
+    "workType": "identity",
     "path": "cat-wu/cat-wu-roots",
-    "work-number": 7,
+    "workAmount": 7,
     "extension": ".jpg"
   }
 ]
