@@ -28,6 +28,18 @@
     --gradient-5-1: #fff;
     --gradient-5-2: #f0008d;
     --gradient-5-3: #c465ff;
+
+
+    /* GENERATABLE */
+    --grad-col-1: #000;
+    --grad-col-2: #666;
+    --grad-col-3: #ccc;
+    --grad-col-4: #fff;
+
+    --grad-pos-1: 0%;
+    --grad-pos-2: 33%;
+    --grad-pos-3: 66%;
+    --grad-pos-4: 100%;
 }
 
 
@@ -44,7 +56,7 @@ body{
 main{
     height: 100%;
     width: 100%;
-    background: linear-gradient(0deg, var(--gradient-1-4) 0%, var(--gradient-1-3) 50%, var(--gradient-1-2) 75%, var(--gradient-1-1) 100%);
+    /* background: linear-gradient(0deg, var(--gradient-1-4) 0%, var(--gradient-1-3) 50%, var(--gradient-1-2) 75%, var(--gradient-1-1) 100%); */
 }
 
 img{

@@ -10,6 +10,8 @@ const backGround = document.getElementById('backGround');
 
 
 
+
+
 window.onload = (event) => {
     generateGradient();
 }
@@ -31,38 +33,71 @@ function generateGradient(){
     var gradSteps = gradColors.length;
 
 
+
+    var gradPlacements = [];
+
+
+
+
+
     var min = 0;
     var max = 100;
 
     var offset = 0;
 
-    for (let i = 0; i < gradSteps; i ++) {
+    for (var i = 0; i < gradSteps; i ++) {
         var wiggleRoom = 10 * (gradSteps - i);
         // console.log(wiggleRoom);
 
         min = 0 + offset;
-        // console.log(min);
-
         max = 100;
         max = max - wiggleRoom;
+        // console.log(min);
         // console.log(max);
 
         placement = randomIntFromInterval(min, max);
-        console.log(placement);
+        // console.log(eval(gradColors)[i]);
+        // console.log(placement);
+
+        gradPlacements[i] = placement
 
         offset = placement + 10;
         // console.log(offset);
     }
 
 
-    console.log(gradTag);
+    // console.log(gradTag);
     console.log(gradColors);
-    console.log(gradSteps);
+    // console.log(gradSteps);
+
+
+    console.log(gradPlacements);
+
+    var lause = 'linear-gradient(0deg'
+
+    for (var i=0; i < gradSteps; i++) {
+        
+        var appendable = gradColors[i] + ' ' + gradPlacements[i] + '%'
+        // console.log(gradColors[i] + ' ' + gradPlacements[i] + '%');
+
+        lause = lause + ', ' + appendable
+        console.log(lause);
+    }
+
+
+
+
+
+
+
+    backGround.style.background = lause + ')'
 }
 
 function randomIntFromInterval(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min)
 }
+
+
 
 
 
