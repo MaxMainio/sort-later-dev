@@ -33,34 +33,26 @@ addEventListener('click', e => {
         var imgPath = 'assets/work/' + selectedWork.path + imgNumber + selectedWork.extension;
         console.log(imgPath);
 
-
-
-
-
-
-
-
-
-
-
-
         backGround.innerHTML += '<img src="' + imgPath + '" class="student-work">'
     });
 });
 
 
 
+
+
+
+
+
+
 function generateImgPath(num){
     if (num != 1) {
-        var imgNumber = randomIntFromInterval(0, num);
+        var imgNumber = randomIntFromInterval(1, num);
         return '-' + imgNumber.toString();
     } else {
         return '';
     }
 }
-
-
-
 
 
 
