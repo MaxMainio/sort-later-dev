@@ -31,3 +31,10 @@ main{
     width: 50%;
     inset: 0 auto auto 0;
 }
+
+.student-title{
+    position: absolute;
+    inset: 50% auto auto 50%;
+    transform: translate3d(-50%, -50%, 0);
+    background-color: white;
+}

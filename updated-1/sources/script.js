@@ -34,6 +34,7 @@ addEventListener('click', e => {
         console.log(imgPath);
 
         backGround.innerHTML += '<img src="' + imgPath + '" class="student-work">'
+        backGround.innerHTML += '<h1 class="student-title">' + selectedWork.prefferedName + '</h1>'
     });
 });
 
