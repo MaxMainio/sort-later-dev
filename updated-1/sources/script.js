@@ -48,9 +48,7 @@ function generateGradient(){
         max = max - wiggleRoom;
 
         placement = randomIntFromInterval(min, max);
-
         gradPlacements[i] = placement
-
         offset = placement + 10;
     }
 
