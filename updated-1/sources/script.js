@@ -11,13 +11,16 @@ const backGround = document.getElementById('backGround');
 
 
 window.onload = (event) => {
-    generateGradient();
+    backGround.style.background = generateGradient();
 }
 
-
-
-
-
+addEventListener('click', e => {
+    // fetch('sort-later-work-key.json')
+    // console.log(fetch('sort-later-work-key.json'));
+    fetch('sort-later-work-key.json')
+    .then((response) => response.json())
+    .then((json) => console.log(json));
+});
 
 
 
@@ -60,8 +63,8 @@ function generateGradient(){
         lause = lause + ', ' + appendable
     }
 
-    // SET THE BACKGROUND TO THIS GRADIENT
-    backGround.style.background = lause + ')'
+    // RETURN THE FORMULA FOR THE GRADIENT
+    return(lause + ')');
 }
 
 function randomIntFromInterval(min, max) {

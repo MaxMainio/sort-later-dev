@@ -1,33 +1,6 @@
 /* HTML */
 :root{
-    /* GRADIENT 1 */
-    --gradient-1-1: #94ff3f;
-    --gradient-1-2: #ffff00;
-    --gradient-1-3: #ccc;
-    --gradient-1-4: #fff;
-
-    /* GRADIENT 2 */
-    --gradient-2-1: #fff;
-    --gradient-2-2: #ff9145;
-    --gradient-2-3: #abff62;
-    --gradient-2-4: #ff77be;
-
-    /* GRADIENT 3 */
-    --gradient-3-1: #fff;
-    --gradient-3-2: #ffff00;
-    --gradient-3-3: #ff96e0;
-    --gradient-3-4: #b3b3b3;
-
-    /* GRADIENT 4 */
-    --gradient-4-1: #fff;
-    --gradient-4-2: #ff7fdf;
-    --gradient-4-3: #3fc1ff;
-    --gradient-4-4: #bfffb4;
-
-    /* GRADIENT 5 */
-    --gradient-5-1: #fff;
-    --gradient-5-2: #f0008d;
-    --gradient-5-3: #c465ff;
+    --type: #333;
 }
 
 

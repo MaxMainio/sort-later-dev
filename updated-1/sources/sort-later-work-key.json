@@ -1,0 +1,38 @@
+[
+  {
+    "email-address": "mbeidler@risd.edu",
+    "full-name": "Max Beidler",
+    "preffered-name": "Max Beidler",
+    "website": "maxmain.io",
+    "work-title": "Best of Weekly",
+    "year": 2023,
+    "work-type": "digital",
+    "path": "max-beidler/max-beidler-best-of-weekly",
+    "work-number": 1,
+    "extension": ".png"
+  },
+  {
+    "email-address": "hwisor@risd.edu",
+    "full-name": "Hope Wisor",
+    "preffered-name": "Hope Wisor",
+    "website": "hopewisor.com",
+    "work-title": "Family Values",
+    "year": 2021,
+    "work-type": "poster",
+    "path": "hope-wisor/hope-wisor-family-values-poster",
+    "work-number": 2,
+    "extension": ".png"
+  },
+  {
+    "email-address": "qwu01@risd.edu",
+    "full-name": "Catherine Wu",
+    "preffered-name": "Cat Wu",
+    "website": "catwu.info",
+    "work-title": "Roots 根",
+    "year": 2022,
+    "work-type": "identity",
+    "path": "cat-wu/cat-wu-roots",
+    "work-number": 7,
+    "extension": ".jpg"
+  }
+]
