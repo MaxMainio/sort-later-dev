@@ -23,11 +23,11 @@ window.onload = (event) => {
 
 
 addEventListener('click', e => {
-    // fetch('sort-later-work-key.json')
-    // console.log(fetch('sort-later-work-key.json'));
     fetch('https://maxmainio.github.io/sort-later-dev/updated-1/sources/sort-later-work-key.json')
     .then((response) => response.json())
-    .then((json) => console.log(json[0].website));
+    .then((json) => {
+        console.log(json[0].website)
+    });
 });
 
 

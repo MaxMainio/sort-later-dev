@@ -1,7 +1,7 @@
 [
   {
     "emailAddress": "mbeidler@risd.edu",
-    "full-name": "Max Beidler",
+    "fullName": "Max Beidler",
     "prefferedName": "Max Beidler",
     "website": "maxmain.io",
     "workTitle": "Best of Weekly",
@@ -13,7 +13,7 @@
   },
   {
     "emailAddress": "hwisor@risd.edu",
-    "full-name": "Hope Wisor",
+    "fullName": "Hope Wisor",
     "prefferedName": "Hope Wisor",
     "website": "hopewisor.com",
     "workTitle": "Family Values",
@@ -25,7 +25,7 @@
   },
   {
     "emailAddress": "qwu01@risd.edu",
-    "full-name": "Catherine Wu",
+    "fullName": "Catherine Wu",
     "prefferedName": "Cat Wu",
     "website": "catwu.info",
     "workTitle": "Roots 根",
