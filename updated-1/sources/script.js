@@ -26,9 +26,38 @@ addEventListener('click', e => {
     fetch('https://maxmainio.github.io/sort-later-dev/updated-1/sources/sort-later-work-key.json')
     .then((response) => response.json())
     .then((json) => {
-        console.log(json[0].website)
+        var selectedWork = json[randomIntFromInterval(0, json.length - 1)];
+        console.log(selectedWork);
+
+        var imgNumber = generateImgPath(selectedWork.workAmount);
+        var imgPath = 'assets/work/' + selectedWork.path + imgNumber + selectedWork.extension;
+        console.log(imgPath);
+
+
+
+
+
+
+
+
+
+
+
+
+        backGround.innerHTML += '<img src="' + imgPath + '" class="student-work">'
     });
 });
+
+
+
+function generateImgPath(num){
+    if (num != 1) {
+        var imgNumber = randomIntFromInterval(0, num);
+        return '-' + imgNumber.toString();
+    } else {
+        return '';
+    }
+}
 
 
 
