@@ -28,6 +28,7 @@ window.addEventListener('beforeprint', (event) => {
     .then((json) => {
         var selectedWork = json[randomIntFromInterval(0, json.length - 1)];
         // console.log(selectedWork);
+        // console.log(json);
 
         var imgNumber = generateImgPath(selectedWork.workAmount);
         var imgPath = 'assets/work/' + selectedWork.path + imgNumber + selectedWork.extension;
