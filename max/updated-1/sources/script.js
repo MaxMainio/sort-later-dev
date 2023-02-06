@@ -28,7 +28,6 @@ window.addEventListener('beforeprint', (event) => {
     .then((json) => {
         var selectedWork = json[randomIntFromInterval(0, json.length - 1)];
         // console.log(selectedWork);
-        // console.log(json);
 
         var imgNumber = generateImgPath(selectedWork.workAmount);
         var imgPath = 'assets/work/' + selectedWork.path + imgNumber + selectedWork.extension;
@@ -76,16 +75,11 @@ function generateGradient(){
     var gradTag = 'gradient' + Math.floor(Math.random() * 4.99);
     // ARRAY OF THE INDIVIDUAL COLORS OF SELECTED GRADIENT
     var gradColors = eval(gradTag);
-    // NUMBER OF COLORS IN SELECTED GRADIENT
     var gradSteps = gradColors.length;
 
-
-
     var gradPlacements = [];
-
     var min = 0;
     var max = 100;
-
     var offset = 0;
 
     // THIS GENERATES THE POSITIONS FOR EACH OCLOR
@@ -101,7 +95,26 @@ function generateGradient(){
         offset = placement + 10;
     }
 
-    var lause = 'linear-gradient(0deg'
+
+
+
+
+
+
+
+
+    // PREPARE THE CSS EXPRESSION OF NEW GRADIENT
+    var lause = 'linear-gradient(' + flipACoin();
+
+    // THIS DECIDES DIRECTION OF THE GRADIENT
+    function flipACoin(){
+        var coinFlip = Math.round(Math.random());
+        if (coinFlip == 1) {
+            return '0deg';
+        } else {
+            return '180deg';
+        }
+    }
 
     // GENERATES THE PROPER CSS EXPRESSION FOR THE GRADIENT
     for (var i=0; i < gradSteps; i++) {

@@ -57,12 +57,10 @@ main{
 #print-work-container{
     width: 80%;
     height: 80%;
-    /* padding: 2rem; */
     position: fixed;
     inset: 50% 0 0 50%;
     transform: translate3d(-50%, -50%, 0);
 
-    /* background-color: #333; */
     z-index: 10;
 }
 
