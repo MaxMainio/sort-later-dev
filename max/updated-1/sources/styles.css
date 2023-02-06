@@ -42,13 +42,24 @@ main{
     width: 100%;
 }
 
-/* #work-title{
-    
+#work-title{
+    font-family: "aktiv-grotesk-condensed", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    text-transform: uppercase;
+
+    color: black;
+    -webkit-text-fill-color: rgba(0, 0, 0, 0); /* Will override color (regardless of order) */
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
 }
 
 #student-name{
-
-} */
+    font-family: "aktiv-grotesk-condensed", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    text-transform: uppercase;
+}
 
 
 
