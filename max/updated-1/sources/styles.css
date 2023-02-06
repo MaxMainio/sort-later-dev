@@ -36,6 +36,8 @@ main{
 
 #print-container{
     display: none;
+
+    /* background-color: red; */
 }
 
 #print-logo{
@@ -55,11 +57,17 @@ main{
 }
 
 #print-work-container{
-    width: 80%;
-    height: 80%;
+    width: 90%;
+    height: 90%;
     position: fixed;
     inset: 50% 0 0 50%;
     transform: translate3d(-50%, -50%, 0);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    /* background-color: green; */
 
     z-index: 10;
 }
@@ -77,6 +85,9 @@ main{
     font-style: normal;
     text-transform: uppercase;
 
+    font-size: 2rem;
+    line-height: 2rem;
+
     color: black;
     -webkit-text-fill-color: rgba(0, 0, 0, 0);
     -webkit-text-stroke-width: 1px;
@@ -88,6 +99,9 @@ main{
     font-weight: 900;
     font-style: normal;
     text-transform: uppercase;
+
+    font-size: 1.5rem;
+    line-height: 1.5rem;
 }
 
 

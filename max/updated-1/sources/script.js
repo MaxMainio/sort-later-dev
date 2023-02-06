@@ -23,13 +23,13 @@ window.onload = (event) => {
 
 
 window.addEventListener('beforeprint', (event) => {
-    fetch('https://maxmainio.github.io/sort-later-dev/max/updated-1/sources/sort-later-work-key.json')
+    fetch('https://maxmainio.github.io/sort-later-dev/max/updated-1/sources/data.json')
     .then((response) => response.json())
     .then((json) => {
         var selectedWork = json[randomIntFromInterval(0, json.length - 1)];
         // console.log(selectedWork);
 
-        var imgNumber = generateImgPath(selectedWork.workAmount);
+        var imgNumber = generateImgNum(selectedWork.workAmount);
         var imgPath = 'assets/work/' + selectedWork.path + imgNumber + selectedWork.extension;
         // console.log(imgPath);
 
@@ -37,7 +37,7 @@ window.addEventListener('beforeprint', (event) => {
         document.getElementById('body').style.background = generateGradient();
         document.getElementById('work-img').src = imgPath;
         document.getElementById('work-title').innerHTML = selectedWork.workTitle.toString();
-        document.getElementById('student-name').innerHTML = selectedWork.prefferedName.toString();
+        document.getElementById('student-name').innerHTML = selectedWork.fullName.toString();
     });
 });
 
@@ -53,7 +53,7 @@ window.addEventListener('afterprint', (event) => {
 
 
 
-function generateImgPath(num){
+function generateImgNum(num){
     if (num != 1) {
         var imgNumber = randomIntFromInterval(1, num);
         return '-' + imgNumber.toString();
