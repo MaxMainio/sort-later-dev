@@ -23,7 +23,7 @@ window.onload = (event) => {
 
 
 window.addEventListener('beforeprint', (event) => {
-    fetch('https://maxmainio.github.io/sort-later-dev/updated-1/sources/sort-later-work-key.json')
+    fetch('https://maxmainio.github.io/sort-later-dev/max/updated-1/sources/sort-later-work-key.json')
     .then((response) => response.json())
     .then((json) => {
         var selectedWork = json[randomIntFromInterval(0, json.length - 1)];
