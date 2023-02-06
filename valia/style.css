@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+}
+
+.gd {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 4vw;
+}
+
+.title {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    font-style: italic;
+    font-size: 15vw;
+    color:white;
+    -webkit-text-stroke: 3px black;
+}
+
+.place {
+    position: fixed;
+    top: auto;
+    bottom: 2px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 3vw;
+}
+
+.layer {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+}
+
+.custatement {
+    width: 60%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 1vw;
+    margin-top: 25%;
+    margin-left: 10%;
+}
+
+
+#l2 {
+    object-fit: cover;
+}
