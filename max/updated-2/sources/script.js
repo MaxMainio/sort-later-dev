@@ -36,7 +36,9 @@ window.addEventListener('beforeprint', (event) => {
         // console.log(imgPath);
 
         // GENERATE GRADIENT FOR BACKGROUND OF PRINT
-        document.getElementById('print-gradient').style.background = generateGradient();
+        var generated = generateGradient();
+        document.getElementById('print-gradient').style.background = generated;
+
         document.getElementById('work-img').src = imgPath;
         document.getElementById('work-title').innerHTML = selectedWork.workTitle.toString();
         document.getElementById('student-name').innerHTML = selectedWork.fullName.toString();
