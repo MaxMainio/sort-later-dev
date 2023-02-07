@@ -1,0 +1,122 @@
+[
+  {
+    "emailAddress": "yhuang15@risd.edu",
+    "fullName": "Anita Huang",
+    "prefferedName": "Anita",
+    "website": "anitahuangg.com",
+    "workTitle": "Sanctuary",
+    "year": 2022,
+    "workType": "Poster",
+    "path": "anita-huang/anita-huang-sanctuary",
+    "workAmount": 1,
+    "extension": ".png"
+  },
+  {
+    "emailAddress": "qwu01@risd.edu",
+    "fullName": "Catherine Wu",
+    "prefferedName": "Cat Wu",
+    "website": "catwu.info",
+    "workTitle": "Roots 根",
+    "year": 2022,
+    "workType": "identity",
+    "path": "cat-wu/cat-wu-roots",
+    "workAmount": 7,
+    "extension": ".jpg"
+  },
+  {
+    "emailAddress": "hwisor@risd.edu",
+    "fullName": "Hope Wisor",
+    "prefferedName": "Hope Wisor",
+    "website": "hopewisor.com",
+    "workTitle": "Family Values",
+    "year": 2021,
+    "workType": "poster",
+    "path": "hope-wisor/hope-wisor-family-values-poster",
+    "workAmount": 2,
+    "extension": ".png"
+  },
+  {
+    "emailAddress": "hwisor@risd.edu",
+    "fullName": "Hope Wisor",
+    "prefferedName": "Hope Wisor",
+    "website": "hopewisor.com",
+    "workTitle": "Bookshelf",
+    "year": 2023,
+    "workType": "Spacial/Sculptural",
+    "path": "hope-wisor/hope-wisor-bookshelf",
+    "workAmount": 1,
+    "extension": ".jpg"
+  },
+  {
+    "emailAddress": "ixie@risd.edu",
+    "fullName": "Iris Xie",
+    "prefferedName": "Iris Xie",
+    "website": "irisxie.com",
+    "workTitle": "Predestination",
+    "year": 2021,
+    "workType": "Spacial/Sculptural",
+    "path": "iris-xie/iris-xie-predestination",
+    "workAmount": 3,
+    "extension": ".jpg"
+  },
+  {
+    "emailAddress": "ixie@risd.edu",
+    "fullName": "Iris Xie",
+    "prefferedName": "Iris Xie",
+    "website": "irisxie.com",
+    "workTitle": "On Beginnings",
+    "year": 2022,
+    "workType": "Poster",
+    "path": "iris-xie/iris-xie-on-beginnings",
+    "workAmount": 1,
+    "extension": ".jpg"
+  },
+  {
+    "emailAddress": "ixie@risd.edu",
+    "fullName": "Iris Xie",
+    "prefferedName": "Iris Xie",
+    "website": "irisxie.com",
+    "workTitle": "Chroma Fest",
+    "year": 2021,
+    "workType": "Poster",
+    "path": "iris-xie/iris-xie-chroma-fest",
+    "workAmount": 1,
+    "extension": ".png"
+  },
+  {
+    "emailAddress": "ixie@risd.edu",
+    "fullName": "Iris Xie",
+    "prefferedName": "Iris Xie",
+    "website": "irisxie.com",
+    "workTitle": "Banana Culture",
+    "year": 2021,
+    "workType": "Poster",
+    "path": "iris-xie/iris-xie-banana-culture",
+    "workAmount": 5,
+    "extension": ".jpg"
+  },
+  {
+    "emailAddress": "hlee40@risd.edu",
+    "fullName": "Jacob Hwan Lee",
+    "prefferedName": "Jacob Hwan Lee",
+    "website": "jacobhwanlee.com",
+    "workTitle": "Interview with Ros Knopov",
+    "year": 2022,
+    "workType": "Print",
+    "path": "jacob-hwan-lee/jacob-hwan-lee-interview-with-ros-knopov",
+    "workAmount": 5,
+    "extension": ".jpg"
+  },
+  {
+    "emailAddress": "vlockwoo@risd.edu",
+    "fullName": "Valeria Lockwood",
+    "prefferedName": "Val",
+    "website": "valerialockwood.cargo.site/",
+    "workTitle": "Hecho en Puerto Rico'",
+    "year": 2022,
+    "workType": "Print",
+    "path": "valeria-lockwood/valeria-lockwood-hecho-en-puerto-rico",
+    "workAmount": 6,
+    "extension": ".jpg"
+  }
+]
