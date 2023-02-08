@@ -8,24 +8,26 @@ $(document).ready(function(){
         console.log(layernum);
         $(this).css("z-index",layernum);
 
-        $(document).scroll(function(){
-            // grab the scroll amount and the window height
-            var scrollAmount = $(window).scrollTop();
-            var documentHeight = $(document).height();
-    
-            // calculate the percentage the user has scrolled down the page
-            var scrollPercent = (scrollAmount / documentHeight) * 100;
-    
-            if(scrollPercent >= 5) {
-                layernum ++;
-                if (layernum <= 4) {
+        $("#prior").click(function(){
+                layernum --;
+                if (layernum >= 1) {
                     layernum = layernum;
                 } else {
-                    layernum = 1;
+                    layernum = 4;
                 }
                 console.log(layernum);
+            });
+
+        $("#later").click(function(){
+            layernum ++;
+            if (layernum <= 4) {
+                layernum = layernum;
+            } else {
+                layernum = 1;
             }
+            console.log(layernum);
         });
+
         setInterval(() => {
             $(this).css("z-index",layernum);
         }, 10);
