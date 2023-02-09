@@ -12,6 +12,7 @@ const backGround = document.getElementById('background');
 
 window.onload = (event) => {
     backGround.style.background = generateGradient();
+    scaleType();
 }
 
 
@@ -185,3 +186,27 @@ const gradient4 = [];
 gradient4[0] = '#fff';
 gradient4[1] = '#f0008d';
 gradient4[2] = '#c465ff';
+
+
+
+
+
+
+
+
+
+function scaleType(){
+    var vw = window.innerWidth;
+    var texts = document.querySelectorAll('h3');
+    
+    var i;
+    for(i = 0; i < texts.length; i++){
+        texts[i].style.fontSize = texts[i].parentElement.offsetHeight * 1.5 + 'px';
+        texts[i].style.lineHeight = texts[i].parentElement.offsetHeight + 'px';
+
+        var lineWidth = texts[i].offsetWidth;
+        var fitLength = vw / (lineWidth / 100);
+
+        texts[i].style.transform = 'scaleX(' + fitLength + '%)';
+    }
+}
