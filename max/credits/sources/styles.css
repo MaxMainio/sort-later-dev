@@ -47,7 +47,7 @@ main{
     justify-content: center;
 }
 
-#who p{
+p{
     font-family: "aktiv-grotesk-condensed", sans-serif;
     font-weight: 900;
     font-style: normal;
@@ -68,11 +68,21 @@ main{
 }
 
 a{
+    color: black;
+    -webkit-text-fill-color: white;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+
     cursor: pointer;
+    text-decoration: none;
 }
 
 a:hover{
     -webkit-text-fill-color: rgba(0, 0, 0, 1);
+}
+
+a:visited{
+    color: inherit;
 }
 
 #background{
