@@ -1,6 +1,6 @@
 console.log('https://www.youtube.com/watch?v=NuAKnbIr6TE');
 
-const backGround = document.getElementById('backGround');
+const backGround = document.getElementById('background');
 
 
 
