@@ -9,15 +9,23 @@
     margin: 0;
 }
 
-body{
+/* body{
     height: 100vh;
     width: 100vw;
-}
+} */
 
-main{
+/* main{
     position: relative;
     height: 100%;
     width: 100%;
+} */
+
+
+
+#splash{
+    width: 100vw;
+    height: 66vh;
+    position: relative;
 }
 
 #logo{
@@ -26,20 +34,41 @@ main{
     width: 100%;
 }
 
+/* #when{
 
-
-
-
-
-
-#test-div{
-    width: 500px;
-    height: 500px;
-    position: absolute;
-    inset: 50% auto auto 50%;
-
-    background: linear-gradient(180deg, rgba(2,0,36,1) -100%, rgba(9,9,121,1) 72%, rgba(0,212,255,1) 150%);
 }
+
+#who{
+
+} */
+
+#who p{
+    font-family: "aktiv-grotesk-condensed", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    text-transform: uppercase;
+
+    font-size: 5rem;
+    line-height: 5rem;
+
+    color: black;
+    -webkit-text-fill-color: rgba(0, 0, 0, 0);
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+
+    display: inline-block;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
