@@ -1,0 +1,462 @@
+@font-face {
+    font-family: GROTESK;
+    src: url(AktivGroteskCd_Trial_XBd.ttf);
+}
+
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: GROTESK;
+  font-size: 72pt;
+  min-height: 160vh;
+  background-color: white;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  animation: body 1s linear;
+  animation-delay: calc(var(--scroll) * -1s);
+
+}
+
+
+h1{
+  padding: 0;
+  font-family: GROTESK;
+  font-size: 62pt;
+  margin: 0;
+  color:white;
+  -webkit-text-stroke: 0.8px black;
+  animation: text 1s linear;
+  animation-delay: calc(var(--scroll) * -1s);
+
+}
+
+
+
+li {
+  display: inline-block;
+  list-style: outside none none;
+  padding: 0;
+  margin: 0;
+  height: 0; 
+}
+
+
+button {
+  font-family: GROTESK;
+  font-size: 62pt;
+  margin: 0;
+  color: white;
+  background-color: transparent;
+  -webkit-text-stroke: 0.8px black;
+  position: relative;
+  z-index: 0;
+  padding: 0;
+  text-align: center;
+  cursor: pointer;
+  border-color: transparent;
+  animation: text 1s linear;
+  animation-delay: calc(var(--scroll) * -1s);
+}
+///////////////////////////////////
+
+
+
+
+img{
+  opacity: 0;
+}
+
+
+button:hover,
+button:focus{
+  color: black;
+  -webkit-text-stroke: 0px;
+  /*background-image: url('placeholder.jpg');*/
+  transform: translateY(-1.5rem);
+  animation: text_bl 0.2s linear;
+}
+
+button:hover + img{
+  opacity: 1;
+}
+  
+ /* @keyframes slidebg {
+  to {
+    background-position:20vmin;
+  }
+}*/
+
+
+
+@keyframes text {
+  0% {
+    color: white;
+  }
+
+  50% {
+    color: #b444ff;
+  }
+  
+  100% {
+    color: white;
+  }
+}
+
+@keyframes body {
+  0% {
+    background-color: white;
+
+  }
+  50% {
+    background-color: #b444ff;
+  }
+  
+  100% {
+    background-color: white;
+
+  }
+}
+
+@keyframes text_bl {
+  0% {
+    color: white;
+  }
+
+  100% {
+    color: black;
+  }
+}
+
+
+
+
+.line-wrap1 {
+  --size: 50vmin;
+  position: absolute;
+  top: 220px;
+  width: 0;
+  height: 0;
+  perspective: 95vmin;
+}
+
+.line-wrap2 {
+  --size: 50vmin;
+  position: absolute;
+  top: 260px;
+  width: 0;
+  height: 0;
+  perspective: 95vmin;
+}
+.line-wrap3 {
+  --size: 50vmin;
+  position: absolute;
+  top: 300px;
+  width: 0;
+  height: 0;
+  perspective: 95vmin;
+}
+.line-wrap4 {
+  --size: 50vmin;
+  position: absolute;
+  top: 340px;
+  width: 0;
+  height: 0;
+  perspective: 95vmin;
+}
+.line-wrap5 {
+  --size: 50vmin;
+  position: absolute;
+  top: 380px;
+  width: 0;
+  height: 0;
+  perspective: 95vmin;
+}
+.line-wrap6 {
+  --size: 50vmin;
+  position: absolute;
+  top: 420px;
+  width: 0;
+  height: 0;
+  perspective: 95vmin;
+}
+.line-wrap7 {
+  --size: 50vmin;
+  position: absolute;
+  top: 460px;
+  width: 0;
+  height: 0;
+  perspective: 95vmin;
+}
+.line-wrap8 {
+  --size: 50vmin;
+  position: absolute;
+  top: 500px;
+  width: 0;
+  height: 0;
+  perspective: 95vmin;
+}
+.line-wrap9 {
+  --size: 50vmin;
+  position: absolute;
+  top: 540px;
+  width: 0;
+  height: 0;
+  perspective: 95vmin;
+}
+.line-wrap10 {
+  --size: 50vmin;
+  position: absolute;
+  top: 580px;
+  width: 0;
+  height: 0;
+  perspective: 95vmin;
+}
+.line-wrap11 {
+  --size: 50vmin;
+  position: absolute;
+  top: 620px;
+  width: 0;
+  height: 0;
+  perspective: 95vmin;
+}
+.line-wrap12 {
+  --size: 50vmin;
+  position: absolute;
+  top: 660px;
+  width: 0;
+  height: 0;
+  perspective: 95vmin;
+}
+.line-wrap13 {
+  --size: 50vmin;
+  position: absolute;
+  top: 700px;
+  width: 0;
+  height: 0;
+  perspective: 95vmin;
+}
+.line-wrap14 {
+  --size: 50vmin;
+  position: absolute;
+  top: 740px;
+  width: 0;
+  height: 0;
+  perspective: 95vmin;
+}
+.line-wrap15 {
+  --size: 50vmin;
+  position: absolute;
+  top: 780px;
+  width: 0;
+  height: 0;
+  perspective: 95vmin;
+}
+.line-wrap16 {
+  --size: 50vmin;
+  position: absolute;
+  top: 820px;
+  width: 0;
+  height: 0;
+  perspective: 95vmin;
+}
+.line-wrap17 {
+  --size: 50vmin;
+  position: absolute;
+  top: 860px;
+  width: 0;
+  height: 0;
+  perspective: 95vmin;
+
+}
+
+
+
+
+.line {
+  justify-items: center;
+  transform-style: preserve-3d;
+  transform: rotateX(0deg) rotateZ(45deg) rotateY(-45deg);
+  animation: line 1s linear;
+  animation-delay: calc(var(--scroll) * -7s);
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+
+}
+
+.line2 {
+  transform-style: preserve-3d;
+  transform: rotateX(0deg) rotateZ(45deg) rotateY(-45deg);
+  animation: line 1s linear;
+  animation-delay: calc(var(--scroll) * -6s);
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+}
+
+.line3 {
+  transform-style: preserve-3d;
+  transform: rotateX(0deg) rotateZ(45deg) rotateY(-45deg);
+  animation: line 1s linear;
+  animation-delay: calc(var(--scroll) * -4s);
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+}
+
+.line4 {
+  transform-style: preserve-3d;
+  transform: rotateX(0deg) rotateZ(45deg) rotateY(-45deg);
+  animation: line 1s linear;
+  animation-delay: calc(var(--scroll) * -3.5s);
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+}
+.line5 {
+  transform-style: preserve-3d;
+  transform: rotateX(0deg) rotateZ(45deg) rotateY(-45deg);
+  animation: line 1s linear;
+  animation-delay: calc(var(--scroll) * -3s);
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+}
+.line6 {
+  transform-style: preserve-3d;
+  transform: rotateX(0deg) rotateZ(45deg) rotateY(-45deg);
+  animation: line 1s linear;
+  animation-delay: calc(var(--scroll) * -2.5s);
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+}
+
+.line7 {
+  transform-style: preserve-3d;
+  transform: rotateX(0deg) rotateZ(45deg) rotateY(-45deg);
+  animation: line 1s linear;
+  animation-delay: calc(var(--scroll) * -2s);
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+}
+.line8 {
+  transform-style: preserve-3d;
+  transform: rotateX(0deg) rotateZ(45deg) rotateY(-45deg);
+  animation: line 1s linear;
+  animation-delay: calc(var(--scroll) * -1.8s);
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+}
+.line9 {
+  transform-style: preserve-3d;
+  transform: rotateX(0deg) rotateZ(45deg) rotateY(-45deg);
+  animation: line 1s linear;
+  animation-delay: calc(var(--scroll) * -1.5s);
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+}
+.line10 {
+  transform-style: preserve-3d;
+  transform: rotateX(0deg) rotateZ(45deg) rotateY(-45deg);
+  animation: line 1s linear;
+  animation-delay: calc(var(--scroll) * -1.2s);
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+}
+.line11 {
+  transform-style: preserve-3d;
+  transform: rotateX(0deg) rotateZ(45deg) rotateY(-45deg);
+  animation: line 1s linear;
+  animation-delay: calc(var(--scroll) * -1s);
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+}
+.line12 {
+  transform-style: preserve-3d;
+  transform: rotateX(0deg) rotateZ(45deg) rotateY(-45deg);
+  animation: line 1s linear;
+  animation-delay: calc(var(--scroll) * -0.8s);
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+}
+.line13 {
+  transform-style: preserve-3d;
+  transform: rotateX(0deg) rotateZ(45deg) rotateY(-45deg);
+  animation: line 1s linear;
+  animation-delay: calc(var(--scroll) * -0.7s);
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+}
+.line14 {
+  transform-style: preserve-3d;
+  transform: rotateX(0deg) rotateZ(45deg) rotateY(-45deg);
+  animation: line 1s linear;
+  animation-delay: calc(var(--scroll) * -0.6s);
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+}
+.line15 {
+  transform-style: preserve-3d;
+  transform: rotateX(0deg) rotateZ(45deg) rotateY(-45deg);
+  animation: line 1s linear;
+  animation-delay: calc(var(--scroll) * -0.5s);
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+}
+.line16 {
+  transform-style: preserve-3d;
+  transform: rotateX(0deg) rotateZ(45deg) rotateY(-45deg);
+  animation: line 1s linear;
+  animation-delay: calc(var(--scroll) * -0.4s);
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+}
+.line17 {
+  transform-style: preserve-3d;
+  transform: rotateX(0deg) rotateZ(45deg) rotateY(-45deg);
+  animation: line 1s linear;
+  animation-delay: calc(var(--scroll) * -0.3s);
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+}
+.line18 {
+  transform-style: preserve-3d;
+  transform: rotateX(0deg) rotateZ(45deg) rotateY(-45deg);
+  animation: line 1s linear;
+  animation-delay: calc(var(--scroll) * -0.2s);
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+}
+
+
+
+
+@keyframes line {
+  0% {
+    transform: rotateX(0deg) rotateY(0deg) translateY(0px);
+  }
+  100% {
+    transform: rotateX(50deg) rotateY(0deg)translateY(-300px);
+  }
+}
+
+.side {
+  position: absolute;
+  width: var(--size);
+  height: var(--size);
+  backface-visibility: visible;
+  top: calc(var(--size) * -.5);
+  display: flex;
+  justify-content: center;
+}
+
+
+
+
+
+:root * {
+  animation-play-state: paused;
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+  
+}
