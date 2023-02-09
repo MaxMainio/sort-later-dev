@@ -15,6 +15,10 @@ window.onload = (event) => {
     scaleType();
 }
 
+addEventListener('resize', e => {
+    scaleType();
+});
+
 
 
 
