@@ -324,6 +324,42 @@
     "extension": ".png"
   },
   {
+    "emailAddress": "mfukawa@risd.edu",
+    "fullName": "Monet Fukawa",
+    "prefferedName": "Monet Fukawa",
+    "website": "monetfukawa.cargo.site/",
+    "workTitle": "Year In A Music Box",
+    "year": 2022,
+    "workType": "Spacial/Sculptural",
+    "path": "monet-fukawa/monet-fukawa-year-in-a-music-box",
+    "workAmount": 7,
+    "extension": ".jpg"
+  },
+  {
+    "emailAddress": "mfukawa@risd.edu",
+    "fullName": "Monet Fukawa",
+    "prefferedName": "Monet Fukawa",
+    "website": "monetfukawa.cargo.site/",
+    "workTitle": "A Story in Rocks",
+    "year": 2022,
+    "workType": "Print and web",
+    "path": "monet-fukawa/monet-fukawa-a-story-in-rocks",
+    "workAmount": 2,
+    "extension": ".jpg"
+  },
+  {
+    "emailAddress": "mfukawa@risd.edu",
+    "fullName": "Monet Fukawa",
+    "prefferedName": "Monet Fukawa",
+    "website": "monetfukawa.cargo.site/",
+    "workTitle": "We're the Dannys",
+    "year": 2021,
+    "workType": "Video and poster",
+    "path": "monet-fukawa/monet-fukawa-we-are-the-dannys",
+    "workAmount": 2,
+    "extension": ".jpg"
+  },
+  {
     "emailAddress": "vlockwoo@risd.edu",
     "fullName": "Valeria Lockwood",
     "prefferedName": "Val",
