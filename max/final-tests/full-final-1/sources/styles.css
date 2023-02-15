@@ -332,6 +332,10 @@ a:visited{
         justify-content: center;
     }
 
+    main{
+        display: none;
+    }
+
     #backGround{
         display: none;
     }
