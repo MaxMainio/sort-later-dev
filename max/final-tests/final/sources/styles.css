@@ -104,7 +104,7 @@ h3{
     color: black;
     -webkit-text-fill-color: white;
     -webkit-text-stroke-width: var(--stroke-width);
-    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-color: var(--stroke-color);
 
     display: inline-block;
     transform-origin: 0 0;
@@ -161,22 +161,24 @@ p{
     text-transform: uppercase;
 
     font-size: 5rem;
-    line-height: 3rem;
+    line-height: 4.5rem;
+    /* line-height: 3rem; */
     white-space: nowrap;
 
     color: black;
     -webkit-text-fill-color: white;
     -webkit-text-stroke-width: var(--stroke-width);
-    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-color: var(--stroke-color);
 
     display: block;
+    transform: scaleY(1.5);
 }
 
 a{
     color: black;
     -webkit-text-fill-color: white;
     -webkit-text-stroke-width: var(--stroke-width);
-    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-color: var(--stroke-color);
 
     cursor: pointer;
     text-decoration: none;
