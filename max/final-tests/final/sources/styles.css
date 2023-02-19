@@ -59,6 +59,7 @@ main{
     margin: -4rem;
 
     z-index: 0;
+    pointer-events: none;
 }
 
 
@@ -95,25 +96,7 @@ main{
 
 
 
-h3{
-    font-family: "aktiv-grotesk-condensed", sans-serif;
-    font-weight: 900;
-    font-style: normal;
-    text-transform: uppercase;
-
-    color: black;
-    -webkit-text-fill-color: white;
-    -webkit-text-stroke-width: var(--stroke-width);
-    -webkit-text-stroke-color: var(--stroke-color);
-
-    display: inline-block;
-    transform-origin: 0 0;
-    white-space: nowrap;
-    
-    margin-left: -4rem;
-}
-
-h4{
+h1{
     font-family: "aktiv-grotesk-condensed", sans-serif;
     font-weight: 900;
     font-style: normal;
@@ -174,7 +157,7 @@ p{
     transform: scaleY(1.5);
 }
 
-a{
+p a{
     color: black;
     -webkit-text-fill-color: white;
     -webkit-text-stroke-width: var(--stroke-width);
@@ -184,11 +167,11 @@ a{
     text-decoration: none;
 }
 
-a:hover{
+p a:hover{
     -webkit-text-fill-color: rgba(0, 0, 0, 1);
 }
 
-a:visited{
+p a:visited{
     color: inherit;
 }
 
@@ -207,18 +190,48 @@ a:visited{
     border-top: var(--stroke-width) solid var(--stroke-color);
 }
 
+#footer{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+h2{
+    font-family: "aktiv-grotesk-condensed", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+}
+
+h2 a{
+    cursor: pointer;
+    text-decoration: none;
+    color: #000;
+}
+
 #bottom-title{
     width: 30vw;
-    margin-top: -1rem;
+    margin: -6.5rem 0 1rem 0;
 }
+
+
+
+
+
+
+
+
 
 #gradient{
     position: absolute;
-    inset: 0 0 0 0;
+    inset: 0;
 
     width: 100%;
     height: 100%;
-    padding: 2rem 2rem 2rem 2rem;
 
     mix-blend-mode: multiply;
     pointer-events: none;
