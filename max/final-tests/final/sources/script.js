@@ -1,6 +1,7 @@
 console.log('https://www.youtube.com/watch?v=NuAKnbIr6TE');
 
-const backGround = document.getElementById('background');
+const backGround = document.getElementById('gradient');
+const falseFile = document.getElementById('false-file');
 
 
 
@@ -12,6 +13,7 @@ const backGround = document.getElementById('background');
 
 window.onload = (event) => {
     backGround.style.background = generateGradient();
+    falseFile.style.setProperty("background-image", getRandomDots());
     scaleType();
 }
 
@@ -64,7 +66,7 @@ window.addEventListener('afterprint', (event) => {
 
 function getRandomDots() {
     var dotNum = randomIntFromInterval(1, 3);
-    var dotPath = '../../assets/svg/dots-' + dotNum.toString() + '.svg';
+    var dotPath = 'url(assets/svg/dots-' + dotNum.toString() + '.svg';
     return dotPath
 }
 
