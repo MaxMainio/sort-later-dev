@@ -13,27 +13,19 @@
 
 main{
     position: relative;
-}
-
-
-
-
-
-#graphics{
-    padding: 4rem;
+    padding: 1rem 4rem;
 
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+
+
+
+
 #top-title{
     width: 50vw;
-}
-
-#layer_1{
-    width: 50vw;
-    display: block;
 }
 
 #false-file{
@@ -57,6 +49,16 @@ main{
 #web-title{
     width: calc(100% + 4rem);
     margin: -1rem 0 0 -2rem;
+    z-index: 1;
+}
+
+#date-year{
+    position: absolute;
+    inset: 0 0 0 0;
+    width: calc(100% + 8rem);
+    margin: -4rem;
+
+    z-index: 0;
 }
 
 
@@ -71,6 +73,7 @@ main{
     width: 100%;
     position: relative;
     margin: -1rem 0;
+    z-index: 1;
 }
 
 .date-container{
@@ -79,9 +82,9 @@ main{
 }
 
 .date-svg{
-    width: calc(100% + 8rem);
+    width: calc(100% + 6rem);
     height: 100%;
-    margin-left: -4rem;
+    margin-left: -3rem;
 }
 
 
@@ -147,6 +150,8 @@ h4{
     column-gap: 1rem;
     justify-content: center;
     position: relative;
+
+    z-index: 1;
 }
 
 p{
