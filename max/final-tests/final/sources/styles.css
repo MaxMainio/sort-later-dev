@@ -31,6 +31,11 @@ main{
     width: 50vw;
 }
 
+#layer_1{
+    width: 50vw;
+    display: block;
+}
+
 #fake-file{
     position: relative;
     width: 100%;
@@ -53,7 +58,7 @@ main{
 
 #web-title{
     width: calc(100% + 4rem);
-    margin: -5rem 0 -1rem -2rem;
+    margin: -1rem 0 0 -2rem;
 }
 
 
@@ -66,7 +71,7 @@ main{
 
 #credits{
     width: calc(100% + 6rem);
-    margin: 0 0 -5rem -3rem;
+    margin: -1rem 0 -5rem -3rem;
 
     display: flex;
     flex-wrap: wrap;
