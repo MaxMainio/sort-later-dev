@@ -18,14 +18,23 @@ window.onload = (event) => {
     falseFile.style.setProperty("background-image", getRandomWebDots());
 
     // Print / PHYSICAL    ----------------------------------------------------------------------------------------------------
-
-
-
-    fetch('https://maxmainio.github.io/sort-later-dev/max/final/souces/data.json')
+    fetch('https://maxmainio.github.io/sort-later-dev/max/final/sources/data.json')
     .then((response) => response.json())
-    .then((data) => {
-        var selectedWork = data[randomIntFromInterval(0, data.length - 1)];
+    .then((json) => {
+        var selectedWork = json[randomIntFromInterval(0, json.length - 1)];
         console.log(selectedWork);
+
+        var imgNumber = generateImgNum(selectedWork.workAmount);
+        // var imgPath = '../../assets/student-work/' + selectedWork.path + imgNumber + selectedWork.extension;
+        // console.log(imgPath);
+
+        // GENERATE GRADIENT FOR BACKGROUND OF PRINT
+        // var generated = generateGradient();
+        // document.getElementById('print-gradient').style.background = generated;
+
+        // document.getElementById('work-img').src = imgPath;
+        // document.getElementById('work-title').innerHTML = selectedWork.workTitle.toString();
+        // document.getElementById('student-name').innerHTML = selectedWork.fullName.toString();
     });
 }
 
