@@ -18,6 +18,15 @@ window.onload = (event) => {
     falseFile.style.setProperty("background-image", getRandomWebDots());
 
     // Print / PHYSICAL    ----------------------------------------------------------------------------------------------------
+
+
+
+    fetch('https://maxmainio.github.io/sort-later-dev/max/final-tests/final/souces/data.json')
+    .then((response) => response.json())
+    .then((data) => {
+        var selectedWork = data[randomIntFromInterval(0, data.length - 1)];
+        console.log(selectedWork);
+    });
 }
 
 
