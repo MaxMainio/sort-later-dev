@@ -35,6 +35,7 @@ window.onload = (event) => {
 
 window.addEventListener('beforeprint', (event) => {
     printGradient.style.background = generateGradient();
+    document.getElementById('print-dots').src = getRandomPrintDots();
 });
 
 window.addEventListener('afterprint', (event) => {
@@ -85,7 +86,7 @@ function getRandomWebDots() {
 
 function getRandomPrintDots() {
     var dotNum = randomIntFromInterval(1, 3);
-    var dotPath = 'url(assets/svg/dots-print-' + dotNum.toString() + '.svg';
+    var dotPath = 'assets/svg/dots-print-' + dotNum.toString() + '.svg';
     return dotPath
 }
 

@@ -346,10 +346,17 @@ h2 a{
     justify-content: space-between;
 }
 
+#print-dots{
+    position: absolute;
+    inset: 0 0 auto 0;
+    z-index: 0;
+}
+
 #print-logo{
     width: calc(100% + 4rem);
     margin: -1rem 0 0 -2rem;
     height: 30%;
+    z-index: 1;
 }
 
 .print-other-files{
@@ -371,7 +378,7 @@ h2 a{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 1rem;
+    padding: 2cm;
 }
 
 #print-work-container{
