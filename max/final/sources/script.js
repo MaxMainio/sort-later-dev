@@ -21,7 +21,7 @@ window.onload = (event) => {
 
 
 
-    fetch('https://maxmainio.github.io/sort-later-dev/max/final-tests/final/souces/data.json')
+    fetch('https://maxmainio.github.io/sort-later-dev/max/final/souces/data.json')
     .then((response) => response.json())
     .then((data) => {
         var selectedWork = data[randomIntFromInterval(0, data.length - 1)];
@@ -108,7 +108,7 @@ function generateImgNum(num){
 
 function generateGradient(){
     // GETS RANDOM GRADIENT BY NAME AS STRING
-    var gradTag = 'gradient' + Math.floor(Math.random() * 4.99);
+    var gradTag = 'gradient' + randomIntFromInterval(0, 4);
     // ARRAY OF THE INDIVIDUAL COLORS OF SELECTED GRADIENT
     var gradColors = eval(gradTag);
     var gradSteps = gradColors.length;

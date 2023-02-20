@@ -307,7 +307,7 @@
     "workTitle": "Fractal Portraits",
     "year": 2022,
     "workType": "Poster",
-    "path": "briaanna-chiu/briaanna-chiu-briaanna-chiu-fractal-portrait",
+    "path": "briaanna-chiu/briaanna-chiu-fractal-portrait",
     "workAmount": 1,
     "extension": ".jpg"
   },
@@ -1279,7 +1279,7 @@
     "workTitle": "Family Word Vomit",
     "year": 2021,
     "workType": "Print",
-    "path": "meave-cunningham-family-word-vomit",
+    "path": "meave-cunningham/meave-cunningham-family-word-vomit",
     "workAmount": 5,
     "extension": ".png"
   },
@@ -1485,6 +1485,30 @@
     "workType": "Spacial/Sculptural",
     "path": "nathaniel-krohn/nathaniel-krohn-summertime-wagon",
     "workAmount": 1,
+    "extension": ".jpg"
+  },
+  {
+    "emailAddress": "nnanda@risd.edu",
+    "fullName": "Nishtha Nanda",
+    "prefferedName": "Nishtha",
+    "website": "nishtananda.com",
+    "workTitle": "Liberated",
+    "year": 2022,
+    "workType": "Print (Publications, zines...etc)",
+    "path": "nishtha-nanda/nishtha-nanda-liberated",
+    "workAmount": 10,
+    "extension": ".jpg"
+  },
+  {
+    "emailAddress": "nnanda@risd.edu",
+    "fullName": "Nishtha Nanda",
+    "prefferedName": "Nishtha",
+    "website": "nishtananda.com",
+    "workTitle": "Blurtone",
+    "year": 2022,
+    "workType": "Spacial/Sculptural",
+    "path": "nishtha-nanda/nishtha-nanda-blurtone",
+    "workAmount": 3,
     "extension": ".jpg"
   },
   {
