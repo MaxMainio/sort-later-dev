@@ -1,8 +1,12 @@
 console.log('https://www.youtube.com/watch?v=NuAKnbIr6TE');
 
 const webGradient = document.getElementById('web-gradient');
-const printGradient = document.getElementById('print-gradient');
 const falseFile = document.getElementById('false-file');
+
+const printGradient = document.getElementById('print-gradient');
+const printIMG = document.getElementById('work-img');
+const workTitle = document.getElementById('work-title');
+const studentName = document.getElementById('student-name');
 
 
 
@@ -18,24 +22,7 @@ window.onload = (event) => {
     falseFile.style.setProperty("background-image", getRandomWebDots());
 
     // Print / PHYSICAL    ----------------------------------------------------------------------------------------------------
-    fetch('https://maxmainio.github.io/sort-later-dev/max/final/sources/data.json')
-    .then((response) => response.json())
-    .then((json) => {
-        var selectedWork = json[randomIntFromInterval(0, json.length - 1)];
-        console.log(selectedWork);
-
-        var imgNumber = generateImgNum(selectedWork.workAmount);
-        // var imgPath = '../../assets/student-work/' + selectedWork.path + imgNumber + selectedWork.extension;
-        // console.log(imgPath);
-
-        // GENERATE GRADIENT FOR BACKGROUND OF PRINT
-        // var generated = generateGradient();
-        // document.getElementById('print-gradient').style.background = generated;
-
-        // document.getElementById('work-img').src = imgPath;
-        // document.getElementById('work-title').innerHTML = selectedWork.workTitle.toString();
-        // document.getElementById('student-name').innerHTML = selectedWork.fullName.toString();
-    });
+    getStudentWork();
 }
 
 
@@ -47,33 +34,11 @@ window.onload = (event) => {
 
 
 window.addEventListener('beforeprint', (event) => {
-    // document.getElementById('print-dots').src = getRandomDots();
-
     printGradient.style.background = generateGradient();
-
-
-    // fetch('https://maxmainio.github.io/sort-later-dev/max/assets/json/data.json')
-    // .then((response) => response.json())
-    // .then((json) => {
-    //     var selectedWork = json[randomIntFromInterval(0, json.length - 1)];
-    //     // console.log(selectedWork);
-
-    //     var imgNumber = generateImgNum(selectedWork.workAmount);
-    //     var imgPath = '../../assets/student-work/' + selectedWork.path + imgNumber + selectedWork.extension;
-    //     // console.log(imgPath);
-
-    //     // GENERATE GRADIENT FOR BACKGROUND OF PRINT
-    //     var generated = generateGradient();
-    //     document.getElementById('print-gradient').style.background = generated;
-
-    //     document.getElementById('work-img').src = imgPath;
-    //     document.getElementById('work-title').innerHTML = selectedWork.workTitle.toString();
-    //     document.getElementById('student-name').innerHTML = selectedWork.fullName.toString();
-    // });
 });
 
 window.addEventListener('afterprint', (event) => {
-    
+    getStudentWork();
 });
 
 
@@ -84,9 +49,43 @@ window.addEventListener('afterprint', (event) => {
 
 
 
+// GENERATE STUDENT WORK    ---------------------------------------------------------------------------------------------------
+function getStudentWork() {
+    fetch('https://maxmainio.github.io/sort-later-dev/max/final/sources/data.json')
+    .then((response) => response.json())
+    .then((json) => {
+        // SELECT WORK TO SHOWCASE
+        var selectedWork = json[randomIntFromInterval(0, json.length - 1)];
+
+        // GENERATE IMAGE PATH
+        var imgNumber = generateImgNum(selectedWork.workAmount);
+        var imgPath = '../assets/student-work/' + selectedWork.path + imgNumber + selectedWork.extension;
+
+        // PLACE SELECTED MATERIAL
+        printIMG.src = imgPath;
+        workTitle.innerHTML = selectedWork.workTitle.toString();
+        studentName.innerHTML = selectedWork.prefferedName.toString();
+    });
+}
+
+
+
+
+
+
+
+
+
+// GENERATE DOTS    -----------------------------------------------------------------------------------------------------------
 function getRandomWebDots() {
     var dotNum = randomIntFromInterval(1, 3);
-    var dotPath = 'url(assets/svg/web-dots-' + dotNum.toString() + '.svg';
+    var dotPath = 'url(assets/svg/dots-web-' + dotNum.toString() + '.svg';
+    return dotPath
+}
+
+function getRandomPrintDots() {
+    var dotNum = randomIntFromInterval(1, 3);
+    var dotPath = 'url(assets/svg/dots-print-' + dotNum.toString() + '.svg';
     return dotPath
 }
 
