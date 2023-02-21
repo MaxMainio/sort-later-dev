@@ -279,7 +279,6 @@ h2 a{
 
 #print-gradient{
     mix-blend-mode: multiply;
-    background-size: 5cm 5cm;
 }
 
 
@@ -322,8 +321,9 @@ h2 a{
 #print-bottom-title{
     width: 25%;
     margin-left: 50%;
-    transform: translate3d(-50%, -0.5rem, 0);
+    transform: translate3d(-50%, -0.25cm, 0);
 }
+
 
 
 
@@ -338,8 +338,8 @@ h2 a{
     height: 94%;
 
     border: var(--stroke-width) solid var(--stroke-color);
-    border-top-right-radius: 4rem;
-    border-top-left-radius: 4rem;
+    border-top-right-radius: 1cm;
+    border-top-left-radius: 1cm;
 
     display: flex;
     flex-direction: column;
@@ -353,15 +353,15 @@ h2 a{
 }
 
 #print-logo{
-    width: calc(100% + 4rem);
-    margin: -1rem 0 0 -2rem;
+    width: calc(100% + 1cm);
+    margin: -0.5cm 0 0 -0.5cm;
     height: 30%;
     z-index: 1;
 }
 
 .print-other-files{
     width: 100%;
-    height: 2rem;
+    height: 1cm;
 
     border-top: var(--stroke-width) solid var(--stroke-color);
 }
@@ -414,6 +414,36 @@ h4{
 
     font-size: 1.5rem;
     line-height: 1.5rem;
+}
+
+
+
+
+
+
+
+
+
+#print-foreground{
+    padding: 1cm;
+}
+
+#print-logo-container{
+    position: relative;
+    width: 100%;
+    height: 94%;
+    top: 4%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#print-logo-over{
+    width: calc(100% + 1cm);
+    margin: -0.5cm 0 0 -0.5cm;
+    height: 30%;
+    z-index: 1;
 }
 
 
