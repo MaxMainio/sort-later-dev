@@ -44,6 +44,7 @@ main{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    z-index: 1;
 }
 
 #web-title{
@@ -150,7 +151,6 @@ p{
 
     font-size: 5rem;
     line-height: 4.5rem;
-    /* line-height: 3rem; */
     white-space: nowrap;
 
     color: black;
@@ -220,7 +220,10 @@ h2 a{
 
 #bottom-title{
     width: 30vw;
-    margin: -6.5rem 0 1rem 0;
+    position: absolute;
+    inset: auto 0 1.5rem 0; /* CHANGE THIS INSET TO MOVE IT UP OR DOWN */
+    margin: 0 auto;
+    z-index: 0;
 }
 
 
@@ -230,7 +233,7 @@ h2 a{
 
 
 
-
+/* PRINT SECTION STARTS HERE ------------------------------------------------------------------------------------------ */
 /* #web-gradient{
     position: absolute;
     inset: 0;
