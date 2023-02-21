@@ -280,9 +280,9 @@ h2 a{
     height: 100%;
 }
 
-#print-gradient{
+/* #print-gradient{
     mix-blend-mode: multiply;
-}
+} */
 
 
 
@@ -294,6 +294,7 @@ h2 a{
 
 #print-graphics{
     padding: 1cm;
+    mix-blend-mode: multiply;
 }
 
 #print-year{
