@@ -134,7 +134,7 @@ h1{
 
 #credits{
     width: calc(100% + 6rem);
-    margin: -1rem 0 -5rem -3rem;
+    margin: -1rem 0 -10vw -3rem;
 
     display: flex;
     flex-wrap: wrap;
