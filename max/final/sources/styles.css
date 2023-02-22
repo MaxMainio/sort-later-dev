@@ -86,9 +86,12 @@ main{
 
     width: calc(100% + 6rem);
     margin-left: -3rem;
+
+    background-image: url(../assets/desktop-svg/date-month-desktop.svg);
 }
 
 .date-container{
+    position: relative;
     width: 100%;
     height: 45vh;
 }
@@ -252,6 +255,51 @@ h2 a{
 
 
 
+@media only screen and (max-width: 1000px) {
+    main{
+        padding: 2vh 5vw;
+    }
+
+    #false-file{
+        margin-top: -1vh;
+    }
+    
+    #web-title{
+        width: calc(100% + 10vw);
+        margin: -1vh 0 0 -5vw;
+    }
+    
+    #date-year{
+        width: calc(100% + 10vw);
+        margin: -5vw;
+    }
+
+    #when{
+        margin: -1vh 0;
+    }
+    
+    #month-container{
+        width: calc(100% + 8vw);
+        margin-left: -4vw;
+    }
+    
+    .date-container{
+        width: calc(100% + 8vw);
+        margin-left: -4vw;
+        height: 45vh;
+    }
+
+    .date-svg{
+        width: 100%;
+        margin-left: 0;
+    }
+
+    #credits{
+        width: calc(100% + 8vw);
+        margin: -2vw 0 -10vw -4vw;
+    }
+}
+
 @media only screen and (max-width: 957px) {
     .date-container{
         height: 40vw;
@@ -295,6 +343,10 @@ h2 a{
     :root{
         --stroke-width: 1px;
         --stroke-color: #000;
+    }
+
+    #month-container{
+        background-image: url(../assets/mobile-svg/date-month-mobile.svg);
     }
 }
 

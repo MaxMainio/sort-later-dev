@@ -11,8 +11,6 @@ const printIMG = document.getElementById('work-img');
 const workTitle = document.getElementById('work-title');
 const studentName = document.getElementById('student-name');
 
-var windowWidth = window.innerWidth;
-
 
 
 
@@ -27,25 +25,9 @@ window.onload = (event) => {
     falseFile.style.setProperty("background-image", getRandomWebDots());
     favicon.href = 'assets/favicons/favicon-' + randomIntFromInterval(1, 10) + '.ico';
 
-    if (windowWidth < 700) {
-        monthSvg.style.backgroundImage = 'url(assets/mobile-svg/date-month-mobile.svg)';
-    } else {
-        monthSvg.style.backgroundImage = 'url(assets/desktop-svg/date-month-desktop.svg)';
-    }
-
     // PRINT / PHYSICAL
     getStudentWork();
 }
-
-window.addEventListener('resize', (event) => {
-    var windowWidth = window.innerWidth;
-    
-    if (windowWidth < 700) {
-        monthSvg.style.backgroundImage = 'url(assets/mobile-svg/date-month-mobile.svg)';
-    } else {
-        monthSvg.style.backgroundImage = 'url(assets/desktop-svg/date-month-desktop.svg)';
-    }
-})
 
 
 
