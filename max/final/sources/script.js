@@ -1,5 +1,7 @@
 console.log('https://www.youtube.com/watch?v=NuAKnbIr6TE');
 
+const favicon = document.querySelector("link[rel~='icon']");
+
 const webGradient = document.getElementById('web-gradient');
 const falseFile = document.getElementById('false-file');
 
@@ -20,6 +22,7 @@ window.onload = (event) => {
     // WEB / DIGITAL
     webGradient.style.background = generateGradient();
     falseFile.style.setProperty("background-image", getRandomWebDots());
+    favicon.href = 'assets/favicons/favicon-' + randomIntFromInterval(1, 10) + '.ico';
 
     // PRINT / PHYSICAL
     getStudentWork();
