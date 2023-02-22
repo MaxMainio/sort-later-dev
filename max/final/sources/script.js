@@ -17,11 +17,11 @@ const studentName = document.getElementById('student-name');
 
 
 window.onload = (event) => {
-    // WEB / DIGITAL    -------------------------------------------------------------------------------------------------------
+    // WEB / DIGITAL
     webGradient.style.background = generateGradient();
     falseFile.style.setProperty("background-image", getRandomWebDots());
 
-    // Print / PHYSICAL    ----------------------------------------------------------------------------------------------------
+    // PRINT / PHYSICAL
     getStudentWork();
 }
 
@@ -33,6 +33,7 @@ window.onload = (event) => {
 
 
 
+// PRINTING "QUERIES"    ------------------------------------------------------------------------------------------------------
 window.addEventListener('beforeprint', (event) => {
     printGradient.style.background = generateGradient();
     document.getElementById('print-dots').src = getRandomPrintDots();
@@ -60,7 +61,7 @@ function getStudentWork() {
 
         // GENERATE IMAGE PATH
         var imgNumber = generateImgNum(selectedWork.workAmount);
-        var imgPath = '../assets/student-work/' + selectedWork.path + imgNumber + selectedWork.extension;
+        var imgPath = 'https://maxmainio.github.io/sort-later-dev/library/student-work/' + selectedWork.path + imgNumber + selectedWork.extension;
 
         // PLACE SELECTED MATERIAL
         printIMG.src = imgPath;
@@ -98,6 +99,7 @@ function getRandomPrintDots() {
 
 
 
+// IF THERE'S MORE THAN ONE WORK, SELECT AT RANDOM    -------------------------------------------------------------------------
 function generateImgNum(num){
     if (num != 1) {
         var imgNumber = randomIntFromInterval(1, num);
@@ -115,6 +117,7 @@ function generateImgNum(num){
 
 
 
+// GENERATE GRADIENT    -------------------------------------------------------------------------------------------------------
 function generateGradient(){
     // GETS RANDOM GRADIENT BY NAME AS STRING
     var gradTag = 'gradient' + randomIntFromInterval(0, 4);
@@ -175,7 +178,7 @@ function randomIntFromInterval(min, max) {
 
 
 
-// GRADIENTS
+// GRADIENTS    ---------------------------------------------------------------------------------------------------------------
 const gradient0 = [];
 gradient0[0] = '#94ff3f';
 gradient0[1] = '#ffff00';
@@ -204,27 +207,3 @@ const gradient4 = [];
 gradient4[0] = '#fff';
 gradient4[1] = '#f0008d';
 gradient4[2] = '#c465ff';
-
-
-
-
-
-
-
-
-
-function scaleType(){
-    var vw = window.innerWidth;
-    var texts = document.querySelectorAll('h3');
-    
-    var i;
-    for(i = 0; i < texts.length; i++){
-        texts[i].style.fontSize = texts[i].parentElement.offsetHeight * 1.5 + 'px';
-        texts[i].style.lineHeight = texts[i].parentElement.offsetHeight + 'px';
-
-        var lineWidth = texts[i].offsetWidth;
-        var fitLength = vw / (lineWidth / 100);
-
-        texts[i].style.transform = 'scaleX(' + fitLength + '%)';
-    }
-}
