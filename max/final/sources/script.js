@@ -53,7 +53,7 @@ window.addEventListener('afterprint', (event) => {
 
 // GENERATE STUDENT WORK    ---------------------------------------------------------------------------------------------------
 function getStudentWork() {
-    fetch('https://maxmainio.github.io/sort-later-dev/max/final/sources/data.json')
+    fetch('https://maxmainio.github.io/sort-later-dev/library/json/data.json')
     .then((response) => response.json())
     .then((json) => {
         // SELECT WORK TO SHOWCASE
