@@ -4,11 +4,14 @@ const favicon = document.querySelector("link[rel~='icon']");
 
 const webGradient = document.getElementById('web-gradient');
 const falseFile = document.getElementById('false-file');
+const monthSvg = document.getElementById('month-container');
 
 const printGradient = document.getElementById('print-gradient');
 const printIMG = document.getElementById('work-img');
 const workTitle = document.getElementById('work-title');
 const studentName = document.getElementById('student-name');
+
+var windowWidth = window.innerWidth;
 
 
 
@@ -24,9 +27,25 @@ window.onload = (event) => {
     falseFile.style.setProperty("background-image", getRandomWebDots());
     favicon.href = 'assets/favicons/favicon-' + randomIntFromInterval(1, 10) + '.ico';
 
+    if (windowWidth < 700) {
+        monthSvg.style.backgroundImage = 'url(assets/mobile-svg/date-month-mobile.svg)';
+    } else {
+        monthSvg.style.backgroundImage = 'url(assets/desktop-svg/date-month-desktop.svg)';
+    }
+
     // PRINT / PHYSICAL
     getStudentWork();
 }
+
+window.addEventListener('resize', (event) => {
+    var windowWidth = window.innerWidth;
+    
+    if (windowWidth < 700) {
+        monthSvg.style.backgroundImage = 'url(assets/mobile-svg/date-month-mobile.svg)';
+    } else {
+        monthSvg.style.backgroundImage = 'url(assets/desktop-svg/date-month-desktop.svg)';
+    }
+})
 
 
 
@@ -84,13 +103,13 @@ function getStudentWork() {
 // GENERATE DOTS    -----------------------------------------------------------------------------------------------------------
 function getRandomWebDots() {
     var dotNum = randomIntFromInterval(1, 3);
-    var dotPath = 'url(assets/svg/dots-web-' + dotNum.toString() + '.svg';
+    var dotPath = 'url(assets/web-svg/dots-web-' + dotNum.toString() + '.svg';
     return dotPath
 }
 
 function getRandomPrintDots() {
     var dotNum = randomIntFromInterval(1, 3);
-    var dotPath = 'assets/svg/dots-print-' + dotNum.toString() + '.svg';
+    var dotPath = 'assets/print-svg/dots-print-' + dotNum.toString() + '.svg';
     return dotPath
 }
 
