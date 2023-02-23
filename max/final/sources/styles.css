@@ -278,6 +278,10 @@ h2 a{
     .other-files{
         height: 85px;
     }
+
+    #credits{
+        margin: -1rem 0 -170px -3rem;
+    }
 }
 
 @media only screen and (max-width: 1000px) {
