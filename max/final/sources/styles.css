@@ -11,14 +11,24 @@
     box-sizing: border-box;
 }
 
+body{
+    position: relative;
+}
+
 main{
     position: relative;
+    max-width: 1700px;
+    margin: 0 auto;
     padding: 1rem 4rem;
 
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
+
+
+
 
 
 
@@ -256,6 +266,20 @@ h2 a{
 
 
 /* MEDIA QUERIES STARTS HERE ------------------------------------------------------------------------------------------ */
+@media only screen and (min-width: 1700px) {
+    #top-title{
+        width: 850px;
+    }
+
+    #bottom-title{
+        width: 510px;
+    }
+
+    .other-files{
+        height: 85px;
+    }
+}
+
 @media only screen and (max-width: 1000px) {
     main{
         padding: 2vh 5vw;
