@@ -255,6 +255,7 @@ h2 a{
 
 
 
+/* MEDIA QUERIES STARTS HERE ------------------------------------------------------------------------------------------ */
 @media only screen and (max-width: 1000px) {
     main{
         padding: 2vh 5vw;

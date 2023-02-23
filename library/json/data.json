@@ -60,6 +60,18 @@
     "extension": ".jpg"
   },
   {
+    "emailAddress": "ylim03@risd.edu",
+    "fullName": "Youjin Lim",
+    "prefferedName": "Amy Youjin Lim",
+    "website": "ylim03.myportfolio.com",
+    "workTitle": "Air Museum Identity Design",
+    "year": 2022,
+    "workType": "Identity",
+    "path": "amy-youjin-lim/amy-youjin-lim-air-museum",
+    "workAmount": 1,
+    "extension": ".jpg"
+  },
+  {
     "emailAddress": "yhuang15@risd.edu",
     "fullName": "Anita Huang",
     "prefferedName": "Anita Huang",
@@ -82,6 +94,30 @@
     "path": "anita-huang/anita-huang-sanctuary",
     "workAmount": 1,
     "extension": ".png"
+  },
+  {
+    "emailAddress": "yhuang15@risd.edu",
+    "fullName": "anita huang",
+    "prefferedName": "anita huang",
+    "website": "anitahuangg.com",
+    "workTitle": "Memorabilia",
+    "year": 2022,
+    "workType": "Print (Publications, zines...etc)",
+    "path": "anita-huang/anita-huang-memorabilia",
+    "workAmount": 1,
+    "extension": ".jpg"
+  },
+  {
+    "emailAddress": "yhuang15@risd.edu",
+    "fullName": "anita huang",
+    "prefferedName": "anita huang",
+    "website": "anitahuangg.com",
+    "workTitle": "Gérad Uféras",
+    "year": 2021,
+    "workType": "Print (Publications, zines...etc)",
+    "path": "anita-huang/anita-huang-gerad-eferas",
+    "workAmount": 1,
+    "extension": ".jpg"
   },
   {
     "emailAddress": "agovinda@risd.edu",
@@ -399,12 +435,24 @@
     "emailAddress": "can02@risd.edu",
     "fullName": "Chaeeun An",
     "prefferedName": "Chaeeun Carrie An",
-    "website": "NULL",
+    "website": "chaeeunan.com",
     "workTitle": "Dot to Dot",
     "year": 2022,
     "workType": "Identity",
     "path": "chaeeun-carrie-an/chaeeun-carrie-an-dot-to-dot",
     "workAmount": 3,
+    "extension": ".jpg"
+  },
+  {
+    "emailAddress": "eliu02@risd.edu",
+    "fullName": "E Min Liu",
+    "prefferedName": "E Min Liu",
+    "website": "eminliu.com",
+    "workTitle": "WZ Coffee Identity Design",
+    "year": 2023,
+    "workType": "Identity",
+    "path": "e-min-liu/e-min-liu-wz-coffee",
+    "workAmount": 4,
     "extension": ".jpg"
   },
   {
@@ -483,7 +531,7 @@
     "emailAddress": "eryan@risd.edu",
     "fullName": "Eleanor Ryan",
     "prefferedName": "Eleanor Ryan",
-    "website": "eryan7f3c.myportfolio.com",
+    "website": "eleanorryan.me",
     "workTitle": "Mycelium Messages",
     "year": 2022,
     "workType": "Spacial/Sculptural",
@@ -495,7 +543,7 @@
     "emailAddress": "eryan@risd.edu",
     "fullName": "Eleanor Ryan",
     "prefferedName": "Eleanor Ryan",
-    "website": "eryan7f3c.myportfolio.com",
+    "website": "eleanorryan.me",
     "workTitle": "Pardalis",
     "year": 2022,
     "workType": "Poster",
@@ -507,7 +555,7 @@
     "emailAddress": "eryan@risd.edu",
     "fullName": "Eleanor Ryan",
     "prefferedName": "Eleanor Ryan",
-    "website": "eryan7f3c.myportfolio.com",
+    "website": "eleanorryan.me",
     "workTitle": "Yee",
     "year": 2022,
     "workType": "Spacial/Sculptural",
@@ -519,7 +567,7 @@
     "emailAddress": "eryan@risd.edu",
     "fullName": "Eleanor Ryan",
     "prefferedName": "Eleanor Ryan",
-    "website": "eryan7f3c.myportfolio.com",
+    "website": "eleanorryan.me",
     "workTitle": "Zoom Zoom Zoom",
     "year": 2022,
     "workType": "Poster",
@@ -531,7 +579,7 @@
     "emailAddress": "eryan@risd.edu",
     "fullName": "Eleanor Ryan",
     "prefferedName": "Eleanor Ryan & Krithi Srinivas",
-    "website": "eryan7f3c.myportfolio.com",
+    "website": "eleanorryan.me",
     "workTitle": "Jump Around",
     "year": 2022,
     "workType": "Print (Publications, zines...etc)",
@@ -732,6 +780,30 @@
     "extension": ".png"
   },
   {
+    "emailAddress": "hwisor@risd.edu",
+    "fullName": "Hope Wisor",
+    "prefferedName": "Hope Wisor",
+    "website": "hopewisor.com",
+    "workTitle": "Sand in the Gears",
+    "year": 2021,
+    "workType": "Print (Publications, zines...etc)",
+    "path": "hope-wisor/hope-wisor-sand-in-the-gears",
+    "workAmount": 9,
+    "extension": ".png"
+  },
+  {
+    "emailAddress": "hwisor@risd.edu",
+    "fullName": "Hope Wisor",
+    "prefferedName": "Hope Wisor",
+    "website": "hopewisor.com",
+    "workTitle": "Last Judgement Rave",
+    "year": 2021,
+    "workType": "Flyers",
+    "path": "hope-wisor/hope-wisor-last-judgement-rave",
+    "workAmount": 5,
+    "extension": ".jpg"
+  },
+  {
     "emailAddress": "icho@risd.edu",
     "fullName": "Iris Cho",
     "prefferedName": "Iris Cho",
@@ -872,7 +944,7 @@
     "year": 2022,
     "workType": "Poster",
     "path": "iris-xie/iris-xie-over-heard",
-    "workAmount": 1,
+    "workAmount": 2,
     "extension": ".png"
   },
   {
@@ -888,6 +960,18 @@
     "extension": ".jpg"
   },
   {
+    "emailAddress": "ixie@risd.edu",
+    "fullName": "Iris Xie",
+    "prefferedName": "Iris Xie",
+    "website": "www.irisxie.com",
+    "workTitle": "NYABF",
+    "year": 2022,
+    "workType": "Poster",
+    "path": "iris-xie/iris-xie-nyabf",
+    "workAmount": 2,
+    "extension": ".gif"
+  },
+  {
     "emailAddress": "hlee40@risd.edu",
     "fullName": "Jacob Hwan Lee",
     "prefferedName": "Jacob Hwan Lee",
@@ -898,6 +982,42 @@
     "path": "jacob-hwan-lee/jacob-hwan-lee-interview-with-ros-knopov",
     "workAmount": 5,
     "extension": ".jpg"
+  },
+  {
+    "emailAddress": "hlee40@risd.edu",
+    "fullName": "Jacob Hwan Lee",
+    "prefferedName": "Jacob Hwan Lee",
+    "website": "jacobhwanlee.com",
+    "workTitle": "Mock Poster for NYABF",
+    "year": 2022,
+    "workType": "Poster",
+    "path": "jacob-hwan-lee/jacob-hwan-lee-nyabf",
+    "workAmount": 1,
+    "extension": ".png"
+  },
+  {
+    "emailAddress": "hlee40@risd.edu",
+    "fullName": "Jacob Hwan Lee",
+    "prefferedName": "Jacob Hwan Lee",
+    "website": "jacobhwanlee.com",
+    "workTitle": "Zebra Poster",
+    "year": 2022,
+    "workType": "Poster",
+    "path": "jacob-hwan-lee/jacob-hwan-lee-zebra-poster",
+    "workAmount": 7,
+    "extension": ".png"
+  },
+  {
+    "emailAddress": "hlee40@risd.edu",
+    "fullName": "Jacob Hwan Lee",
+    "prefferedName": "Jacob Hwan Lee",
+    "website": "jacobhwanlee.com",
+    "workTitle": "Moon Vase",
+    "year": 2022,
+    "workType": "Poster",
+    "path": "jacob-hwan-lee/jacob-hwan-lee-moon-vase",
+    "workAmount": 1,
+    "extension": ".webp"
   },
   {
     "emailAddress": "jperkins@risd.edu",
@@ -1179,11 +1299,35 @@
     "emailAddress": "ksriniva@risd.edu",
     "fullName": "Krithi Srinivas",
     "prefferedName": "Krithi Srinivas",
-    "website": "NULL",
+    "website": "kspofoema.cargo.site",
     "workTitle": "Poof",
     "year": 2022,
     "workType": "Spacial/Sculptural",
     "path": "krithi-srinivas/krithi-srinivas-proof",
+    "workAmount": 1,
+    "extension": ".jpg"
+  },
+  {
+    "emailAddress": "ksriniva@risd.edu",
+    "fullName": "Krithi Srinivas",
+    "prefferedName": "Krithi Srinivas",
+    "website": "kspofoema.cargo.site",
+    "workTitle": "Papillon",
+    "year": 2022,
+    "workType": "Poster",
+    "path": "krithi-srinivas/krithi-srinivas-papillon",
+    "workAmount": 1,
+    "extension": ".jpg"
+  },
+  {
+    "emailAddress": "ksriniva@risd.edu",
+    "fullName": "Krithi Srinivas",
+    "prefferedName": "Krithi Srinivas",
+    "website": "kspofoema.cargo.site",
+    "workTitle": "Boston Art Book Fair Poster",
+    "year": 2022,
+    "workType": "Poster",
+    "path": "krithi-srinivas/krithi-srinivas-boston-book-fair",
     "workAmount": 1,
     "extension": ".jpg"
   },
@@ -1222,6 +1366,42 @@
     "path": "max-beidler/max-beidler-homodeus",
     "workAmount": 6,
     "extension": ".webp"
+  },
+  {
+    "emailAddress": "mbeidler@risd.edu",
+    "fullName": "Max Mainio Beidler",
+    "prefferedName": "Max Mainio Beidler",
+    "website": "maxmain.io",
+    "workTitle": "Generative? Poems",
+    "year": 2022,
+    "workType": "Web to Print",
+    "path": "max-beidler/max-beidler-generative-poems",
+    "workAmount": 9,
+    "extension": ".jpg"
+  },
+  {
+    "emailAddress": "mbeidler@risd.edu",
+    "fullName": "Max Mainio Beidler",
+    "prefferedName": "Max Mainio Beidler",
+    "website": "maxmain.io",
+    "workTitle": "Military Meat",
+    "year": 2021,
+    "workType": "Poster",
+    "path": "max-beidler/max-beidler-military-meat",
+    "workAmount": 10,
+    "extension": ".jpg"
+  },
+  {
+    "emailAddress": "mbeidler@risd.edu",
+    "fullName": "Max Mainio Beidler",
+    "prefferedName": "Max Mainio Beidler",
+    "website": "maxmain.io",
+    "workTitle": "Cat Fractal Jacquard",
+    "year": 2022,
+    "workType": "Knit",
+    "path": "max-beidler/max-beidler-cat-fractal-jacquard",
+    "workAmount": 1,
+    "extension": ".png"
   },
   {
     "emailAddress": "moconnor@risd.edu",
@@ -1512,6 +1692,78 @@
     "extension": ".jpg"
   },
   {
+    "emailAddress": "nnanda@risd.edu",
+    "fullName": "Nishtha Nanda",
+    "prefferedName": "Nishtha Nanda",
+    "website": "nishtananda.com",
+    "workTitle": "Unsolicited borders",
+    "year": 2022,
+    "workType": "3D Rendering/Motion Graphics",
+    "path": "nishtha-nanda/nishtha-nanda-unsolicited-borders",
+    "workAmount": 1,
+    "extension": ".png"
+  },
+  {
+    "emailAddress": "nnanda@risd.edu",
+    "fullName": "Nishtha Nanda",
+    "prefferedName": "Nishtha Nanda",
+    "website": "nishtananda.com",
+    "workTitle": "Caving through design",
+    "year": 2022,
+    "workType": "Poster",
+    "path": "nishtha-nanda/nishtha-nanda-caving-through-design",
+    "workAmount": 2,
+    "extension": ".jpg"
+  },
+  {
+    "emailAddress": "ychoi15@risd.edu",
+    "fullName": "Ri (Yeri) Choi",
+    "prefferedName": "Ri Choi",
+    "website": "yeri-choi.com",
+    "workTitle": "Picky Eater",
+    "year": 2022,
+    "workType": "2 Posters as a Set",
+    "path": "ri-choi/ri-choi-picky-eater",
+    "workAmount": 1,
+    "extension": ".jpg"
+  },
+  {
+    "emailAddress": "ychoi15@risd.edu",
+    "fullName": "Ri (Yeri) Choi",
+    "prefferedName": "Ri Choi",
+    "website": "yeri-choi.com",
+    "workTitle": "Insect Museum Identity Design",
+    "year": 2022,
+    "workType": "Identity",
+    "path": "ri-choi/ri-choi-insect-museum",
+    "workAmount": 4,
+    "extension": ".jpg"
+  },
+  {
+    "emailAddress": "ychoi15@risd.edu",
+    "fullName": "Ri (Yeri) Choi",
+    "prefferedName": "Ri Choi",
+    "website": "yeri-choi.com",
+    "workTitle": "Faux All Identity Design",
+    "year": 2022,
+    "workType": "Identity",
+    "path": "ri-choi/ri-choi-faux-all",
+    "workAmount": 4,
+    "extension": ".jpg"
+  },
+  {
+    "emailAddress": "ychoi15@risd.edu",
+    "fullName": "Ri (Yeri) Choi",
+    "prefferedName": "Ri Choi",
+    "website": "yeri-choi.com",
+    "workTitle": "Small Beings",
+    "year": 2022,
+    "workType": "Poster",
+    "path": "ri-choi/ri-choi-small-beings",
+    "workAmount": 1,
+    "extension": ".jpg"
+  },
+  {
     "emailAddress": "sdeng@risd.edu",
     "fullName": "Sharlene Deng",
     "prefferedName": "Sharlene Deng",
@@ -1608,6 +1860,66 @@
     "extension": ".png"
   },
   {
+    "emailAddress": "ssantana@risd.edu",
+    "fullName": "sofia santana",
+    "prefferedName": "sofia santana",
+    "website": "ssantanaa.cargo.site",
+    "workTitle": "Faded Björk",
+    "year": 2022,
+    "workType": "Poster",
+    "path": "sofia-santana/sofia-santana-spraypaint-faded-bjork",
+    "workAmount": 1,
+    "extension": ".jpg"
+  },
+  {
+    "emailAddress": "ssantana@risd.edu",
+    "fullName": "sofia santana",
+    "prefferedName": "sofia santana",
+    "website": "ssantanaa.cargo.site",
+    "workTitle": "Smiley",
+    "year": 2021,
+    "workType": "Poster",
+    "path": "sofia-santana/sofia-santana-smiley",
+    "workAmount": 1,
+    "extension": ".jpg"
+  },
+  {
+    "emailAddress": "ssantana@risd.edu",
+    "fullName": "sofia santana",
+    "prefferedName": "sofia santana",
+    "website": "ssantanaa.cargo.site",
+    "workTitle": "Spray Paint Exp",
+    "year": 2022,
+    "workType": "Poster",
+    "path": "sofia-santana/sofia-santana-spraypaint",
+    "workAmount": 2,
+    "extension": ".jpg"
+  },
+  {
+    "emailAddress": "sju01@risd.edu",
+    "fullName": "Steve Ju",
+    "prefferedName": "Steve Seongmin Ju",
+    "website": "steveseongminju.com",
+    "workTitle": "GwanMulDae 1/8th",
+    "year": 2023,
+    "workType": "Spacial/Sculptural",
+    "path": "steve-ju/steve-ju-gwan-mul-dae",
+    "workAmount": 1,
+    "extension": ".jpg"
+  },
+  {
+    "emailAddress": "sju01@risd.edu",
+    "fullName": "Steve Ju",
+    "prefferedName": "Steve Seongmin Ju",
+    "website": "steveseongminju.com",
+    "workTitle": "Sketchbook 1",
+    "year": "April 2021 - Oct 2022",
+    "workType": "sketches/sketchbook + Identity",
+    "path": "steve-ju/steve-ju-sketchbook",
+    "workAmount": 1,
+    "extension": ".jpg"
+  },
+  {
     "emailAddress": "vlockwoo@risd.edu",
     "fullName": "Valeria Lockwood",
     "prefferedName": "Val",
@@ -1617,6 +1929,30 @@
     "workType": "Print (Publications, zines...etc)",
     "path": "valeria-lockwood/valeria-lockwood-hecho-en-puerto-rico",
     "workAmount": 6,
+    "extension": ".jpg"
+  },
+  {
+    "emailAddress": "vlockwoo@risd.edu",
+    "fullName": "Valeria Lockwood",
+    "prefferedName": "Valeria Lockwood",
+    "website": "valerialockwood.cargo.site",
+    "workTitle": "Un Camino de Amor",
+    "year": 2021,
+    "workType": "Spacial/Sculptural",
+    "path": "valeria-lockwood/valeria-lockwood-un-camino-de-amor",
+    "workAmount": 6,
+    "extension": ".jpg"
+  },
+  {
+    "emailAddress": "vlockwoo@risd.edu",
+    "fullName": "Valeria Lockwood",
+    "prefferedName": "Valeria Lockwood",
+    "website": "valerialockwood.cargo.site",
+    "workTitle": "Say You Love Me - Monophonics",
+    "year": 2022,
+    "workType": "Poster",
+    "path": "valeria-lockwood/valeria-lockwood-monophonics",
+    "workAmount": 4,
     "extension": ".jpg"
   },
   {
@@ -1692,6 +2028,54 @@
     "extension": ".png"
   },
   {
+    "emailAddress": "wluan@risd.edu",
+    "fullName": "Wayne Luan",
+    "prefferedName": "Wayne",
+    "website": "wayneluan.com",
+    "workTitle": "Antenna Workspaces",
+    "year": 2022,
+    "workType": "Identity",
+    "path": "wayne-luan/wayne-luan-antenna-workspaces",
+    "workAmount": 6,
+    "extension": ".jpg"
+  },
+  {
+    "emailAddress": "wluan@risd.edu",
+    "fullName": "Wayne Luan",
+    "prefferedName": "Wayne",
+    "website": "wayneluan.com",
+    "workTitle": "Microtypography",
+    "year": 2020,
+    "workType": "Poster",
+    "path": "wayne-luan/wayne-luan-microtypography",
+    "workAmount": 5,
+    "extension": ".jpg"
+  },
+  {
+    "emailAddress": "wluan@risd.edu",
+    "fullName": "Wayne Luan",
+    "prefferedName": "Wayne",
+    "website": "wayneluan.com",
+    "workTitle": "CONTROLLERS Concert",
+    "year": 2021,
+    "workType": "Identity",
+    "path": "wayne-luan/wayne-luan-controllers-concert-identity",
+    "workAmount": 4,
+    "extension": ".png"
+  },
+  {
+    "emailAddress": "wluan@risd.edu",
+    "fullName": "Wayne Luan",
+    "prefferedName": "Wayne",
+    "website": "wayneluan.com",
+    "workTitle": "CONTROLLERS Concert",
+    "year": 2021,
+    "workType": "Identity",
+    "path": "wayne-luan/wayne-luan-controllers-concert-mockups",
+    "workAmount": 2,
+    "extension": ".jpg"
+  },
+  {
     "emailAddress": "yli16@risd.edu",
     "fullName": "Yanlin Li",
     "prefferedName": "Yanlin Li",
@@ -1712,7 +2096,31 @@
     "year": 2022,
     "workType": "Hanging Fabric",
     "path": "yasemin-sarihan/yasemin-sarihan-rug-population-flag",
+    "workAmount": 4,
+    "extension": ".jpg"
+  },
+  {
+    "emailAddress": "ysarihan@risd.edu",
+    "fullName": "Yasemin Sarıhan",
+    "prefferedName": "Yasemin Sarıhan",
+    "website": "yaseminsarihan.com",
+    "workTitle": "On Metal",
+    "year": 2022,
+    "workType": "Print",
+    "path": "yasemin-sarihan/yasemin-sarihan-on-metal",
     "workAmount": 1,
+    "extension": ".jpg"
+  },
+  {
+    "emailAddress": "ysarihan@risd.edu",
+    "fullName": "Yasemin Sarıhan",
+    "prefferedName": "Yasemin Sarıhan",
+    "website": "yaseminsarihan.com",
+    "workTitle": "Rave as Medium",
+    "year": 2022,
+    "workType": "Spacial/Sculptural",
+    "path": "yasemin-sarihan/yasemin-sarihan-rave-as-medium",
+    "workAmount": 3,
     "extension": ".jpg"
   },
   {
