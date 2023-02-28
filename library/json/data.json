@@ -72,6 +72,54 @@
     "extension": ".jpg"
   },
   {
+    "emailAddress": "ylim03@risd.edu",
+    "fullName": "Youjin Lim",
+    "prefferedName": "Amy Youjin Lim",
+    "website": "ylim03.myportfolio.com",
+    "workTitle": "Matilda Serif",
+    "year": 2022,
+    "workType": "Typography/type",
+    "path": "amy-youjin-lim/amy-youjin-lim-matilda-serif",
+    "workAmount": 1,
+    "extension": ".png"
+  },
+  {
+    "emailAddress": "ylim03@risd.edu",
+    "fullName": "Youjin Lim",
+    "prefferedName": "Amy Youjin Lim",
+    "website": "ylim03.myportfolio.com",
+    "workTitle": "Misjudge Zebra",
+    "year": 2022,
+    "workType": "Print (Publications, zines...etc)",
+    "path": "amy-youjin-lim/amy-youjin-lim-misjudge-zebra",
+    "workAmount": 1,
+    "extension": ".jpg"
+  },
+  {
+    "emailAddress": "ylim03@risd.edu",
+    "fullName": "Youjin Lim",
+    "prefferedName": "Amy Youjin Lim",
+    "website": "ylim03.myportfolio.com",
+    "workTitle": "Surreal Photobook",
+    "year": 2021,
+    "workType": "Print (Publications, zines...etc)",
+    "path": "amy-youjin-lim/amy-youjin-lim-surreal-photobook",
+    "workAmount": 1,
+    "extension": ".jpg"
+  },
+  {
+    "emailAddress": "ylim03@risd.edu",
+    "fullName": "Youjin Lim",
+    "prefferedName": "Amy Youjin Lim",
+    "website": "ylim03.myportfolio.com",
+    "workTitle": "KWRL Poster",
+    "year": 2022,
+    "workType": "Poster",
+    "path": "amy-youjin-lim/amy-youjin-lim-kwrl-poster",
+    "workAmount": 2,
+    "extension": ".jpg"
+  },
+  {
     "emailAddress": "yhuang15@risd.edu",
     "fullName": "Anita Huang",
     "prefferedName": "Anita Huang",
@@ -560,7 +608,7 @@
     "year": 2022,
     "workType": "Spacial/Sculptural",
     "path": "eleanor-ryan/eleanor-ryan-yee",
-    "workAmount": 1,
+    "workAmount": 2,
     "extension": ".jpg"
   },
   {
@@ -694,6 +742,18 @@
     "path": "emma-noel/emma-noel-the-scan-series-nyabf",
     "workAmount": 1,
     "extension": ".jpg"
+  },
+  {
+    "emailAddress": "",
+    "fullName": "",
+    "prefferedName": "GD Sneior Class of 2023",
+    "website": "",
+    "workTitle": "Exhibition Scan",
+    "year": "",
+    "workType": "",
+    "path": "senior-class/exhibition-scan",
+    "workAmount": 8,
+    "extension": ".webp"
   },
   {
     "emailAddress": "hspuria@risd.edu",
@@ -1020,6 +1080,42 @@
     "extension": ".webp"
   },
   {
+    "emailAddress": "jmyung01@risd.edu",
+    "fullName": "Jaesun Myung",
+    "prefferedName": "Jaesun Myung",
+    "website": "jaesunmyung.cargo.site",
+    "workTitle": "Silence-Relatum",
+    "year": 2022,
+    "workType": "Print + Installation",
+    "path": "jaesun-myung/jaesun-myung-silence-relatum",
+    "workAmount": 9,
+    "extension": ".jpg"
+  },
+  {
+    "emailAddress": "jmyung01@risd.edu",
+    "fullName": "Jaesun Myung",
+    "prefferedName": "Jaesun Myung",
+    "website": "jaesunmyung.cargo.site",
+    "workTitle": "Untitled",
+    "year": 2022,
+    "workType": "Photography",
+    "path": "jaesun-myung/jaesun-myung-untitled",
+    "workAmount": 5,
+    "extension": ".jpg"
+  },
+  {
+    "emailAddress": "jmyung01@risd.edu",
+    "fullName": "Jaesun Myung",
+    "prefferedName": "Jaesun Myung",
+    "website": "jaesunmyung.cargo.site",
+    "workTitle": "Ordered in Time",
+    "year": 2022,
+    "workType": "Paper collage",
+    "path": "jaesun-myung/jaesun-myung-ordered-in-time",
+    "workAmount": 1,
+    "extension": ".jpg"
+  },
+  {
     "emailAddress": "jperkins@risd.edu",
     "fullName": "Jessica Perkins",
     "prefferedName": "Jessica Perkins",
@@ -1332,6 +1428,18 @@
     "extension": ".jpg"
   },
   {
+    "emailAddress": "ltrue@risd.edu",
+    "fullName": "Lilia True",
+    "prefferedName": "Lilia True",
+    "website": "instagram.com/liliatrue",
+    "workTitle": "PVD",
+    "year": 2022,
+    "workType": "Poster",
+    "path": "lilia-true/lilia-true-pvd",
+    "workAmount": 1,
+    "extension": ".jpg"
+  },
+  {
     "emailAddress": "mcuschie@risd.edu",
     "fullName": "Matthew Cuschieri",
     "prefferedName": "Matthew Cuschieri",
@@ -1568,6 +1676,18 @@
     "year": 2022,
     "workType": "Spacial/Sculptural",
     "path": "mizuki-hanada/mizuki-hanada-untitled",
+    "workAmount": 1,
+    "extension": ".jpg"
+  },
+  {
+    "emailAddress": "mhanada@risd.edu",
+    "fullName": "Mizuki Hanada",
+    "prefferedName": "Mizuki Hanada",
+    "website": "mizukihanada.cargo.site",
+    "workTitle": "Asterisk Volume 01: An Interview With Mio Yokota",
+    "year": 2022,
+    "workType": "Print (Publications, zines...etc)",
+    "path": "mizuki-hanada/mizuki-hanada-asterisk-volume",
     "workAmount": 1,
     "extension": ".jpg"
   },
@@ -1861,7 +1981,7 @@
   },
   {
     "emailAddress": "ssantana@risd.edu",
-    "fullName": "sofia santana",
+    "fullName": "Sofia Santana",
     "prefferedName": "Sofia Santana",
     "website": "ssantanaa.cargo.site",
     "workTitle": "Faded Björk",
@@ -1873,7 +1993,7 @@
   },
   {
     "emailAddress": "ssantana@risd.edu",
-    "fullName": "sofia santana",
+    "fullName": "Sofia Santana",
     "prefferedName": "Sofia Santana",
     "website": "ssantanaa.cargo.site",
     "workTitle": "Smiley",
@@ -1885,7 +2005,7 @@
   },
   {
     "emailAddress": "ssantana@risd.edu",
-    "fullName": "sofia santana",
+    "fullName": "Sofia Santana",
     "prefferedName": "Sofia Santana",
     "website": "ssantanaa.cargo.site",
     "workTitle": "Spray Paint Exp",
@@ -1917,6 +2037,18 @@
     "workType": "sketches/sketchbook + Identity",
     "path": "steve-ju/steve-ju-sketchbook",
     "workAmount": 1,
+    "extension": ".jpg"
+  },
+  {
+    "emailAddress": "swang16@risd.edu",
+    "fullName": "Shuixin Wang",
+    "prefferedName": "Ursula Wang",
+    "website": "shuixinwang.net",
+    "workTitle": "Reframe the Space with Colors and Shape",
+    "year": 2022,
+    "workType": "Poster",
+    "path": "ursula-wang/ursula-wang-reframe-the-space",
+    "workAmount": 3,
     "extension": ".jpg"
   },
   {
