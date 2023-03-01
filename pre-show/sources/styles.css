@@ -1,0 +1,603 @@
+/* HTML */
+:root{
+    --stroke-width: 2px;
+    --stroke-color: #000;
+}
+
+
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    position: relative;
+}
+
+main{
+    position: relative;
+    max-width: 1700px;
+    margin: 0 auto;
+    padding: 1rem 4rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+
+
+
+
+
+
+#top-title{
+    width: 50vw;
+}
+
+#false-file{
+    position: relative;
+    width: 100%;
+
+    border: var(--stroke-width) solid var(--stroke-color);
+    border-top-right-radius: 4vw;
+    border-top-left-radius: 4vw;
+
+    background-color: #fff;
+    margin-top: -0.75rem;
+
+    background-repeat: repeat-x;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 1;
+}
+
+#web-title{
+    width: calc(100% + 4rem);
+    margin: -1rem 0 0 -2rem;
+    z-index: 1;
+}
+
+#date-year{
+    position: absolute;
+    inset: 0 0 0 0;
+    width: calc(100% + 8rem);
+    margin: -4rem;
+
+    z-index: 0;
+    pointer-events: none;
+}
+
+
+
+
+
+
+
+
+
+#when{
+    width: 100%;
+    position: relative;
+    margin: -1rem 0;
+    z-index: 1;
+}
+
+#month-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: calc(100% + 6rem);
+    margin-left: -3rem;
+
+    background-image: url(../assets/desktop-svg/date-month-desktop.svg);
+}
+
+.date-container{
+    position: relative;
+    width: 100%;
+    height: 45vh;
+}
+
+.date-svg{
+    width: calc(100% + 6rem);
+    height: 100%;
+    margin-left: -1rem;
+}
+
+
+
+
+
+
+
+
+
+h1{
+    font-family: "aktiv-grotesk-condensed", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    text-transform: uppercase;
+
+    font-size: 3rem;
+    line-height: 3rem;
+
+    color: black;
+
+    white-space: nowrap;
+}
+
+
+
+
+
+
+
+
+
+#credits{
+    width: calc(100% + 6rem);
+    margin: -1rem 0 -10vw -3rem;
+
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 1rem;
+    justify-content: center;
+    position: relative;
+
+    z-index: 1;
+}
+
+p{
+    font-family: "aktiv-grotesk-condensed", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    text-transform: uppercase;
+
+    font-size: 5rem;
+    line-height: 4.5rem;
+    white-space: nowrap;
+
+    color: black;
+    -webkit-text-fill-color: white;
+    -webkit-text-stroke-width: var(--stroke-width);
+    -webkit-text-stroke-color: var(--stroke-color);
+
+    display: block;
+    transform: scaleY(1.5);
+}
+
+p a{
+    color: black;
+    -webkit-text-fill-color: white;
+    -webkit-text-stroke-width: var(--stroke-width);
+    -webkit-text-stroke-color: var(--stroke-color);
+
+    cursor: pointer;
+    text-decoration: none;
+}
+
+p a:hover{
+    -webkit-text-fill-color: rgba(0, 0, 0, 1);
+}
+
+p a:visited{
+    color: inherit;
+}
+
+
+
+
+
+
+
+
+
+.other-files{
+    width: 100%;
+    height: 5vw;
+
+    border-top: var(--stroke-width) solid var(--stroke-color);
+}
+
+#bottom-title{
+    width: 30vw;
+    position: relative;
+    inset: 0 auto;
+    margin: -1% auto 0 auto;
+    z-index: 0;
+}
+
+#footer{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: -3.5% 0 1rem 0;
+}
+
+h2{
+    font-family: "aktiv-grotesk-condensed", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+}
+
+h2 a{
+    cursor: pointer;
+    text-decoration: none;
+    color: #000;
+}
+
+
+
+
+
+
+
+
+
+#web-gradient{
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: calc(100% + 1rem);
+    transform: translateY(-1rem);
+    mix-blend-mode: multiply;
+    pointer-events: none;
+    z-index: 2;
+}
+
+
+
+
+
+
+
+
+
+/* MEDIA QUERIES STARTS HERE ------------------------------------------------------------------------------------------ */
+@media only screen and (min-width: 1700px) {
+    #top-title{
+        width: 850px;
+    }
+
+    #bottom-title{
+        width: 510px;
+    }
+
+    .other-files{
+        height: 85px;
+    }
+
+    #credits{
+        margin: -1rem 0 -170px -3rem;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    main{
+        padding: 2vh 5vw;
+    }
+
+    #false-file{
+        margin-top: -1vh;
+    }
+    
+    #web-title{
+        width: calc(100% + 10vw);
+        margin: -1vh 0 0 -5vw;
+    }
+    
+    #date-year{
+        width: calc(100% + 10vw);
+        margin: -5vw;
+    }
+
+    #when{
+        margin: -1vh 0;
+    }
+    
+    #month-container{
+        width: calc(100% + 8vw);
+        margin-left: -4vw;
+    }
+    
+    .date-container{
+        width: calc(100% + 8vw);
+        margin-left: -4vw;
+        height: 45vh;
+    }
+
+    .date-svg{
+        width: 100%;
+        margin-left: 0;
+    }
+
+    #credits{
+        width: calc(100% + 8vw);
+        margin: -2vw 0 -10vw -4vw;
+    }
+}
+
+@media only screen and (max-width: 957px) {
+    .date-container{
+        height: 40vw;
+    }
+
+    p{
+        font-size: 4.5rem;
+        line-height: 4rem;
+    }
+
+    #bottom-title{
+        width: 50vw;
+        margin-top: -2%;
+    }
+
+    #footer{
+        flex-direction: column;
+        gap: 1rem;
+        margin: 1rem 0;
+    }
+}
+  
+@media only screen and (max-width: 886px) {
+    h1{
+        font-size: 5vw;
+        line-height: 5vw;
+    }
+
+    h2{
+        font-size: 2.5vw;
+        line-height: 2.25vw;
+    }
+
+    p{
+        font-size: 7.5vw;
+        line-height: 6.25vw;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    :root{
+        --stroke-width: 1px;
+        --stroke-color: #000;
+    }
+
+    #month-container{
+        background-image: url(../assets/mobile-svg/date-month-mobile.svg);
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    p{
+        font-size: 6vw;
+        line-height: 5vw;
+    }
+}
+
+
+
+
+
+
+
+
+
+/* PRINT SECTION STARTS HERE ------------------------------------------------------------------------------------------ */
+#print{
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+.print-container{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+
+
+
+
+
+#print-graphics{
+    padding: 1cm;
+    mix-blend-mode: multiply;
+}
+
+#print-year{
+    position: fixed;
+    height: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#print-top-container{
+    width: 100%;
+    height: 4%;
+    overflow: hidden;
+}
+
+#print-top-title{
+    width: 40%;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+#print-bottom-container{
+    width: 100%;
+    height: 2%;
+    overflow: hidden;
+}
+
+#print-bottom-title{
+    width: 25%;
+    margin-left: 50%;
+    transform: translate3d(-50%, -0.25cm, 0);
+}
+
+
+
+
+
+
+
+
+
+#print-file{
+    position: relative;
+    width: 100%;
+    height: 94%;
+
+    border: var(--stroke-width) solid var(--stroke-color);
+    border-top-right-radius: 1cm;
+    border-top-left-radius: 1cm;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#print-dots{
+    position: absolute;
+    inset: 0 0 auto 0;
+    z-index: 0;
+}
+
+#print-logo{
+    width: calc(100% + 1cm);
+    margin: -0.5cm 0 0 -0.5cm;
+    height: 30%;
+    z-index: 1;
+}
+
+.print-other-files{
+    width: 100%;
+    height: 1cm;
+
+    border-top: var(--stroke-width) solid var(--stroke-color);
+}
+
+
+
+
+
+
+
+
+
+#print-midground{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2cm;
+}
+
+#print-work-container{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#work-img{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+h3{
+    font-family: "aktiv-grotesk-condensed", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    text-transform: uppercase;
+
+    font-size: 2rem;
+    line-height: 2rem;
+
+    color: black;
+    -webkit-text-fill-color: rgba(0, 0, 0, 0);
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+
+h4{
+    font-family: "aktiv-grotesk-condensed", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    text-transform: uppercase;
+
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+}
+
+
+
+
+
+
+
+
+
+#print-foreground{
+    padding: 1cm;
+}
+
+#print-logo-container{
+    position: relative;
+    width: 100%;
+    height: 94%;
+    top: 4%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#print-logo-over{
+    width: calc(100% + 1cm);
+    margin: -0.5cm 0 0 -0.5cm;
+    height: 30%;
+    z-index: 1;
+}
+
+
+
+
+
+
+
+
+
+@media print {
+    @page{
+        margin: 0;
+    }
+
+    body{
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+
+    main{
+        display: none;
+    }
+
+    #print{
+        display: block;
+    }
+}
