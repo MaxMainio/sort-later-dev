@@ -252,6 +252,78 @@
     "extension": ".jpg"
   },
   {
+    "emailAddress": "agovinda@risd.edu",
+    "fullName": "Anmol Govinda Rao",
+    "prefferedName": "Anmol Govinda Rao",
+    "website": "anmolgrao.com",
+    "workTitle": "Biodiversity Infographics",
+    "year": 2021,
+    "workType": "Poster",
+    "path": "anmol-govinda-rao/anmol-govinda-rao-biodiversity",
+    "workAmount": 1,
+    "extension": ".jpg"
+  },
+  {
+    "emailAddress": "agovinda@risd.edu",
+    "fullName": "Anmol Govinda Rao",
+    "prefferedName": "Anmol Govinda Rao",
+    "website": "anmolgrao.com",
+    "workTitle": "Landmark Poster",
+    "year": 2020,
+    "workType": "Poster",
+    "path": "anmol-govinda-rao/anmol-govinda-rao-landmark-poster",
+    "workAmount": 1,
+    "extension": ".jpg"
+  },
+  {
+    "emailAddress": "agovinda@risd.edu",
+    "fullName": "Anmol Govinda Rao",
+    "prefferedName": "Anmol Govinda Rao",
+    "website": "anmolgrao.com",
+    "workTitle": "Official Audio",
+    "year": 2021,
+    "workType": "Poster",
+    "path": "anmol-govinda-rao/anmol-govinda-rao-official-audio",
+    "workAmount": 1,
+    "extension": ".png"
+  },
+  {
+    "emailAddress": "agovinda@risd.edu",
+    "fullName": "Anmol Govinda Rao",
+    "prefferedName": "Anmol Govinda Rao",
+    "website": "anmolgrao.com",
+    "workTitle": "Visual Systems",
+    "year": 2020,
+    "workType": "Poster",
+    "path": "anmol-govinda-rao/anmol-govinda-rao-visual-systems",
+    "workAmount": 3,
+    "extension": ".jpg"
+  },
+  {
+    "emailAddress": "agovinda@risd.edu",
+    "fullName": "Anmol Govinda Rao",
+    "prefferedName": "Anmol Govinda Rao",
+    "website": "anmolgrao.com",
+    "workTitle": "Collection",
+    "year": 2021,
+    "workType": "Poster + Installation",
+    "path": "anmol-govinda-rao/anmol-govinda-rao-collection",
+    "workAmount": 1,
+    "extension": ".jpg"
+  },
+  {
+    "emailAddress": "agovinda@risd.edu",
+    "fullName": "Anmol Govinda Rao",
+    "prefferedName": "Anmol Govinda Rao",
+    "website": "anmolgrao.com",
+    "workTitle": "Interview with Jack Madden",
+    "year": 2022,
+    "workType": "Print (Publications, zines...etc)",
+    "path": "anmol-govinda-rao/anmol-govinda-rao-jack-madden-interview",
+    "workAmount": 1,
+    "extension": ".jpg"
+  },
+  {
     "emailAddress": "sding01@risd.edu",
     "fullName": "Siwu Ding",
     "prefferedName": "Annie Ren",
@@ -358,6 +430,54 @@
     "path": "ashley-yae/ashley-yae-the-moors",
     "workAmount": 1,
     "extension": ".gif"
+  },
+  {
+    "emailAddress": "ayae@risd.edu",
+    "fullName": "Ashley Michelle Yae",
+    "prefferedName": "Ashley Yae",
+    "website": "ashleyyae.com",
+    "workTitle": "Exhibit Design",
+    "year": 2022,
+    "workType": "Print (Publications, zines...etc)",
+    "path": "ashley-yae/ashley-yae-exhibit-design-publication-",
+    "workAmount": 6,
+    "extension": ".jpg"
+  },
+  {
+    "emailAddress": "ayae@risd.edu",
+    "fullName": "Ashley Michelle Yae",
+    "prefferedName": "Ashley Yae",
+    "website": "ashleyyae.com",
+    "workTitle": "World Heritage Changdeokgung",
+    "year": 2022,
+    "workType": "Poster Print (Publications, zines...etc)",
+    "path": "ashley-yae/ashley-yae-world-heritage",
+    "workAmount": 4,
+    "extension": ".jpg"
+  },
+  {
+    "emailAddress": "ayae@risd.edu",
+    "fullName": "Ashley Michelle Yae",
+    "prefferedName": "Ashley Yae",
+    "website": "ashleyyae.com",
+    "workTitle": "Cropping in Type",
+    "year": 2021,
+    "workType": "Print (Publications, zines...etc)",
+    "path": "ashley-yae/ashley-yae-cropping-in-type",
+    "workAmount": 1,
+    "extension": ".png"
+  },
+  {
+    "emailAddress": "ayae@risd.edu",
+    "fullName": "Ashley Michelle Yae",
+    "prefferedName": "Ashley Yae",
+    "website": "ashleyyae.com",
+    "workTitle": "Props from: \"A Long Way From Chicago",
+    "year": 2022,
+    "workType": "Print (Publications, zines...etc)",
+    "path": "ashley-yae/ashley-yae-long-way-from-chicago",
+    "workAmount": 1,
+    "extension": ".jpg"
   },
   {
     "emailAddress": "bchiu@risd.edu",
@@ -688,6 +808,30 @@
     "fullName": "Emma Noel",
     "prefferedName": "Emma Noel",
     "website": "emmanoel.cargo.site",
+    "workTitle": "Plywood Cube",
+    "year": 2022,
+    "workType": "Furniture",
+    "path": "emma-noel/emma-noel-plywood-cube",
+    "workAmount": 1,
+    "extension": ".jpg"
+  },
+  {
+    "emailAddress": "enoel@risd.edu",
+    "fullName": "Emma Noel",
+    "prefferedName": "Emma Noel",
+    "website": "emmanoel.cargo.site",
+    "workTitle": "Time & Surface",
+    "year": 2022,
+    "workType": "Poster",
+    "path": "emma-noel/emma-noel-time-and-surface",
+    "workAmount": 1,
+    "extension": ".jpg"
+  },
+  {
+    "emailAddress": "enoel@risd.edu",
+    "fullName": "Emma Noel",
+    "prefferedName": "Emma Noel",
+    "website": "emmanoel.cargo.site",
     "workTitle": "Erleichda Regular",
     "year": 2022,
     "workType": "Type Design / Poster",
@@ -716,7 +860,7 @@
     "year": 2022,
     "workType": "Print (Publications, zines...etc)",
     "path": "emma-noel/emma-noel-print-ness",
-    "workAmount": 2,
+    "workAmount": 1,
     "extension": ".jpg"
   },
   {
@@ -1260,6 +1404,42 @@
     "extension": ".jpg"
   },
   {
+    "emailAddress": "kzhou01@risd.edu",
+    "fullName": "Karen Zhou",
+    "prefferedName": "Karen Zhou",
+    "website": "karenzhoudesign.cargo.site",
+    "workTitle": "Sweet N' Low",
+    "year": 2022,
+    "workType": "Poster",
+    "path": "karen-zhou/karen-zhou-sweet-n-low",
+    "workAmount": 3,
+    "extension": ".jpg"
+  },
+  {
+    "emailAddress": "kzhou01@risd.edu",
+    "fullName": "Karen Zhou",
+    "prefferedName": "Karen Zhou",
+    "website": "karenzhoudesign.cargo.site",
+    "workTitle": "Give Me Love",
+    "year": 2021,
+    "workType": "Poster",
+    "path": "karen-zhou/karen-zhou-give-me-love",
+    "workAmount": 2,
+    "extension": ".jpg"
+  },
+  {
+    "emailAddress": "kzhou01@risd.edu",
+    "fullName": "Karen Zhou",
+    "prefferedName": "Karen Zhou",
+    "website": "karenzhoudesign.cargo.site",
+    "workTitle": "Experiential Design Process Reader",
+    "year": 2022,
+    "workType": "Print (Publications, zines...etc)",
+    "path": "karen-zhou/karen-zhou-process-reader",
+    "workAmount": 5,
+    "extension": ".jpg"
+  },
+  {
     "emailAddress": "khodgdon@risd.edu",
     "fullName": "Kevin Hodgdon",
     "prefferedName": "Kevin Hodgdon",
@@ -1440,6 +1620,18 @@
     "extension": ".jpg"
   },
   {
+    "emailAddress": "mrafi@risd.edu",
+    "fullName": "Mahnoor Rafi",
+    "prefferedName": "Mahnoor Rafi",
+    "website": "mahnoorrafi.com",
+    "workTitle": "Nishaan",
+    "year": 2022,
+    "workType": "Campaign",
+    "path": "mahnoor-rafi/mahnoor-rafi-nishaan",
+    "workAmount": 5,
+    "extension": ".jpg"
+  },
+  {
     "emailAddress": "mcuschie@risd.edu",
     "fullName": "Matthew Cuschieri",
     "prefferedName": "Matthew Cuschieri",
@@ -1606,6 +1798,30 @@
     "path": "mio-kosaka/mio-kosaka-process-reader",
     "workAmount": 1,
     "extension": ".jpg"
+  },
+  {
+    "emailAddress": "mkosaka@risd.edu",
+    "fullName": "Mio Kosaka",
+    "prefferedName": "Mio Kosaka",
+    "website": "miokosaka.com",
+    "workTitle": "I Miss U",
+    "year": 2022,
+    "workType": "foam core and plotter paper",
+    "path": "mio-kosaka/mio-kosaka-i-miss-u",
+    "workAmount": 1,
+    "extension": ".png"
+  },
+  {
+    "emailAddress": "mkosaka@risd.edu",
+    "fullName": "Mio Kosaka",
+    "prefferedName": "Mio Kosaka",
+    "website": "miokosaka.com",
+    "workTitle": "US Animal Map",
+    "year": 2022,
+    "workType": "Poster",
+    "path": "mio-kosaka/mio-kosaka-us-animal-map",
+    "workAmount": 1,
+    "extension": ".webp"
   },
   {
     "emailAddress": "mhanada@risd.edu",
