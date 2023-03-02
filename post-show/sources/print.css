@@ -1,0 +1,21 @@
+/* HTML */
+@page{
+    margin: 0;
+}
+
+:root{
+    --stroke-width: 2px;
+    --stroke-color: #000;
+}
+
+
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    position: relative;
+    background-color: red;
+}
