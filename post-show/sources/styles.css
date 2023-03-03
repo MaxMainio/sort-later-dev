@@ -2,6 +2,7 @@
 :root{
     --stroke-width: 2px;
     --stroke-color: #000;
+    --folder-width: 3%;
 }
 
 
@@ -28,7 +29,7 @@ article{
     width: 100vw;
     height: 100vh;
     position: fixed;
-    padding: 0 5%;
+    padding: 0 calc(var(--folder-width) + 16px);
 
     overflow-y: scroll;
     -ms-overflow-style: none;
@@ -39,9 +40,19 @@ article::-webkit-scrollbar{
     display: none;
 }
 
+.animatable{
+    transition: all 0.5s ease-in-out;
+}
+
+.removed{
+    transform: translateX(calc(-100% + var(--folder-width)));
+}
+
+
+
 section{
     width: 100%;
-    max-width: 1400px;
+    max-width: 1600px;
     height: 500vh;
     position: relative;
     margin: 0 auto;
@@ -58,21 +69,61 @@ section{
 
 
 
-#credits{
+#students{
     background-color: red;
-    clip-path: polygon(0% 0%, 100% 0%, 100% 30%, 95% 36%, 95% 100%, 0% 100%);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 30%, calc(100% - var(--folder-width)) 36%, calc(100% - var(--folder-width)) 100%, 0% 100%);
 }
 
 
 
-#top-title img{
+.top-title{
     width: 50vw;
     position: relative;
     margin: 32px auto -16px auto;
 }
 
 #false-file{
+    position: relative;
     width: 100%;
+
+    border: var(--stroke-width) solid var(--stroke-color);
+    border-top-right-radius: 4vw;
+    border-top-left-radius: 4vw;
+
+    background-color: #fff;
+    margin-top: -0.75rem;
+
+    background-repeat: repeat-x;
+
+    /* display: flex;
+    flex-direction: column;
+    justify-content: space-between; */
+}
+
+
+
+.date-year{
+    position: absolute;
+    width: calc(100% + 64px);
+    margin: -32px auto auto -32px;
+
+    z-index: 0;
+    pointer-events: none;
+}
+
+.web-title{
+    position: relative;
+    width: calc(100% + 32px);
+    margin: -16px auto auto -16px;
+
+    z-index: 1;
+}
+
+
+
+#when{
+    width: 100%;
+    position: relative;
 }
 
 
@@ -115,13 +166,9 @@ section{
 
 #work{
     background-color: green;
-    clip-path: polygon(0% 0%, 100% 0%, 100% 63%, 95% 69%, 95% 100%, 0% 100%);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 63%, calc(100% - var(--folder-width)) 69%, calc(100% - var(--folder-width)) 100%, 0% 100%);
 }
 
 #exhibition{
     background-color: blue;
-}
-
-.removed{
-    transform: translateX(-95%);
 }
