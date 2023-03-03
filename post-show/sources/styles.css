@@ -29,33 +29,99 @@ article{
     height: 100vh;
     position: fixed;
     padding: 0 5%;
+
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
+
+article::-webkit-scrollbar{
+    display: none;
+}
+
+section{
+    width: 100%;
+    max-width: 1400px;
+    height: 500vh;
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+
+
+
+
+
 
 #credits{
     background-color: red;
-    clip-path: polygon(0% 0%, 100% 0%, 100% 33%, 95% 33%, 95% 100%, 0% 100%);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 30%, 95% 36%, 95% 100%, 0% 100%);
 }
+
+
+
+#top-title img{
+    width: 50vw;
+    position: relative;
+    margin: 32px auto -16px auto;
+}
+
+#false-file{
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 #work{
     background-color: green;
-    clip-path: polygon(0% 0%, 100% 0%, 100% 66%, 95% 66%, 95% 100%, 0% 100%);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 63%, 95% 69%, 95% 100%, 0% 100%);
 }
 
 #exhibition{
     background-color: blue;
 }
 
-
-
-
-
-
-
-section{
-    width: 100%;
-    max-width: 1400px;
-    height: 100%;
-    position: relative;
-    margin: 0 auto;
-    background-color: aqua;
+.removed{
+    transform: translateX(-95%);
 }
