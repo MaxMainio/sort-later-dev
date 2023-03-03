@@ -172,7 +172,7 @@ section{
     position: relative;
 }
 
-p{
+#credits p{
     font-family: "aktiv-grotesk-condensed", sans-serif;
     font-weight: 900;
     font-style: normal;
@@ -191,7 +191,7 @@ p{
     transform: scaleY(1.5);
 }
 
-p a{
+#credits p a{
     color: var(--type-color);
     -webkit-text-fill-color: var(--base-color);
     -webkit-text-stroke-width: var(--stroke-width);
@@ -201,11 +201,11 @@ p a{
     text-decoration: none;
 }
 
-p a:hover{
+#credits p a:hover{
     -webkit-text-fill-color: rgba(0, 0, 0, 1);
 }
 
-p a:visited{
+#credits p a:visited{
     color: inherit;
 }
 
@@ -309,8 +309,17 @@ h3 a{
 
 
 #work{
-    background-color: green;
+    background-color: var(--base-color);
     clip-path: polygon(0% 0%, 100% 0%, 100% 63%, calc(100% - var(--folder-width)) 69%, calc(100% - var(--folder-width)) 100%, 0% 100%);
+}
+
+#web-gradient{
+    position: absolute;
+    inset: 1rem 0 0 0;
+    width: 100vw;
+    transform: translateY(-1rem);
+    mix-blend-mode: multiply;
+    pointer-events: none;
 }
 
 #exhibition{
