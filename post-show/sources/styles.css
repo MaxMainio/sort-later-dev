@@ -32,7 +32,7 @@ article{
     width: 100vw;
     height: 100vh;
     position: fixed;
-    padding: 0 calc(var(--folder-width) + 16px);
+    padding: 0 calc(var(--folder-width) + 48px);
 
     overflow-y: scroll;
     -ms-overflow-style: none;
@@ -115,7 +115,6 @@ section{
     border-top-left-radius: 4vw;
 
     background-color: var(--base-color);
-    margin-top: -0.75rem;
 
     background-repeat: repeat-x;
     z-index: 1;
@@ -261,7 +260,7 @@ section{
     width: 30vw;
     position: relative;
     inset: 0 auto;
-    margin: -1% auto 0 auto;
+    margin: -12px auto 0 auto;
     z-index: 0;
 }
 
