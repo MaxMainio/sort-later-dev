@@ -115,14 +115,47 @@ section{
     position: relative;
     width: calc(100% + 32px);
     margin: -16px auto auto -16px;
-
-    z-index: 1;
 }
 
 
 
 #when{
     width: 100%;
+    position: relative;
+}
+
+.date-container{
+    height: 45vh;
+    margin-top: -32px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+}
+
+.date-container img{
+    width: calc(100% + 64px);
+    height: 100%;
+    margin-left: -32px;
+
+    position: absolute;
+    inset: 0;
+}
+
+.date-container h2{
+    font-family: "aktiv-grotesk-condensed", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    text-transform: uppercase;
+
+    font-size: 3rem;
+    line-height: 3rem;
+
+    color: black;
+
+    white-space: nowrap;
     position: relative;
 }
 
