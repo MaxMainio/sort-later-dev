@@ -34,6 +34,10 @@ window.onload = (event) => {
     webGradient.style.background = generateGradient();
 }
 
+window.addEventListener('resize', e => {
+    webGradient.style.height = setWebGradientHeight();
+})
+
 
 
 

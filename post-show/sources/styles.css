@@ -53,6 +53,27 @@ article::-webkit-scrollbar{
 
 
 
+aside{
+    position: fixed;
+    right: 0;
+    width: var(--folder-width);
+    height: 33%;
+}
+
+#exhibition-tab{
+    bottom: 0;
+}
+
+#work-tab{
+    top: 33%;
+}
+
+#students-tab{
+    top: 0;
+}
+
+
+
 section{
     width: 100%;
     max-width: 1600px;
@@ -315,9 +336,8 @@ h3 a{
 
 #web-gradient{
     position: absolute;
-    inset: 1rem 0 0 0;
+    inset: 0;
     width: 100vw;
-    transform: translateY(-1rem);
     mix-blend-mode: multiply;
     pointer-events: none;
 }
