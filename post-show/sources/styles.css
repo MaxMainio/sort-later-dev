@@ -60,17 +60,25 @@ aside{
     height: 33%;
 }
 
-#exhibition-tab{
-    bottom: 0;
+aside h2{
+    font-family: "aktiv-grotesk-condensed", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+
+    transform: rotate(90deg);
+    cursor: pointer;
 }
 
-#work-tab{
-    top: 33%;
-}
 
-#students-tab{
-    top: 0;
-}
+
+
+
+
+
 
 
 
@@ -96,6 +104,15 @@ section{
 #students{
     background-color: var(--base-color);
     clip-path: polygon(0% 0%, 100% 0%, 100% 30%, calc(100% - var(--folder-width)) 36%, calc(100% - var(--folder-width)) 100%, 0% 100%);
+}
+
+#students-tab{
+    position: fixed;
+    inset: 0 0 auto auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 
@@ -333,6 +350,15 @@ h3 a{
     clip-path: polygon(0% 0%, 100% 0%, 100% 63%, calc(100% - var(--folder-width)) 69%, calc(100% - var(--folder-width)) 100%, 0% 100%);
 }
 
+#work-tab{
+    position: fixed;
+    inset: 33% 0 auto auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 #web-gradient{
     position: absolute;
     inset: 0;
@@ -342,5 +368,14 @@ h3 a{
 }
 
 #exhibition{
-    background-color: blue;
+    background-color: var(--type-color);
+}
+
+#exhibition-tab{
+    position: fixed;
+    inset: auto 0 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
