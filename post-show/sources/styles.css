@@ -1,9 +1,10 @@
 /* HTML */
 :root{
     --stroke-width: 2px;
-    --stroke-color: #000;
+    --stroke-color: #fff;
 
-    --base-color: #333;
+    --cover-color: #000;
+    --cover-type: #fff;
     --type-color: #000;
     --folder-width: 3vw;
 }
@@ -67,7 +68,7 @@ aside{
     -ms-overflow-style: none;
     scrollbar-width: none;
 
-    background-color: var(--base-color);
+    background-color: var(--cover-color);
     clip-path: polygon(0vw 0vh, 100vw 0vh, 100vw 47vh, calc(100vw - var(--folder-width)) 53vh, calc(100vw - var(--folder-width)) 100vh, 0vw 100vh);
 
     z-index: 1;
@@ -133,7 +134,7 @@ section{
     border-top-right-radius: 4vw;
     border-top-left-radius: 4vw;
 
-    background-color: var(--base-color);
+    background-color: var(--cover-color);
 
     background-repeat: repeat-x;
     z-index: 1;
@@ -208,8 +209,8 @@ section{
     line-height: 4.5rem;
     white-space: nowrap;
 
-    color: var(--type-color);
-    -webkit-text-fill-color: var(--base-color);
+    color: var(--cover-type);
+    -webkit-text-fill-color: var(--cover-color);
     -webkit-text-stroke-width: var(--stroke-width);
     -webkit-text-stroke-color: var(--stroke-color);
 
@@ -218,8 +219,8 @@ section{
 }
 
 #credits p a{
-    color: var(--type-color);
-    -webkit-text-fill-color: var(--base-color);
+    color: var(--cover-type);
+    -webkit-text-fill-color: var(--cover-color);
     -webkit-text-stroke-width: var(--stroke-width);
     -webkit-text-stroke-color: var(--stroke-color);
 
@@ -285,6 +286,24 @@ footer{
 
 
 
+#cover-gradient{
+    position: absolute;
+    inset: 0 auto 0 0;
+    height: 100%;
+    width: 97vw;
+    
+    mix-blend-mode: multiply;
+    z-index: 2;
+}
+
+
+
+
+
+
+
+
+
 
 
 
@@ -306,6 +325,10 @@ footer{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+#work-tab h1{
+    color: var(--type-color);
 }
 
 
@@ -343,12 +366,13 @@ footer{
     line-height: 1.5rem;
 
     max-width: 60ch;
+    color: var(--type-color);
 }
 
 hr{
     width: 100%;
     border-width: 2px;
-    border-color: var(--stroke-color);
+    border-color: var(--type-color);
 }
 
 
@@ -401,6 +425,7 @@ hr{
     line-height: 1.2rem;
 
     margin-top: 0.5rem;
+    color: var(--type-color);
 }
 
 
@@ -433,8 +458,6 @@ h1, h2, h3, h4, h5{
     font-weight: 900;
     font-style: normal;
     text-transform: uppercase;
-
-    color: var(--type-color);
 }
 
 h1{
@@ -442,6 +465,7 @@ h1{
     font-size: 1.5rem;
     line-height: 1.5rem;
 
+    color: var(--cover-type);
     transform: rotate(90deg);
 }
 
@@ -451,38 +475,42 @@ h2{
 
     white-space: nowrap;
     position: relative;
+
+    color: var(--cover-type);
 }
 
 h3{
     text-align: center;
     font-size: 1.5rem;
     line-height: 1.5rem;
+    color: var(--cover-type);
 }
 
 h3 a{
     text-decoration: none;
-    color: var(--type-color);
+    color: var(--cover-type);
     cursor: pointer;
 }
 
 h4{
     font-size: 1.5rem;
     line-height: 1.5rem;
+    color: var(--type-color);
 }
 
 h5{
     font-size: 1.5rem;
     line-height: 1.5rem;
 
-    color: var(--type-color);
+    color: var(--cover-type);
     -webkit-text-fill-color: white;
     -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: var(--stroke-color);
+    -webkit-text-stroke-color: var(--type-color);
 }
 
 p{
     font-family: "aktiv-grotesk", sans-serif;
     font-style: normal;
 
-    color: var(--type-color);
+    color: var(--cover-type);
 }
