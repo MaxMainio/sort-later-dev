@@ -2,26 +2,19 @@ console.log('https://www.youtube.com/watch?v=NuAKnbIr6TE');
 
 const favicon = document.querySelector("link[rel~='icon']");
 
-const exhibitionSlide = document.getElementById('exhibition');
-const workSlide = document.getElementById('work');
 const studentsSlide = document.getElementById('students');
+const workSlide = document.getElementById('work');
 
 const falseFile = document.getElementById('false-file');
 
-const webGradient = document.getElementById('web-gradient');
-const studentSection = document.getElementById('student-section');
+// const webGradient = document.getElementById('work');
+// const studentSection = document.getElementById('work-section');
 
 
 
 
 
 
-// const monthSvg = document.getElementById('month-container');
-
-// const printGradient = document.getElementById('print-gradient');
-// const printIMG = document.getElementById('work-img');
-// const workTitle = document.getElementById('work-title');
-// const studentName = document.getElementById('student-name');
 
 
 
@@ -30,13 +23,13 @@ window.onload = (event) => {
     favicon.href = 'assets/favicons/favicon-' + randomIntFromInterval(1, 10) + '.ico';
     falseFile.style.setProperty("background-image", getRandomWebDots());
 
-    webGradient.style.height = setWebGradientHeight();
-    webGradient.style.background = generateGradient();
+    // workSlide.style.height = setWebGradientHeight();
+    workSlide.style.background = generateGradient();
 }
 
-window.addEventListener('resize', e => {
-    webGradient.style.height = setWebGradientHeight();
-})
+// window.addEventListener('resize', e => {
+//     workSlide.style.height = setWebGradientHeight();
+// })
 
 
 
@@ -86,20 +79,6 @@ workSlide.addEventListener('click', e => {
     setTimeout(() => {
         studentsSlide.classList.remove('animatable');
         workSlide.classList.remove('animatable');
-    },500);
-})
-
-// CLICK ON EXHIBITION PAGE ---------------------------------------------------------------------------
-exhibitionSlide.addEventListener('click', e => {
-    workSlide.classList.add('animatable');
-    studentsSlide.classList.add('animatable');
-
-    workSlide.classList.add('removed')
-    studentsSlide.classList.add('removed')
-
-    setTimeout(() => {
-        workSlide.classList.remove('animatable')
-        studentsSlide.classList.remove('animatable')
     },500);
 })
 
@@ -160,10 +139,10 @@ function generateGradient(){
     return(lause + ')');
 }
 
-function setWebGradientHeight() {
-    var heightToSet = studentSection.offsetHeight;
-    webGradient.style.height = heightToSet + 'px';
-}
+// function setWebGradientHeight() {
+//     var heightToSet = studentSection.offsetHeight;
+//     webGradient.style.height = heightToSet + 'px';
+// }
 
 
 
