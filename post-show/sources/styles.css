@@ -3,7 +3,7 @@
     --stroke-width: 2px;
     --stroke-color: #000;
 
-    --base-color: #fff;
+    --base-color: #333;
     --type-color: #000;
     --folder-width: 3vw;
 }
@@ -40,6 +40,8 @@ aside{
     right: 0;
     width: var(--folder-width);
     height: 50%;
+
+    cursor: pointer;
 }
 
 
@@ -65,7 +67,7 @@ aside{
     -ms-overflow-style: none;
     scrollbar-width: none;
 
-    background-color: #333;
+    background-color: var(--base-color);
     clip-path: polygon(0vw 0vh, 100vw 0vh, 100vw 47vh, calc(100vw - var(--folder-width)) 53vh, calc(100vw - var(--folder-width)) 100vh, 0vw 100vh);
 
     z-index: 1;
@@ -294,8 +296,6 @@ footer{
 #work{
     position: relative;
 
-    height: 500vh;
-
     z-index: 0;
 }
 
@@ -308,11 +308,47 @@ footer{
     justify-content: center;
 }
 
-#work-section{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1rem;
-    align-items: start;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.introduction{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.intro-logo{
+    width: 25%;
+}
+
+.introduction p{
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+
+    max-width: 60ch;
+}
+
+hr{
+    width: 100%;
+    border-width: 2px;
+    border-color: var(--stroke-color);
 }
 
 
@@ -326,6 +362,19 @@ footer{
 
 
 
+
+
+
+
+
+
+
+#submission-section{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    align-items: start;
+}
 
 .submission{
     -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
@@ -337,26 +386,19 @@ footer{
 .submission:hover{
     filter: grayscale(0%);
     mix-blend-mode: normal;
+    filter: drop-shadow(0 0 0.75rem rgba(0, 0, 0, 0.1));
 }
-
-
-
-
 
 .submission img{
     width: 100%;
+    cursor: pointer;
 }
 
 .submission p{
-    font-family: "aktiv-grotesk-condensed", sans-serif;
-    font-weight: 900;
-    font-style: normal;
-    text-transform: uppercase;
+    font-weight: 500;
 
-    font-size: 0.8rem;
-    line-height: 1rem;
-
-    color: var(--type-color);
+    font-size: 1rem;
+    line-height: 1.2rem;
 
     margin-top: 0.5rem;
 }
@@ -401,7 +443,6 @@ h1{
     line-height: 1.5rem;
 
     transform: rotate(90deg);
-    cursor: pointer;
 }
 
 h2{
@@ -425,16 +466,23 @@ h3 a{
 }
 
 h4{
-    font-size: 1.25rem;
-    line-height: 1.25rem;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
 }
 
 h5{
-    font-size: 1.25rem;
-    line-height: 1.25rem;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
 
     color: var(--type-color);
-    -webkit-text-fill-color: var(--base-color);
+    -webkit-text-fill-color: white;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: var(--stroke-color);
+}
+
+p{
+    font-family: "aktiv-grotesk", sans-serif;
+    font-style: normal;
+
+    color: var(--type-color);
 }
