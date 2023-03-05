@@ -164,12 +164,12 @@ function setStudentWork(){
         // console.log(json);
 
         for (let i = 0; i < json.length; i ++) {
-            var studentSubmission = json[i];
+            // var studentSubmission = json[i];
 
             if (json[i].fileNumber != 1) {
                 // generateMultiple(json[i]);
             } else {
-                generateSingular(json[i]);
+                var generatedSubmission = generateSingular(json[i]);
             }
 
             
@@ -203,10 +203,10 @@ function generateSingular(singleSubmission) {
     var submissionAltText = generateAltText(singleSubmission.prefferedName, singleSubmission.workTitle, singleSubmission.workType, singleSubmission.yearCreated, singleSubmission.workDescription);
     // console.log(submissionAltText);
 
-    var submissionTitleText = generateTitleText();
+    var submissionTitleText = generateTitleText(singleSubmission.prefferedName, singleSubmission.workTitle, singleSubmission.workType, singleSubmission.yearCreated, singleSubmission.workDescription);
     // console.log(submissionTitleText);
 
-    if (singleSubmission.description != '') {
+    if (singleSubmission.description === 'Null') {
         var submissionTitleCard = generateTitleCardWith(singleSubmission.prefferedName, singleSubmission.workTitle, singleSubmission.description);
     } else {
         var submissionTitleCard = generateTitleCardWithOut(singleSubmission.prefferedName, singleSubmission.workTitle);
@@ -214,7 +214,12 @@ function generateSingular(singleSubmission) {
 
     var submissionElement = document.createElement('div');
     submissionElement.setAttribute('class', 'submission');
+    console.log(submissionElement);
+
     submissionElement.innerHTML = '<a href="' + singleSubmission.websiteLink + '" target="_blank"><img src="' + submissionFilePath + '" alt="' + submissionAltText + '" title="' + submissionTitleText + '" loading="lazy"></a>' + submissionTitleCard
+    console.log(submissionElement.innerHTML);
+
+    submissionSection.appendChild(submissionElement);
 }
 
 
