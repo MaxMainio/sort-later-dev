@@ -7,8 +7,8 @@ const workSlide = document.getElementById('work');
 
 const falseFile = document.getElementById('false-file');
 
-const coverGradient = document.getElementById('cover-gradient');
-const studentSection = document.getElementById('student-section');
+// const coverGradient = document.getElementById('cover-gradient');
+// const studentSection = document.getElementById('student-section');
 
 
 
@@ -23,14 +23,14 @@ window.onload = (event) => {
     favicon.href = 'assets/favicons/favicon-' + randomIntFromInterval(1, 10) + '.ico';
     falseFile.style.setProperty("background-image", getRandomWebDots());
 
-    coverGradient.style.height = setCoverGradientHeight();
-    coverGradient.style.background = generateGradient();
+    // coverGradient.style.height = setCoverGradientHeight();
+    // coverGradient.style.background = generateGradient();
     workSlide.style.background = generateGradient();
 }
 
-window.addEventListener('resize', e => {
-    coverGradient.style.height = setCoverGradientHeight();
-})
+// window.addEventListener('resize', e => {
+//     coverGradient.style.height = setCoverGradientHeight();
+// })
 
 
 

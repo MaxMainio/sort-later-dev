@@ -3,7 +3,7 @@
     --stroke-width: 2px;
     --stroke-color: #fff;
 
-    --cover-color: #000;
+    --cover-color: #333;
     --cover-type: #fff;
     --type-color: #000;
     --folder-width: 3vw;
@@ -229,7 +229,7 @@ section{
 }
 
 #credits p a:hover{
-    -webkit-text-fill-color: rgba(0, 0, 0, 1);
+    -webkit-text-fill-color: var(--cover-type);
 }
 
 #credits p a:visited{
@@ -293,6 +293,7 @@ footer{
     width: 97vw;
     
     mix-blend-mode: multiply;
+    pointer-events: none;
     z-index: 2;
 }
 
@@ -362,11 +363,13 @@ footer{
 .introduction p{
     font-weight: 600;
     text-transform: uppercase;
-    font-size: 1.25rem;
-    line-height: 1.5rem;
-
-    max-width: 60ch;
+    font-size: 1.75rem;
+    line-height: 2rem;
     color: var(--type-color);
+}
+
+strong{
+    font-weight: 900;
 }
 
 hr{
@@ -401,7 +404,7 @@ hr{
 }
 
 .submission{
-    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
 
     mix-blend-mode: multiply;
@@ -415,7 +418,6 @@ hr{
 
 .submission img{
     width: 100%;
-    cursor: pointer;
 }
 
 .submission p{
