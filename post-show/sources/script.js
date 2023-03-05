@@ -26,10 +26,6 @@ window.onload = (event) => {
     setStudentWork();
 }
 
-// window.addEventListener('resize', e => {
-//     coverGradient.style.height = setCoverGradientHeight();
-// })
-
 
 
 
@@ -174,7 +170,7 @@ function setStudentWork(){
 
 
 
-
+// GENERATE SINGULAR SUBMISSION    --------------------------------------------------------------------
 function generateSingular(singleSubmission) {
     var submissionFilePath = generateFilePath(singleSubmission.filePath, singleSubmission.fileExtension);
 
@@ -202,26 +198,31 @@ function generateSingular(singleSubmission) {
 
 
 
+
+
+// GENERATE MULTIPLE SUBMISSION    --------------------------------------------------------------------
 function generateMultiple(multiSubmission) {
     var multiAmount = multiSubmission.fileNumber;
     var dataAttribute = generateDataAttribute(multiSubmission.prefferedName, multiSubmission.workTitle);
     var firstFilePath = generateFirstFilePath(multiSubmission.filePath, multiSubmission.fileExtension);
-    // console.log(multiAmount);
 
     if (multiSubmission.workDescription != 'Null') {
-        var submissionTitleCard = generateTitleCardWith(multiSubmission.prefferedName, multiSubmission.workTitle, multiSubmission.workDescription);
+        var submissionTitleCard = generateMultiTitleCardWith(multiSubmission.prefferedName, multiSubmission.workTitle, multiSubmission.workDescription);
 
         var submissionAltText = generateAltTextWith(multiSubmission.prefferedName, multiSubmission.workTitle, multiSubmission.workType, multiSubmission.yearCreated, multiSubmission.workDescription);
 
         var submissionTitleText = generateTitleTextWith(multiSubmission.prefferedName, multiSubmission.workTitle, multiSubmission.workType, multiSubmission.yearCreated, multiSubmission.workDescription);
     } else {
-        var submissionTitleCard = generateTitleCardWithOut(multiSubmission.prefferedName, multiSubmission.workTitle);
+        var submissionTitleCard = generateMultiTitleCardWithOut(multiSubmission.prefferedName, multiSubmission.workTitle);
 
         var submissionAltText = generateAltTextWithOut(multiSubmission.prefferedName, multiSubmission.workTitle, multiSubmission.workType, multiSubmission.yearCreated);
 
         var submissionTitleText = generateTitleTextWithOut(multiSubmission.prefferedName, multiSubmission.workTitle, multiSubmission.workType, multiSubmission.yearCreated);
     }
 
+
+
+    // GENERATE FIRST OF COLLECTION    ------------------------------------------------------------
     var submissionElement = document.createElement('div');
     submissionElement.setAttribute('class', 'submission');
     submissionElement.setAttribute('data-collection', dataAttribute);
@@ -230,30 +231,20 @@ function generateMultiple(multiSubmission) {
 
     submissionSection.appendChild(submissionElement);
 
-    // console.log(submissionElement);
 
 
+    // GENERATE REST OF COLLECTION    -----------------------------------------------------------------
+    for (let i = 2; i < multiAmount; i ++) {
+        var followUpElement = document.createElement('div');
+        followUpElement.setAttribute('class', 'submission');
+        followUpElement.setAttribute('data-collection', dataAttribute);
 
+        var followUpFilePath = generateFollowUpFilePath(multiSubmission.filePath, i, multiSubmission.fileExtension);
 
+        followUpElement.innerHTML = '<a href="' + multiSubmission.websiteLink + '" target="_blank"><img src="' + followUpFilePath + '" alt="' + submissionAltText + '" title="' + submissionTitleText + '" loading="lazy"></a> <h4>' + multiSubmission.prefferedName + '</h4> <h5>' + multiSubmission.workTitle + ' ' + i + '</h5>'
 
-
-
-
-
-
-
-
-    // for (let i = 1; i < multiAmount; i ++) {
-
-    // }
-
-
-
-
-
-
-
-
+        submissionSection.appendChild(followUpElement);
+    }
 }
 
 
@@ -277,6 +268,11 @@ function generateFilePath(filePath, fileExtension) {
 function generateFirstFilePath(filePath, fileExtension) {
     return 'https://maxmainio.github.io/sort-later-dev/library/student-work/' + filePath + '-1' + fileExtension;
 }
+function generateFollowUpFilePath(filePath, index, fileExtension) {
+    return 'https://maxmainio.github.io/sort-later-dev/library/student-work/' + filePath + '-' + index + fileExtension;
+}
+
+
 
 function generateDataAttribute(prefferedName, workTitle) {
     var dataString = prefferedName + '-' + workTitle;
@@ -288,6 +284,10 @@ function generateDataAttribute(prefferedName, workTitle) {
 
 function generateTitleCardWith(prefferedName, workTitle, description) {
     return '<h4>' + prefferedName + '</h4> <h5>' + workTitle + '</h5> <p>' + description + '</p>'
+}
+
+function generateMultiTitleCardWith(prefferedName, workTitle, description) {
+    return '<h4>' + prefferedName + '</h4> <h5>' + workTitle + '</h5> <p>' + description + ' 1 </p>'
 }
 
 function generateAltTextWith(prefferedName, workTitle, workType, yearCreated, description) {
@@ -302,6 +302,10 @@ function generateTitleTextWith(prefferedName, workTitle, workType, yearCreated, 
 
 function generateTitleCardWithOut(prefferedName, workTitle) {
     return '<h4>' + prefferedName + '</h4> <h5>' + workTitle + '</h5>'
+}
+
+function generateMultiTitleCardWithOut(prefferedName, workTitle) {
+    return '<h4>' + prefferedName + '</h4> <h5>' + workTitle + ' 1 </h5>'
 }
 
 function generateAltTextWithOut(prefferedName, workTitle, workType, yearCreated) {
