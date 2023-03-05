@@ -7,9 +7,6 @@ const workSlide = document.getElementById('work');
 
 const falseFile = document.getElementById('false-file');
 
-// const coverGradient = document.getElementById('cover-gradient');
-// const studentSection = document.getElementById('student-section');
-
 const submissionSection = document.getElementById('submission-section');
 
 
@@ -25,8 +22,6 @@ window.onload = (event) => {
     favicon.href = 'assets/favicons/favicon-' + randomIntFromInterval(1, 10) + '.ico';
     falseFile.style.setProperty("background-image", getRandomWebDots());
 
-    // coverGradient.style.height = setCoverGradientHeight();
-    // coverGradient.style.background = generateGradient();
     workSlide.style.background = generateGradient();
     setStudentWork();
 }
@@ -161,13 +156,9 @@ function setStudentWork(){
     fetch('https://maxmainio.github.io/sort-later-dev/library/json/work.json')
     .then((response) => response.json())
     .then((json) => {
-        // console.log(json);
-
         for (let i = 0; i < json.length; i ++) {
-
-
             if (json[i].fileNumber != 1) {
-
+                generateMultiple(json[i]);
             } else {
                 generateSingular(json[i]);
             }
@@ -211,6 +202,62 @@ function generateSingular(singleSubmission) {
 
 
 
+function generateMultiple(multiSubmission) {
+    var multiAmount = multiSubmission.fileNumber;
+    var dataAttribute = generateDataAttribute(multiSubmission.prefferedName, multiSubmission.workTitle);
+    var firstFilePath = generateFirstFilePath(multiSubmission.filePath, multiSubmission.fileExtension);
+    // console.log(multiAmount);
+
+    if (multiSubmission.workDescription != 'Null') {
+        var submissionTitleCard = generateTitleCardWith(multiSubmission.prefferedName, multiSubmission.workTitle, multiSubmission.workDescription);
+
+        var submissionAltText = generateAltTextWith(multiSubmission.prefferedName, multiSubmission.workTitle, multiSubmission.workType, multiSubmission.yearCreated, multiSubmission.workDescription);
+
+        var submissionTitleText = generateTitleTextWith(multiSubmission.prefferedName, multiSubmission.workTitle, multiSubmission.workType, multiSubmission.yearCreated, multiSubmission.workDescription);
+    } else {
+        var submissionTitleCard = generateTitleCardWithOut(multiSubmission.prefferedName, multiSubmission.workTitle);
+
+        var submissionAltText = generateAltTextWithOut(multiSubmission.prefferedName, multiSubmission.workTitle, multiSubmission.workType, multiSubmission.yearCreated);
+
+        var submissionTitleText = generateTitleTextWithOut(multiSubmission.prefferedName, multiSubmission.workTitle, multiSubmission.workType, multiSubmission.yearCreated);
+    }
+
+    var submissionElement = document.createElement('div');
+    submissionElement.setAttribute('class', 'submission');
+    submissionElement.setAttribute('data-collection', dataAttribute);
+
+    submissionElement.innerHTML = '<a href="' + multiSubmission.websiteLink + '" target="_blank"><img src="' + firstFilePath + '" alt="' + submissionAltText + '" title="' + submissionTitleText + '" loading="lazy"></a>' + submissionTitleCard
+
+    submissionSection.appendChild(submissionElement);
+
+    // console.log(submissionElement);
+
+
+
+
+
+
+
+
+
+
+
+
+    // for (let i = 1; i < multiAmount; i ++) {
+
+    // }
+
+
+
+
+
+
+
+
+}
+
+
+
 
 
 
@@ -225,6 +272,16 @@ function generateSingular(singleSubmission) {
 
 function generateFilePath(filePath, fileExtension) {
     return 'https://maxmainio.github.io/sort-later-dev/library/student-work/' + filePath + fileExtension;
+}
+
+function generateFirstFilePath(filePath, fileExtension) {
+    return 'https://maxmainio.github.io/sort-later-dev/library/student-work/' + filePath + '-1' + fileExtension;
+}
+
+function generateDataAttribute(prefferedName, workTitle) {
+    var dataString = prefferedName + '-' + workTitle;
+
+    return dataString = dataString.replace(/\s+/g, '-').toLowerCase();
 }
 
 
@@ -254,6 +311,45 @@ function generateAltTextWithOut(prefferedName, workTitle, workType, yearCreated)
 function generateTitleTextWithOut(prefferedName, workTitle, workType, yearCreated) {
     return prefferedName + '&#013;' + workTitle + '&#013;&#013;' + workType + '&#013;' + yearCreated;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// HOVER ALL OF SAME COLLECTION    --------------------------------------------------------------------
+document.querySelectorAll('[data-collection]').forEach(item => {
+    item.addEventListener('mouseover', event => {
+        var collection = event.target.closest('.submission').dataset.collection;
+
+        document.querySelectorAll('[data-collection=' + collection + ']').forEach((element) => {
+            element.classList.add('hovering');
+        });
+    })
+
+    item.addEventListener('mouseout', event => {
+        var collection = event.target.closest('.submission').dataset.collection;
+
+        document.querySelectorAll('[data-collection=' + collection + ']').forEach((element) => {
+            element.classList.remove('hovering');
+        });
+    })
+})
+
+
+
 
 
 

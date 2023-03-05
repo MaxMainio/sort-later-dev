@@ -405,7 +405,7 @@ hr{
 
 #submission-section{
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     column-gap: 1rem;
     row-gap: 2rem;
     align-items: start;
@@ -419,6 +419,12 @@ hr{
 }
 
 .submission:hover{
+    filter: grayscale(0%);
+    mix-blend-mode: normal;
+    filter: drop-shadow(0 0 0.75rem rgba(0, 0, 0, 0.1));
+}
+
+.hovering{
     filter: grayscale(0%);
     mix-blend-mode: normal;
     filter: drop-shadow(0 0 0.75rem rgba(0, 0, 0, 0.1));
