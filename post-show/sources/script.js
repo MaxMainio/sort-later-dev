@@ -156,7 +156,7 @@ function setCoverGradientHeight() {
 
 
 
-// GENERATE GRADIENT    -------------------------------------------------------------------------------
+// GENERATE LIST OF SUBMITTED WORKS    ----------------------------------------------------------------
 function setStudentWork(){
     fetch('https://maxmainio.github.io/sort-later-dev/library/json/work.json')
     .then((response) => response.json())
@@ -164,25 +164,13 @@ function setStudentWork(){
         // console.log(json);
 
         for (let i = 0; i < json.length; i ++) {
-            // var studentSubmission = json[i];
+
 
             if (json[i].fileNumber != 1) {
-                // generateMultiple(json[i]);
+
             } else {
-                var generatedSubmission = generateSingular(json[i]);
+                generateSingular(json[i]);
             }
-
-            
-
-            // var submissionElement = document.createElement('div');
-            // submissionElement.setAttribute('class', 'submission');
-            // submissionElement.innerHTML = '<a href="' + studentSubmission.websiteLink + '" target="_blank"><img src="https://maxmainio.github.io/sort-later-dev/library/student-work/' + studentSubmission.filePath + studentSubmission.fileExtension + '" alt="' + studentSubmission.prefferedName + ': ' + studentSubmission.workTitle + ', ' + studentSubmission.workType + ' ' + studentSubmission.yearCreated + ', ' + studentSubmission.workDescription + '" title="' + studentSubmission.prefferedName + '&#013;' + studentSubmission.workTitle + '&#013;&#013;' + studentSubmission.workType + '&#013;' + studentSubmission.yearCreated + '&#013;&#013;' + studentSubmission.workDescription + '" loading="lazy"></a> <h4>' + studentSubmission.prefferedName + '</h4> <h5>' + studentSubmission.workTitle + '</h5> <p>' + studentSubmission.workDescription + '</p>'
-
-
-
-
-
-            // submissionSection.appendChild(submissionElement);
         }
     });
 }
@@ -198,26 +186,25 @@ function setStudentWork(){
 
 function generateSingular(singleSubmission) {
     var submissionFilePath = generateFilePath(singleSubmission.filePath, singleSubmission.fileExtension);
-    // console.log(submissionFilePath);
 
-    var submissionAltText = generateAltText(singleSubmission.prefferedName, singleSubmission.workTitle, singleSubmission.workType, singleSubmission.yearCreated, singleSubmission.workDescription);
-    // console.log(submissionAltText);
+    if (singleSubmission.workDescription != 'Null') {
+        var submissionTitleCard = generateTitleCardWith(singleSubmission.prefferedName, singleSubmission.workTitle, singleSubmission.workDescription);
 
-    var submissionTitleText = generateTitleText(singleSubmission.prefferedName, singleSubmission.workTitle, singleSubmission.workType, singleSubmission.yearCreated, singleSubmission.workDescription);
-    // console.log(submissionTitleText);
+        var submissionAltText = generateAltTextWith(singleSubmission.prefferedName, singleSubmission.workTitle, singleSubmission.workType, singleSubmission.yearCreated, singleSubmission.workDescription);
 
-    if (singleSubmission.description === 'Null') {
-        var submissionTitleCard = generateTitleCardWith(singleSubmission.prefferedName, singleSubmission.workTitle, singleSubmission.description);
+        var submissionTitleText = generateTitleTextWith(singleSubmission.prefferedName, singleSubmission.workTitle, singleSubmission.workType, singleSubmission.yearCreated, singleSubmission.workDescription);
     } else {
         var submissionTitleCard = generateTitleCardWithOut(singleSubmission.prefferedName, singleSubmission.workTitle);
+
+        var submissionAltText = generateAltTextWithOut(singleSubmission.prefferedName, singleSubmission.workTitle, singleSubmission.workType, singleSubmission.yearCreated);
+
+        var submissionTitleText = generateTitleTextWithOut(singleSubmission.prefferedName, singleSubmission.workTitle, singleSubmission.workType, singleSubmission.yearCreated);
     }
 
     var submissionElement = document.createElement('div');
     submissionElement.setAttribute('class', 'submission');
-    console.log(submissionElement);
 
     submissionElement.innerHTML = '<a href="' + singleSubmission.websiteLink + '" target="_blank"><img src="' + submissionFilePath + '" alt="' + submissionAltText + '" title="' + submissionTitleText + '" loading="lazy"></a>' + submissionTitleCard
-    console.log(submissionElement.innerHTML);
 
     submissionSection.appendChild(submissionElement);
 }
@@ -240,20 +227,32 @@ function generateFilePath(filePath, fileExtension) {
     return 'https://maxmainio.github.io/sort-later-dev/library/student-work/' + filePath + fileExtension;
 }
 
-function generateAltText(prefferedName, workTitle, workType, yearCreated, workDescription) {
-    return prefferedName + ': ' + workTitle + ', ' + workType + ' ' + yearCreated + ', ' + workDescription;
-}
 
-function generateTitleText(prefferedName, workTitle, workType, yearCreated, workDescription) {
-    return prefferedName + '&#013;' + workTitle + '&#013;&#013;' + workType + '&#013;' + yearCreated + '&#013;&#013;' + workDescription;
-}
 
 function generateTitleCardWith(prefferedName, workTitle, description) {
     return '<h4>' + prefferedName + '</h4> <h5>' + workTitle + '</h5> <p>' + description + '</p>'
 }
 
+function generateAltTextWith(prefferedName, workTitle, workType, yearCreated, description) {
+return prefferedName + ': ' + workTitle + ', ' + workType + ' ' + yearCreated + ', ' + description;
+}
+
+function generateTitleTextWith(prefferedName, workTitle, workType, yearCreated, description) {
+    return prefferedName + '&#013;' + workTitle + '&#013;&#013;' + workType + '&#013;' + yearCreated + '&#013;&#013;' + description;
+}
+
+
+
 function generateTitleCardWithOut(prefferedName, workTitle) {
     return '<h4>' + prefferedName + '</h4> <h5>' + workTitle + '</h5>'
+}
+
+function generateAltTextWithOut(prefferedName, workTitle, workType, yearCreated) {
+    return prefferedName + ': ' + workTitle + ', ' + workType + ' ' + yearCreated;
+}
+
+function generateTitleTextWithOut(prefferedName, workTitle, workType, yearCreated) {
+    return prefferedName + '&#013;' + workTitle + '&#013;&#013;' + workType + '&#013;' + yearCreated;
 }
 
 
