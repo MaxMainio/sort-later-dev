@@ -1,32 +1,47 @@
-/* HTML */
+/* GLOBAL ------------------------------------------------------------------------------------------ */
 :root{
     --stroke-width: 2px;
     --stroke-color: #fff;
 
-    --cover-color: #333;
+    --cover-primary: #333;
     --cover-type: #fff;
-    --type-color: #000;
+
+    --type-primary: #000;
+    --type-secondary: #fff;
+
     --folder-width: 3vw;
 }
 
+::selection {
+    background: var(--type-primary);
+}
 
+::-moz-selection {
+    background: var(--type-primary);
+}
 
 *{
     margin: 0;
     box-sizing: border-box;
+
+    font-family: "aktiv-grotesk-condensed", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    text-transform: uppercase;
 }
 
+
+
+
+
+
+
+
+
+/* RAW ELEMENTS ------------------------------------------------------------------------------------ */
 body{
     position: relative;
 }
-
-
-
-
-
-
-
-
 
 main{
     position: relative;
@@ -34,6 +49,20 @@ main{
 
 article{
     width: 100vw;
+}
+
+section{
+    position: relative;
+
+    width: 100%;
+    max-width: 1600px;
+
+    margin: 0 auto;
+    padding: 32px 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 aside{
@@ -47,6 +76,13 @@ aside{
 
 
 
+
+
+
+
+
+
+/* ANIMATIONS -------------------------------------------------------------------------------------- */
 .animatable{
     transition: all 0.5s ease-in-out;
 }
@@ -57,6 +93,13 @@ aside{
 
 
 
+
+
+
+
+
+
+/* CREDITS SECTION --------------------------------------------------------------------------------- */
 #students{
     height: 100vh;
     position: fixed;
@@ -68,7 +111,7 @@ aside{
     -ms-overflow-style: none;
     scrollbar-width: none;
 
-    background-color: var(--cover-color);
+    background-color: var(--cover-primary);
     clip-path: polygon(0vw 0vh, 100vw 0vh, 100vw 47vh, calc(100vw - var(--folder-width)) 53vh, calc(100vw - var(--folder-width)) 100vh, 0vw 100vh);
 
     z-index: 1;
@@ -85,32 +128,9 @@ aside{
     display: flex;
     align-items: center;
     justify-content: center;
+
+    color: var(--cover-type);
 }
-
-
-
-
-
-
-
-
-
-
-section{
-    position: relative;
-
-    width: 100%;
-    max-width: 1600px;
-
-    margin: 0 auto;
-    padding: 32px 0;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-
 
 
 
@@ -134,7 +154,7 @@ section{
     border-top-right-radius: 4vw;
     border-top-left-radius: 4vw;
 
-    background-color: var(--cover-color);
+    background-color: var(--cover-primary);
 
     background-repeat: repeat-x;
     z-index: 1;
@@ -154,6 +174,10 @@ section{
     width: calc(100% + 32px);
     margin: -16px auto auto -16px;
 }
+
+
+
+
 
 
 
@@ -188,6 +212,10 @@ section{
 
 
 
+
+
+
+
 #credits{
     width: calc(100% + 96px);
     margin: -16px 0 -10vw -48px;
@@ -200,17 +228,12 @@ section{
 }
 
 #credits p{
-    font-family: "aktiv-grotesk-condensed", sans-serif;
-    font-weight: 900;
-    font-style: normal;
-    text-transform: uppercase;
-
     font-size: 5rem;
     line-height: 4.5rem;
     white-space: nowrap;
 
     color: var(--cover-type);
-    -webkit-text-fill-color: var(--cover-color);
+    -webkit-text-fill-color: var(--cover-primary);
     -webkit-text-stroke-width: var(--stroke-width);
     -webkit-text-stroke-color: var(--stroke-color);
 
@@ -220,7 +243,7 @@ section{
 
 #credits p a{
     color: var(--cover-type);
-    -webkit-text-fill-color: var(--cover-color);
+    -webkit-text-fill-color: var(--cover-primary);
     -webkit-text-stroke-width: var(--stroke-width);
     -webkit-text-stroke-color: var(--stroke-color);
 
@@ -240,6 +263,10 @@ section{
 
 
 
+
+
+
+
 .other-files div{
     width: 100%;
     height: 5vw;
@@ -254,10 +281,6 @@ section{
 }
 
 .last-file h2{
-    font-family: "aktiv-grotesk-condensed", sans-serif;
-    font-weight: 900;
-    font-style: normal;
-    text-transform: uppercase;
     text-align: center;
     font-size: 2.5rem;
     line-height: 2.5rem;
@@ -305,14 +328,7 @@ footer{
 
 
 
-
-
-
-
-
-
-
-
+/* WORK SECTION ------------------------------------------------------------------------------------ */
 #work{
     position: relative;
 
@@ -329,15 +345,8 @@ footer{
 }
 
 #work-tab h1{
-    color: var(--type-color);
+    color: var(--type-primary);
 }
-
-
-
-
-
-
-
 
 
 
@@ -365,28 +374,26 @@ footer{
     text-transform: uppercase;
     font-size: 1.75rem;
     line-height: 2rem;
-    color: var(--type-color);
+    color: var(--type-primary);
+}
+
+.introduction p::selection{
+    color: var(--type-secondary);
 }
 
 strong{
     font-weight: 900;
 }
 
+strong::selection{
+    color: var(--type-secondary);
+}
+
 hr{
     width: 100%;
     border-width: 2px;
-    border-color: var(--type-color);
+    border-color: var(--type-primary);
 }
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -399,7 +406,8 @@ hr{
 #submission-section{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 1rem;
+    column-gap: 1rem;
+    row-gap: 2rem;
     align-items: start;
 }
 
@@ -427,7 +435,7 @@ hr{
     line-height: 1.2rem;
 
     margin-top: 0.5rem;
-    color: var(--type-color);
+    color: var(--type-primary);
 }
 
 
@@ -438,36 +446,12 @@ hr{
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-h1, h2, h3, h4, h5{
-    font-family: "aktiv-grotesk-condensed", sans-serif;
-    font-weight: 900;
-    font-style: normal;
-    text-transform: uppercase;
-}
-
+/* TYPE -------------------------------------------------------------------------------------------- */
 h1{
     text-align: center;
     font-size: 1.5rem;
     line-height: 1.5rem;
 
-    color: var(--cover-type);
     transform: rotate(90deg);
 }
 
@@ -497,22 +481,30 @@ h3 a{
 h4{
     font-size: 1.5rem;
     line-height: 1.5rem;
-    color: var(--type-color);
+    color: var(--type-primary);
+}
+
+h4::selection{
+    color: var(--type-secondary);
 }
 
 h5{
     font-size: 1.5rem;
     line-height: 1.5rem;
 
-    color: var(--cover-type);
-    -webkit-text-fill-color: white;
+    color: var(--type-secondary);
+    -webkit-text-fill-color: var(--type-secondary);
     -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: var(--type-color);
+    -webkit-text-stroke-color: var(--type-primary);
 }
 
 p{
     font-family: "aktiv-grotesk", sans-serif;
     font-style: normal;
 
-    color: var(--cover-type);
+    color: var(--type-secondary);
+}
+
+p::selection{
+    color: var(--type-secondary);
 }
