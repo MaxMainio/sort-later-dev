@@ -1,10 +1,10 @@
 /* GLOBAL ------------------------------------------------------------------------------------------ */
 :root{
     --stroke-width: 2px;
-    --stroke-color: #fff;
+    --stroke-color: #333;
 
-    --cover-primary: #000;
-    --cover-type: #fff;
+    --cover-primary: #fff;
+    --cover-type: #333;
 
     --type-primary: #000;
     --type-secondary: #fff;
