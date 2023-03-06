@@ -100,6 +100,21 @@ aside{
 
 
 /* CREDITS SECTION --------------------------------------------------------------------------------- */
+#folder-background{
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.folder-cover{
+    width: 100%;
+    height: 100%;
+
+    filter: drop-shadow(0 0 0.25rem rgba(0, 0, 0, 0.2));
+}
+
 #students{
     height: 100vh;
     position: fixed;
@@ -111,7 +126,6 @@ aside{
     -ms-overflow-style: none;
     scrollbar-width: none;
 
-    background-color: var(--cover-primary);
     clip-path: polygon(0vw 0vh, 100vw 0vh, 100vw 47vh, calc(100vw - var(--folder-width)) 53vh, calc(100vw - var(--folder-width)) 100vh, 0vw 100vh);
 
     z-index: 1;

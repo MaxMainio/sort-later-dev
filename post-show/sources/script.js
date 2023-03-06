@@ -2,6 +2,7 @@ console.log('https://www.youtube.com/watch?v=NuAKnbIr6TE');
 
 const favicon = document.querySelector("link[rel~='icon']");
 
+const folderCover = document.getElementById('folder-background');
 const studentsSlide = document.getElementById('students');
 const workSlide = document.getElementById('work');
 
@@ -51,13 +52,16 @@ function getRandomWebDots() {
 
 // CLICK ON STUDENTS / CREDITS PAGE -------------------------------------------------------------------
 studentsSlide.addEventListener('click', e => {
+    folderCover.classList.add('animatable');
     studentsSlide.classList.add('animatable');
     workSlide.classList.add('animatable');
 
+    folderCover.classList.remove('removed');
     studentsSlide.classList.remove('removed');
     workSlide.classList.remove('removed');
 
     setTimeout(() => {
+        folderCover.classList.remove('animatable');
         studentsSlide.classList.remove('animatable')
         workSlide.classList.remove('animatable')
     },500);
@@ -65,13 +69,16 @@ studentsSlide.addEventListener('click', e => {
 
 // CLICK ON WORK PAGE ---------------------------------------------------------------------------------
 workSlide.addEventListener('click', e => {
+    folderCover.classList.add('animatable');
     studentsSlide.classList.add('animatable');
     workSlide.classList.add('animatable');
 
+    folderCover.classList.add('removed');
     studentsSlide.classList.add('removed');
     workSlide.classList.remove('removed');
 
     setTimeout(() => {
+        folderCover.classList.remove('animatable');
         studentsSlide.classList.remove('animatable');
         workSlide.classList.remove('animatable');
     },500);
