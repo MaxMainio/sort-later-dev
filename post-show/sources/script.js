@@ -23,7 +23,7 @@ const studentName = document.getElementById('student-name');
 
 
 
-// ON LOAD --------------------------------------------------------------------------------------------
+// ON LOAD ---------------------------------------------------------------------------------------------------------------
 window.onload = (event) => {
     // DIGITAL
     favicon.href = 'assets/favicons/favicon-' + randomIntFromInterval(1, 10) + '.ico';
@@ -43,20 +43,14 @@ window.onload = (event) => {
 
 
 
-// PRINTING "QUERIES"    ------------------------------------------------------------------------------------------------------
+// PRINTING    -----------------------------------------------------------------------------------------------------------
 window.addEventListener('afterprint', (event) => {
     printPrep();
 });
 
 
 
-
-
-
-
-
-
-// GENERATE STUDENT WORK    ---------------------------------------------------------------------------------------------------
+// GENERATE STUDENT WORK
 function printPrep() {
     fetch('https://maxmainio.github.io/sort-later-dev/library/json/data.json')
     .then((response) => response.json())
@@ -80,13 +74,7 @@ function printPrep() {
 
 
 
-
-
-
-
-
-
-// IF THERE'S MORE THAN ONE WORK, SELECT AT RANDOM    -------------------------------------------------------------------------
+// IF THERE'S MORE THAN ONE WORK, SELECT AT RANDOM
 function generateImgNum(num){
     if (num != 1) {
         var imgNumber = randomIntFromInterval(1, num);
@@ -104,18 +92,6 @@ function generateImgNum(num){
 
 
 
-// GENERATE DOTS    ------------------------------------------------------------------------------------------------------
-function getRandomWebDots() {
-    var dotNum = randomIntFromInterval(1, 3);
-    var dotPath = 'url(assets/web-svg/dots-web-' + dotNum.toString() + '.svg';
-    return dotPath
-}
-
-function getRandomPrintDots() {
-    var dotNum = randomIntFromInterval(1, 3);
-    var dotPath = 'assets/print-svg/dots-print-' + dotNum.toString() + '.svg';
-    return dotPath
-}
 
 
 
@@ -125,7 +101,9 @@ function getRandomPrintDots() {
 
 
 
-// CLICK ON STUDENTS / CREDITS PAGE --------------------------------------------------------------------------------------
+
+// FOLDER INTERACTIVITY    -----------------------------------------------------------------------------------------------
+// CLICK ON STUDENTS / CREDITS PAGE
 studentsSlide.addEventListener('click', e => {
     folderCover.classList.add('animatable');
     studentsSlide.classList.add('animatable');
@@ -142,7 +120,7 @@ studentsSlide.addEventListener('click', e => {
     },500);
 })
 
-// CLICK ON WORK PAGE ---------------------------------------------------------------------------------
+// CLICK ON WORK PAGE
 workSlide.addEventListener('click', e => {
     folderCover.classList.add('animatable');
     studentsSlide.classList.add('animatable');
@@ -167,11 +145,35 @@ workSlide.addEventListener('click', e => {
 
 
 
-// GENERATE WEB GRADIENT    ----------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+// GENERATE DOTS    ------------------------------------------------------------------------------------------------------
+function getRandomWebDots() {
+    var dotNum = randomIntFromInterval(1, 3);
+    var dotPath = 'url(assets/web-svg/dots-web-' + dotNum.toString() + '.svg';
+    return dotPath
+}
+
+function getRandomPrintDots() {
+    var dotNum = randomIntFromInterval(1, 3);
+    var dotPath = 'assets/print-svg/dots-print-' + dotNum.toString() + '.svg';
+    return dotPath
+}
+
+
+
+// GRADIENTS    ----------------------------------------------------------------------------------------------------------
+// GENERATE WEB GRADIENT
 function generateWebGradient(){
-    // GETS RANDOM GRADIENT BY NAME AS STRING
     var gradTag = 'gradient' + randomIntFromInterval(0, 4);
-    // ARRAY OF THE INDIVIDUAL COLORS OF SELECTED GRADIENT
     var gradColors = eval(gradTag);
     var gradSteps = gradColors.length;
 
@@ -180,7 +182,6 @@ function generateWebGradient(){
     var max = 100;
     var offset = 0;
 
-    // THIS GENERATES THE POSITIONS FOR EACH OCLOR
     for (var i = 0; i < gradSteps; i ++) {
         var wiggleRoom = 10 * (gradSteps - i);
 
@@ -193,32 +194,21 @@ function generateWebGradient(){
         offset = placement + 10;
     }
 
-    // PREPARE THE CSS EXPRESSION OF NEW GRADIENT
     var lause = 'linear-gradient(180deg';
 
-    // GENERATES THE PROPER CSS EXPRESSION FOR THE GRADIENT
     for (var i=0; i < gradSteps; i++) {
         var appendable = gradColors[i] + ' ' + gradPlacements[i] + '%'
         lause = lause + ', ' + appendable
     }
 
-    // RETURN THE FORMULA FOR THE GRADIENT
     return(lause + ')');
 }
 
 
 
-
-
-
-
-
-
-// GENERATE PRINT GRADIENT    --------------------------------------------------------------------------------------------
+// GENERATE PRINT GRADIENT
 function generatePrintGradient(){
-    // GETS RANDOM GRADIENT BY NAME AS STRING
     var gradTag = 'gradient' + randomIntFromInterval(0, 4);
-    // ARRAY OF THE INDIVIDUAL COLORS OF SELECTED GRADIENT
     var gradColors = eval(gradTag);
     var gradSteps = gradColors.length;
 
@@ -227,7 +217,6 @@ function generatePrintGradient(){
     var max = 100;
     var offset = 0;
 
-    // THIS GENERATES THE POSITIONS FOR EACH OCLOR
     for (var i = 0; i < gradSteps; i ++) {
         var wiggleRoom = 10 * (gradSteps - i);
 
@@ -240,10 +229,8 @@ function generatePrintGradient(){
         offset = placement + 10;
     }
 
-    // PREPARE THE CSS EXPRESSION OF NEW GRADIENT
     var lause = 'linear-gradient(' + flipACoin();
 
-    // THIS DECIDES DIRECTION OF THE GRADIENT
     function flipACoin(){
         var coinFlip = Math.round(Math.random());
         if (coinFlip == 1) {
@@ -253,13 +240,11 @@ function generatePrintGradient(){
         }
     }
 
-    // GENERATES THE PROPER CSS EXPRESSION FOR THE GRADIENT
     for (var i=0; i < gradSteps; i++) {
         var appendable = gradColors[i] + ' ' + gradPlacements[i] + '%'
         lause = lause + ', ' + appendable
     }
 
-    // RETURN THE FORMULA FOR THE GRADIENT
     return(lause + ')');
 }
 
@@ -271,7 +256,8 @@ function generatePrintGradient(){
 
 
 
-// GENERATE LIST OF SUBMITTED WORKS    -----------------------------------------------------------------------------------
+// GENERATE STUDENT WORK SECTION    --------------------------------------------------------------------------------------
+// GET STUDENTS WORK
 function setStudentWork(){
     fetch('https://maxmainio.github.io/sort-later-dev/library/json/data.json')
     .then((response) => response.json())
@@ -288,13 +274,7 @@ function setStudentWork(){
 
 
 
-
-
-
-
-
-
-// GENERATE SINGULAR SUBMISSION    ---------------------------------------------------------------------------------------
+// IF SINGULAR
 function generateSingular(singleSubmission) {
     var submissionFilePath = generateFilePath(singleSubmission.filePath, singleSubmission.fileExtension);
 
@@ -322,9 +302,7 @@ function generateSingular(singleSubmission) {
 
 
 
-
-
-// GENERATE MULTIPLE SUBMISSION    --------------------------------------------------------------------
+// IF MULTIPLE
 function generateMultiple(multiSubmission) {
     var multiAmount = multiSubmission.fileNumber;
     var dataAttribute = generateDataAttribute(multiSubmission.prefferedName, multiSubmission.workTitle);
@@ -346,7 +324,7 @@ function generateMultiple(multiSubmission) {
 
 
 
-    // GENERATE FIRST OF COLLECTION    -------------------------------------------------------------------------------
+    // FIRST OF COLLECTION
     var submissionElement = document.createElement('div');
     submissionElement.setAttribute('class', 'submission');
     submissionElement.setAttribute('data-collection', dataAttribute);
@@ -357,7 +335,7 @@ function generateMultiple(multiSubmission) {
 
 
 
-    // GENERATE REST OF COLLECTION    ------------------------------------------------------------------------------------
+    // REST OF COLLECTION
     for (let i = 2; i < (multiAmount + 1); i ++) {
         var followUpElement = document.createElement('div');
         followUpElement.setAttribute('class', 'submission');
@@ -379,25 +357,45 @@ function generateMultiple(multiSubmission) {
 
 
 
-
-
-
-
-
-
+// SINGULAR
 function generateFilePath(filePath, fileExtension) {
     return 'https://maxmainio.github.io/sort-later-dev/library/student-work/' + filePath + fileExtension;
 }
 
+function generateTitleCardWith(prefferedName, workTitle, description) {
+    description = description.split('\n').join('<br>');
+
+    return '<h4>' + prefferedName + '</h4> <h5>' + workTitle + '</h5> <p>' + description + '</p>'
+}
+
+function generateTitleCardWithOut(prefferedName, workTitle) {
+    return '<h4>' + prefferedName + '</h4> <h5>' + workTitle + '</h5>'
+}
+
+
+
+// MULTIPLE
 function generateFirstFilePath(filePath, fileExtension) {
     return 'https://maxmainio.github.io/sort-later-dev/library/student-work/' + filePath + '-1' + fileExtension;
 }
+
 function generateFollowUpFilePath(filePath, index, fileExtension) {
     return 'https://maxmainio.github.io/sort-later-dev/library/student-work/' + filePath + '-' + index + fileExtension;
 }
 
+function generateMultiTitleCardWith(prefferedName, workTitle, description) {
+    description = description.split('\n').join('<br>');
+
+    return '<h4>' + prefferedName + '</h4> <h5>' + workTitle + ' 1</h5> <p>' + description + '</p>'
+}
+
+function generateMultiTitleCardWithOut(prefferedName, workTitle) {
+    return '<h4>' + prefferedName + '</h4> <h5>' + workTitle + ' 1 </h5>'
+}
 
 
+
+// GLOBAL
 function generateDataAttribute(prefferedName, workTitle) {
     var dataString = prefferedName + '-' + workTitle;
     var dataString = dataString.replace(/\s+/g, '-').toLowerCase();
@@ -408,38 +406,18 @@ function generateDataAttribute(prefferedName, workTitle) {
 
 
 
-function generateTitleCardWith(prefferedName, workTitle, description) {
-    description = description.split('\n').join('<br>');
-
-    return '<h4>' + prefferedName + '</h4> <h5>' + workTitle + '</h5> <p>' + description + '</p>'
-}
-
-function generateMultiTitleCardWith(prefferedName, workTitle, description) {
-    description = description.split('\n').join('<br>');
-
-    return '<h4>' + prefferedName + '</h4> <h5>' + workTitle + ' 1</h5> <p>' + description + '</p>'
-}
-
 function generateAltTextWith(prefferedName, workTitle, workType, yearCreated, description) {
 return prefferedName + ': ' + workTitle + ', ' + workType + ' ' + yearCreated + ', ' + description;
 }
 
-function generateTitleTextWith(prefferedName, workTitle, workType, yearCreated, description) {
-    return prefferedName + '&#013;' + workTitle + '&#013;&#013;' + workType + '&#013;' + yearCreated + '&#013;&#013;' + description;
-}
-
-
-
-function generateTitleCardWithOut(prefferedName, workTitle) {
-    return '<h4>' + prefferedName + '</h4> <h5>' + workTitle + '</h5>'
-}
-
-function generateMultiTitleCardWithOut(prefferedName, workTitle) {
-    return '<h4>' + prefferedName + '</h4> <h5>' + workTitle + ' 1 </h5>'
-}
-
 function generateAltTextWithOut(prefferedName, workTitle, workType, yearCreated) {
     return prefferedName + ': ' + workTitle + ', ' + workType + ' ' + yearCreated;
+}
+
+
+
+function generateTitleTextWith(prefferedName, workTitle, workType, yearCreated, description) {
+    return prefferedName + '&#013;' + workTitle + '&#013;&#013;' + workType + '&#013;' + yearCreated + '&#013;&#013;' + description;
 }
 
 function generateTitleTextWithOut(prefferedName, workTitle, workType, yearCreated) {
@@ -454,16 +432,7 @@ function generateTitleTextWithOut(prefferedName, workTitle, workType, yearCreate
 
 
 
-
-
-
-
-
-
-
-
-
-// HOVER ALL OF SAME COLLECTION    ---------------------------------------------------------------------------------------
+// HOVER ALL OF SAME COLLECTION
 setTimeout(() => {
     document.querySelectorAll('[data-collection]').forEach(item => {
         item.addEventListener('mouseover', event => {
@@ -483,23 +452,6 @@ setTimeout(() => {
         })
     })
 }, 1000);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

@@ -38,6 +38,16 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
 /* RAW ELEMENTS ------------------------------------------------------------------------------------------------------- */
 body{
     position: relative;
@@ -82,6 +92,16 @@ aside{
 
 
 
+
+
+
+
+
+
+
+
+
+
 /* ANIMATIONS --------------------------------------------------------------------------------------------------------- */
 .animatable{
     transition: all 0.5s ease-in-out;
@@ -90,6 +110,16 @@ aside{
 .removed{
     transform: translateX(calc(-100% + var(--folder-width)));
 }
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -119,6 +149,7 @@ aside{
     height: 100vh;
     position: fixed;
 
+    padding: 0 5vw;
     inset: 0;
 
     overflow-y: scroll;
@@ -176,8 +207,8 @@ aside{
 
 .date-year{
     position: absolute;
-    width: calc(100% + 128px);
-    margin: -32px auto auto -64px;
+    width: 98vw;
+    margin: -32px auto auto -4vw;
 
     z-index: 0;
     pointer-events: none;
@@ -185,8 +216,8 @@ aside{
 
 .web-title{
     position: relative;
-    width: calc(100% + 32px);
-    margin: -16px auto auto -16px;
+    width: calc(100% + 2vw);
+    margin: -16px auto auto -1vw;
 }
 
 
@@ -214,9 +245,9 @@ aside{
 }
 
 .date-container img{
-    width: calc(100% + 64px);
+    width: calc(100% + 4vw);
     height: 100%;
-    margin-left: -32px;
+    margin-left: -2vw;
 
     position: absolute;
     inset: 0;
@@ -231,8 +262,8 @@ aside{
 
 
 #credits{
-    width: calc(100% + 96px);
-    margin: -16px 0 -10vw -48px;
+    width: calc(100% + 4vw);
+    margin: -16px 0 -10vw -2vw;
 
     display: flex;
     flex-wrap: wrap;
@@ -342,10 +373,21 @@ footer{
 
 
 
+
+
+
+
+
+
+
+
+
+
 /* WORK SECTION ------------------------------------------------------------------------------------------------------- */
 #work{
     position: relative;
     z-index: 0;
+    padding: 0 5vw;
 }
 
 #work-tab{
@@ -465,6 +507,16 @@ hr{
 
 
 
+
+
+
+
+
+
+
+
+
+
 /* TEAMS -------------------------------------------------------------------------------------------------------------- */
 .teams{
     width: 100%;
@@ -497,10 +549,30 @@ hr{
 
 
 
+
+
+
+
+
+
+
+
+
+
 /* PRINT -------------------------------------------------------------------------------------------------------------- */
 #print{
     display: none;
 }
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -519,6 +591,10 @@ h1{
     transform: rotate(90deg);
 }
 
+h1::selection{
+    color: var(--type-secondary);
+}
+
 h2{
     font-size: 3rem;
     line-height: 3rem;
@@ -527,6 +603,10 @@ h2{
     position: relative;
 
     color: var(--cover-type);
+}
+
+h2::selection{
+    color: var(--type-secondary);
 }
 
 h3{
@@ -581,7 +661,28 @@ p::selection{
 
 
 
+
+
+
+
+
+
+
+
+
+
 /* MEDIA QUERIES STARTS HERE ------------------------------------------------------------------------------------------ */
+@media only screen and (max-width: 1400px) {
+    h1{
+        font-size: 1.7vw;
+    }
+
+    #credits p{
+        font-size: 6vw;
+        line-height: 5.5vw;
+    }
+}
+
 /* @media only screen and (min-width: 1700px) {
     #top-title{
         width: 850px;
