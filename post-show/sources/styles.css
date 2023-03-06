@@ -698,9 +698,29 @@ p::selection{
         line-height: 1.25rem;
     }
 
+    h3{
+        font-size: 2vw;
+        line-height: 2vw;
+    }
+
     #credits p{
         font-size: 6vw;
         line-height: 5.5vw;
+    }
+
+    .last-file h2{
+        font-size: 2.75vw;
+        line-height: 2.75vw;
+    }
+
+    .bottom-title{
+        margin-top: -0.8vw;
+    }
+
+    footer{
+        flex-direction: column;
+        gap: 1rem;
+        margin: 1rem 0;
     }
 
     .introduction p{
@@ -724,7 +744,19 @@ p::selection{
     }
 }
 
+
+
+
+
+
+
+
+
 @media only screen and (max-width: 1000px) {
+    .date-container{
+        height: 40vw;
+    }
+
     .introduction p{
         font-size: 1.25rem;
         line-height: 1.25rem;
@@ -765,5 +797,29 @@ p::selection{
     .teams a{
         font-size: 1.25rem;
         line-height: 1.25rem;
+    }
+
+    h2{
+        font-size: 4.75vw;
+        line-height: 4.75vw;
+    }
+}
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 800px) {
+    :root{
+        --stroke-width: 1px;
+        --stroke-color: #000;
+    }
+
+    #submission-section{
+        grid-template-columns: repeat(1, minmax(0, 1fr));
     }
 }

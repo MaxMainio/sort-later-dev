@@ -1,6 +1,12 @@
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 1137.96 531" style="enable-background:new 0 0 1137.96 531;"  xml:space="preserve" preserveAspectRatio="none">
 <style type="text/css">
-	.st0{fill:#ffffff;stroke:#333333;stroke-width:2px;stroke-miterlimit:10;vector-effect:non-scaling-stroke;}
+	.st0{
+		fill:#ffffff;
+		stroke:#333333;
+		stroke-width:2px;
+		stroke-miterlimit:10;
+		vector-effect:non-scaling-stroke;
+	}
 </style>
 <g>
 	<path class="st0" d="M69.223,313.801c-21.936-11.66-37.975-29.75-48.125-54.25S5.873,201.341,5.873,158.4
