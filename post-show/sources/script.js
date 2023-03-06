@@ -287,10 +287,14 @@ function generateDataAttribute(prefferedName, workTitle) {
 
 
 function generateTitleCardWith(prefferedName, workTitle, description) {
+    description = description.split('\n').join('<br>');
+
     return '<h4>' + prefferedName + '</h4> <h5>' + workTitle + '</h5> <p>' + description + '</p>'
 }
 
 function generateMultiTitleCardWith(prefferedName, workTitle, description) {
+    description = description.split('\n').join('<br>');
+
     return '<h4>' + prefferedName + '</h4> <h5>' + workTitle + ' 1</h5> <p>' + description + '</p>'
 }
 
