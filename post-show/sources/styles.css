@@ -126,7 +126,7 @@ aside{
     -ms-overflow-style: none;
     scrollbar-width: none;
 
-    clip-path: polygon(0vw 0vh, 100vw 0vh, 100vw 47vh, calc(100vw - var(--folder-width)) 53vh, calc(100vw - var(--folder-width)) 100vh, 0vw 100vh);
+    clip-path: polygon(0vw 0vh, calc(100vw - var(--folder-width)) 0vh, calc(100vw - var(--folder-width)) 47vh, 100vw 53vh, 100vw 100vh, 0vw 100vh);
 
     z-index: 1;
 }
@@ -137,7 +137,7 @@ aside{
 
 #students-tab{
     position: fixed;
-    inset: 0 0 auto auto;
+    inset: auto 0 0 auto;
 
     display: flex;
     align-items: center;
@@ -345,13 +345,12 @@ footer{
 /* WORK SECTION ------------------------------------------------------------------------------------ */
 #work{
     position: relative;
-
     z-index: 0;
 }
 
 #work-tab{
     position: fixed;
-    inset: auto 0 0 auto;
+    inset: 0 0 auto auto;
 
     display: flex;
     align-items: center;
@@ -488,6 +487,19 @@ hr{
 
 .teams a::selection{
     color: var(--type-secondary);
+}
+
+
+
+
+
+
+
+
+
+/* PRINT ------------------------------------------------------------------------------------------- */
+#print{
+    display: none;
 }
 
 

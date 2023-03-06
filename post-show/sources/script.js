@@ -10,6 +10,11 @@ const falseFile = document.getElementById('false-file');
 
 const submissionSection = document.getElementById('submission-section');
 
+const printGradient = document.getElementById('print-gradient');
+const printIMG = document.getElementById('work-img');
+const workTitle = document.getElementById('work-title');
+const studentName = document.getElementById('student-name');
+
 
 
 
@@ -20,11 +25,78 @@ const submissionSection = document.getElementById('submission-section');
 
 // ON LOAD --------------------------------------------------------------------------------------------
 window.onload = (event) => {
+    // DIGITAL
     favicon.href = 'assets/favicons/favicon-' + randomIntFromInterval(1, 10) + '.ico';
     falseFile.style.setProperty("background-image", getRandomWebDots());
-
     workSlide.style.background = generateGradient();
     setStudentWork();
+
+    // PRINT
+    printPrep();
+}
+
+
+
+
+
+
+
+
+
+// PRINTING "QUERIES"    ------------------------------------------------------------------------------------------------------
+window.addEventListener('beforeprint', (event) => {
+    printGradient.style.background = generateGradient();
+});
+
+window.addEventListener('afterprint', (event) => {
+    printPrep();
+});
+
+
+
+
+
+
+
+
+
+// GENERATE STUDENT WORK    ---------------------------------------------------------------------------------------------------
+function printPrep() {
+    fetch('https://maxmainio.github.io/sort-later-dev/library/json/work.json')
+    .then((response) => response.json())
+    .then((json) => {
+        // SELECT WORK TO SHOWCASE
+        var selectedWork = json[randomIntFromInterval(0, json.length - 1)];
+
+        // GENERATE IMAGE PATH
+        var imgNumber = generateImgNum(selectedWork.fileNumber);
+        var imgPath = 'https://maxmainio.github.io/sort-later-dev/library/student-work/' + selectedWork.filePath + imgNumber + selectedWork.fileExtension;
+
+        // PLACE SELECTED MATERIAL
+        printIMG.src = imgPath;
+        workTitle.innerHTML = selectedWork.workTitle.toString();
+        studentName.innerHTML = selectedWork.prefferedName.toString();
+
+        document.getElementById('print-dots').src = getRandomPrintDots();
+    });
+}
+
+
+
+
+
+
+
+
+
+// IF THERE'S MORE THAN ONE WORK, SELECT AT RANDOM    -------------------------------------------------------------------------
+function generateImgNum(num){
+    if (num != 1) {
+        var imgNumber = randomIntFromInterval(1, num);
+        return '-' + imgNumber.toString();
+    } else {
+        return '';
+    }
 }
 
 
@@ -39,6 +111,12 @@ window.onload = (event) => {
 function getRandomWebDots() {
     var dotNum = randomIntFromInterval(1, 3);
     var dotPath = 'url(assets/web-svg/dots-web-' + dotNum.toString() + '.svg';
+    return dotPath
+}
+
+function getRandomPrintDots() {
+    var dotNum = randomIntFromInterval(1, 3);
+    var dotPath = 'assets/print-svg/dots-print-' + dotNum.toString() + '.svg';
     return dotPath
 }
 
