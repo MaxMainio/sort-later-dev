@@ -203,6 +203,8 @@ function generateSingular(singleSubmission) {
 // GENERATE MULTIPLE SUBMISSION    --------------------------------------------------------------------
 function generateMultiple(multiSubmission) {
     var multiAmount = multiSubmission.fileNumber;
+    console.log(multiAmount);
+
     var dataAttribute = generateDataAttribute(multiSubmission.prefferedName, multiSubmission.workTitle);
     var firstFilePath = generateFirstFilePath(multiSubmission.filePath, multiSubmission.fileExtension);
 
@@ -234,7 +236,7 @@ function generateMultiple(multiSubmission) {
 
 
     // GENERATE REST OF COLLECTION    -----------------------------------------------------------------
-    for (let i = 2; i < multiAmount; i ++) {
+    for (let i = 2; i < (multiAmount + 1); i ++) {
         var followUpElement = document.createElement('div');
         followUpElement.setAttribute('class', 'submission');
         followUpElement.setAttribute('data-collection', dataAttribute);
