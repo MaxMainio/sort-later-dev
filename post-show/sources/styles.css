@@ -520,11 +520,19 @@ hr{
 /* TEAMS -------------------------------------------------------------------------------------------------------------- */
 .teams{
     width: 100%;
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    
+    -webkit-column-count: 4;
+    -moz-column-count: 4;
+    column-count: 4;
+      
+    -webkit-column-gap: 1rem;
+    -moz-column-gap: 1rem;
     column-gap: 1rem;
-    row-gap: 2rem;
-    align-items: start;
+}
+
+.teams p{
+    margin-bottom: 2rem;
+    break-inside: avoid;
 }
 
 .teams a{
@@ -539,6 +547,18 @@ hr{
 
 .teams a::selection{
     color: var(--type-secondary);
+}
+
+#web-team{
+    break-after: column;
+}
+
+#project-team{
+    break-after: column;
+}
+
+#special-thanks{
+    break-after: column;
 }
 
 
@@ -673,132 +693,77 @@ p::selection{
 
 /* MEDIA QUERIES STARTS HERE ------------------------------------------------------------------------------------------ */
 @media only screen and (max-width: 1400px) {
-    h1{
-        font-size: 1.7vw;
+    h1, h4, h5{
+        font-size: 1.25rem;
+        line-height: 1.25rem;
     }
 
     #credits p{
         font-size: 6vw;
         line-height: 5.5vw;
     }
-}
 
-/* @media only screen and (min-width: 1700px) {
-    #top-title{
-        width: 850px;
-    }
-
-    #bottom-title{
-        width: 510px;
-    }
-
-    .other-files{
-        height: 85px;
-    }
-
-    #credits{
-        margin: -1rem 0 -170px -3rem;
-    }
-} */
-
-/* @media only screen and (max-width: 1000px) {
-    main{
-        padding: 2vh 5vw;
-    }
-
-    #false-file{
-        margin-top: -1vh;
-    }
-    
-    #web-title{
-        width: calc(100% + 10vw);
-        margin: -1vh 0 0 -5vw;
-    }
-    
-    #date-year{
-        width: calc(100% + 10vw);
-        margin: -5vw;
-    }
-
-    #when{
-        margin: -1vh 0;
-    }
-    
-    #month-container{
-        width: calc(100% + 8vw);
-        margin-left: -4vw;
-    }
-    
-    .date-container{
-        width: calc(100% + 8vw);
-        margin-left: -4vw;
-        height: 45vh;
-    }
-
-    .date-svg{
-        width: 100%;
-        margin-left: 0;
-    }
-
-    #credits{
-        width: calc(100% + 8vw);
-        margin: -2vw 0 -10vw -4vw;
-    }
-} */
-
-/* @media only screen and (max-width: 957px) {
-    .date-container{
-        height: 40vw;
-    }
-
-    p{
-        font-size: 4.5rem;
-        line-height: 4rem;
-    }
-
-    #bottom-title{
-        width: 50vw;
-        margin-top: -2%;
-    }
-
-    #footer{
-        flex-direction: column;
-        gap: 1rem;
-        margin: 1rem 0;
-    }
-} */
-  
-/* @media only screen and (max-width: 886px) {
-    h1{
-        font-size: 5vw;
-        line-height: 5vw;
-    }
-
-    h2{
-        font-size: 2.5vw;
+    .introduction p{
+        font-size: 2vw;
         line-height: 2.25vw;
     }
 
-    p{
-        font-size: 7.5vw;
-        line-height: 6.25vw;
-    }
-} */
-
-/* @media only screen and (max-width: 700px) {
-    :root{
-        --stroke-width: 1px;
-        --stroke-color: #000;
+    .submission p{
+        font-size: 0.8rem;
+        line-height: 1rem;
     }
 
-    #month-container{
-        background-image: url(../assets/mobile-svg/date-month-mobile.svg);
+    strong{
+        font-size: 2vw;
+        line-height: 2.25vw;
     }
-} */
 
-/* @media only screen and (max-width: 450px) {
-    p{
-        font-size: 6vw;
-        line-height: 5vw;
+    .teams a{
+        font-size: 2vw;
+        line-height: 2.25vw;
     }
-} */
+}
+
+@media only screen and (max-width: 1000px) {
+    .introduction p{
+        font-size: 1.25rem;
+        line-height: 1.25rem;
+    }
+
+    #submission-section{
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .submission{
+        filter: grayscale(0%);
+        mix-blend-mode: normal;
+    }
+
+    .teams{
+        -webkit-column-count: 2;
+        -moz-column-count: 2;
+        column-count: 2;
+    }
+
+    #web-team{
+        break-after: auto;
+    }
+    
+    #project-team{
+        break-after: auto;
+    }
+    
+    #special-thanks{
+        break-after: auto;
+    }
+
+    strong{
+        font-size: 1.25rem;
+        line-height: 1.25rem;
+    }
+
+    .teams a{
+        font-size: 1.25rem;
+        line-height: 1.25rem;
+    }
+}
