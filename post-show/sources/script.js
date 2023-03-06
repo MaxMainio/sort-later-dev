@@ -203,8 +203,6 @@ function generateSingular(singleSubmission) {
 // GENERATE MULTIPLE SUBMISSION    --------------------------------------------------------------------
 function generateMultiple(multiSubmission) {
     var multiAmount = multiSubmission.fileNumber;
-    console.log(multiAmount);
-
     var dataAttribute = generateDataAttribute(multiSubmission.prefferedName, multiSubmission.workTitle);
     var firstFilePath = generateFirstFilePath(multiSubmission.filePath, multiSubmission.fileExtension);
 
