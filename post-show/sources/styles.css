@@ -1,4 +1,4 @@
-/* GLOBAL ------------------------------------------------------------------------------------------ */
+/* GLOBAL ------------------------------------------------------------------------------------------------------------- */
 :root{
     --stroke-width: 2px;
     --stroke-color: #333;
@@ -38,7 +38,7 @@
 
 
 
-/* RAW ELEMENTS ------------------------------------------------------------------------------------ */
+/* RAW ELEMENTS ------------------------------------------------------------------------------------------------------- */
 body{
     position: relative;
 }
@@ -82,7 +82,7 @@ aside{
 
 
 
-/* ANIMATIONS -------------------------------------------------------------------------------------- */
+/* ANIMATIONS --------------------------------------------------------------------------------------------------------- */
 .animatable{
     transition: all 0.5s ease-in-out;
 }
@@ -99,7 +99,7 @@ aside{
 
 
 
-/* CREDITS SECTION --------------------------------------------------------------------------------- */
+/* CREDITS SECTION ---------------------------------------------------------------------------------------------------- */
 #folder-background{
     position: fixed;
     height: 100vh;
@@ -342,7 +342,7 @@ footer{
 
 
 
-/* WORK SECTION ------------------------------------------------------------------------------------ */
+/* WORK SECTION ------------------------------------------------------------------------------------------------------- */
 #work{
     position: relative;
     z-index: 0;
@@ -465,7 +465,7 @@ hr{
 
 
 
-/* TEAMS ------------------------------------------------------------------------------------------- */
+/* TEAMS -------------------------------------------------------------------------------------------------------------- */
 .teams{
     width: 100%;
     display: grid;
@@ -497,7 +497,7 @@ hr{
 
 
 
-/* PRINT ------------------------------------------------------------------------------------------- */
+/* PRINT -------------------------------------------------------------------------------------------------------------- */
 #print{
     display: none;
 }
@@ -510,7 +510,7 @@ hr{
 
 
 
-/* TYPE -------------------------------------------------------------------------------------------- */
+/* TYPE --------------------------------------------------------------------------------------------------------------- */
 h1{
     text-align: center;
     font-size: 1.5rem;
@@ -572,3 +572,132 @@ p{
 p::selection{
     color: var(--type-secondary);
 }
+
+
+
+
+
+
+
+
+
+/* MEDIA QUERIES STARTS HERE ------------------------------------------------------------------------------------------ */
+/* @media only screen and (min-width: 1700px) {
+    #top-title{
+        width: 850px;
+    }
+
+    #bottom-title{
+        width: 510px;
+    }
+
+    .other-files{
+        height: 85px;
+    }
+
+    #credits{
+        margin: -1rem 0 -170px -3rem;
+    }
+} */
+
+/* @media only screen and (max-width: 1000px) {
+    main{
+        padding: 2vh 5vw;
+    }
+
+    #false-file{
+        margin-top: -1vh;
+    }
+    
+    #web-title{
+        width: calc(100% + 10vw);
+        margin: -1vh 0 0 -5vw;
+    }
+    
+    #date-year{
+        width: calc(100% + 10vw);
+        margin: -5vw;
+    }
+
+    #when{
+        margin: -1vh 0;
+    }
+    
+    #month-container{
+        width: calc(100% + 8vw);
+        margin-left: -4vw;
+    }
+    
+    .date-container{
+        width: calc(100% + 8vw);
+        margin-left: -4vw;
+        height: 45vh;
+    }
+
+    .date-svg{
+        width: 100%;
+        margin-left: 0;
+    }
+
+    #credits{
+        width: calc(100% + 8vw);
+        margin: -2vw 0 -10vw -4vw;
+    }
+} */
+
+/* @media only screen and (max-width: 957px) {
+    .date-container{
+        height: 40vw;
+    }
+
+    p{
+        font-size: 4.5rem;
+        line-height: 4rem;
+    }
+
+    #bottom-title{
+        width: 50vw;
+        margin-top: -2%;
+    }
+
+    #footer{
+        flex-direction: column;
+        gap: 1rem;
+        margin: 1rem 0;
+    }
+} */
+  
+/* @media only screen and (max-width: 886px) {
+    h1{
+        font-size: 5vw;
+        line-height: 5vw;
+    }
+
+    h2{
+        font-size: 2.5vw;
+        line-height: 2.25vw;
+    }
+
+    p{
+        font-size: 7.5vw;
+        line-height: 6.25vw;
+    }
+} */
+
+/* @media only screen and (max-width: 700px) {
+    :root{
+        --stroke-width: 1px;
+        --stroke-color: #000;
+    }
+
+    #month-container{
+        background-image: url(../assets/mobile-svg/date-month-mobile.svg);
+    }
+} */
+
+/* @media only screen and (max-width: 450px) {
+    p{
+        font-size: 6vw;
+        line-height: 5vw;
+    }
+} */

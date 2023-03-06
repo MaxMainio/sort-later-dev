@@ -28,7 +28,7 @@ window.onload = (event) => {
     // DIGITAL
     favicon.href = 'assets/favicons/favicon-' + randomIntFromInterval(1, 10) + '.ico';
     falseFile.style.setProperty("background-image", getRandomWebDots());
-    workSlide.style.background = generateGradient();
+    workSlide.style.background = generateWebGradient();
     setStudentWork();
 
     // PRINT
@@ -44,10 +44,6 @@ window.onload = (event) => {
 
 
 // PRINTING "QUERIES"    ------------------------------------------------------------------------------------------------------
-window.addEventListener('beforeprint', (event) => {
-    printGradient.style.background = generateGradient();
-});
-
 window.addEventListener('afterprint', (event) => {
     printPrep();
 });
@@ -62,7 +58,7 @@ window.addEventListener('afterprint', (event) => {
 
 // GENERATE STUDENT WORK    ---------------------------------------------------------------------------------------------------
 function printPrep() {
-    fetch('https://maxmainio.github.io/sort-later-dev/library/json/work.json')
+    fetch('https://maxmainio.github.io/sort-later-dev/library/json/data.json')
     .then((response) => response.json())
     .then((json) => {
         // SELECT WORK TO SHOWCASE
@@ -78,6 +74,7 @@ function printPrep() {
         studentName.innerHTML = selectedWork.prefferedName.toString();
 
         document.getElementById('print-dots').src = getRandomPrintDots();
+        printGradient.style.background = generatePrintGradient();
     });
 }
 
@@ -107,7 +104,7 @@ function generateImgNum(num){
 
 
 
-// GENERATE DOTS    -----------------------------------------------------------------------------------
+// GENERATE DOTS    ------------------------------------------------------------------------------------------------------
 function getRandomWebDots() {
     var dotNum = randomIntFromInterval(1, 3);
     var dotPath = 'url(assets/web-svg/dots-web-' + dotNum.toString() + '.svg';
@@ -128,7 +125,7 @@ function getRandomPrintDots() {
 
 
 
-// CLICK ON STUDENTS / CREDITS PAGE -------------------------------------------------------------------
+// CLICK ON STUDENTS / CREDITS PAGE --------------------------------------------------------------------------------------
 studentsSlide.addEventListener('click', e => {
     folderCover.classList.add('animatable');
     studentsSlide.classList.add('animatable');
@@ -170,8 +167,55 @@ workSlide.addEventListener('click', e => {
 
 
 
-// GENERATE GRADIENT    -------------------------------------------------------------------------------
-function generateGradient(){
+// GENERATE WEB GRADIENT    ----------------------------------------------------------------------------------------------
+function generateWebGradient(){
+    // GETS RANDOM GRADIENT BY NAME AS STRING
+    var gradTag = 'gradient' + randomIntFromInterval(0, 4);
+    // ARRAY OF THE INDIVIDUAL COLORS OF SELECTED GRADIENT
+    var gradColors = eval(gradTag);
+    var gradSteps = gradColors.length;
+
+    var gradPlacements = [];
+    var min = 0;
+    var max = 100;
+    var offset = 0;
+
+    // THIS GENERATES THE POSITIONS FOR EACH OCLOR
+    for (var i = 0; i < gradSteps; i ++) {
+        var wiggleRoom = 10 * (gradSteps - i);
+
+        min = 0 + offset;
+        max = 100;
+        max = max - wiggleRoom;
+
+        placement = randomIntFromInterval(min, max);
+        gradPlacements[i] = placement
+        offset = placement + 10;
+    }
+
+    // PREPARE THE CSS EXPRESSION OF NEW GRADIENT
+    var lause = 'linear-gradient(180deg';
+
+    // GENERATES THE PROPER CSS EXPRESSION FOR THE GRADIENT
+    for (var i=0; i < gradSteps; i++) {
+        var appendable = gradColors[i] + ' ' + gradPlacements[i] + '%'
+        lause = lause + ', ' + appendable
+    }
+
+    // RETURN THE FORMULA FOR THE GRADIENT
+    return(lause + ')');
+}
+
+
+
+
+
+
+
+
+
+// GENERATE PRINT GRADIENT    --------------------------------------------------------------------------------------------
+function generatePrintGradient(){
     // GETS RANDOM GRADIENT BY NAME AS STRING
     var gradTag = 'gradient' + randomIntFromInterval(0, 4);
     // ARRAY OF THE INDIVIDUAL COLORS OF SELECTED GRADIENT
@@ -219,10 +263,6 @@ function generateGradient(){
     return(lause + ')');
 }
 
-function setCoverGradientHeight() {
-    var heightToSet = studentSection.offsetHeight;
-    coverGradient.style.height = heightToSet + 'px';
-}
 
 
 
@@ -231,10 +271,9 @@ function setCoverGradientHeight() {
 
 
 
-
-// GENERATE LIST OF SUBMITTED WORKS    ----------------------------------------------------------------
+// GENERATE LIST OF SUBMITTED WORKS    -----------------------------------------------------------------------------------
 function setStudentWork(){
-    fetch('https://maxmainio.github.io/sort-later-dev/library/json/work.json')
+    fetch('https://maxmainio.github.io/sort-later-dev/library/json/data.json')
     .then((response) => response.json())
     .then((json) => {
         for (let i = 0; i < json.length; i ++) {
@@ -255,7 +294,7 @@ function setStudentWork(){
 
 
 
-// GENERATE SINGULAR SUBMISSION    --------------------------------------------------------------------
+// GENERATE SINGULAR SUBMISSION    ---------------------------------------------------------------------------------------
 function generateSingular(singleSubmission) {
     var submissionFilePath = generateFilePath(singleSubmission.filePath, singleSubmission.fileExtension);
 
@@ -307,7 +346,7 @@ function generateMultiple(multiSubmission) {
 
 
 
-    // GENERATE FIRST OF COLLECTION    ------------------------------------------------------------
+    // GENERATE FIRST OF COLLECTION    -------------------------------------------------------------------------------
     var submissionElement = document.createElement('div');
     submissionElement.setAttribute('class', 'submission');
     submissionElement.setAttribute('data-collection', dataAttribute);
@@ -318,7 +357,7 @@ function generateMultiple(multiSubmission) {
 
 
 
-    // GENERATE REST OF COLLECTION    -----------------------------------------------------------------
+    // GENERATE REST OF COLLECTION    ------------------------------------------------------------------------------------
     for (let i = 2; i < (multiAmount + 1); i ++) {
         var followUpElement = document.createElement('div');
         followUpElement.setAttribute('class', 'submission');
@@ -424,7 +463,7 @@ function generateTitleTextWithOut(prefferedName, workTitle, workType, yearCreate
 
 
 
-// HOVER ALL OF SAME COLLECTION    --------------------------------------------------------------------
+// HOVER ALL OF SAME COLLECTION    ---------------------------------------------------------------------------------------
 setTimeout(() => {
     document.querySelectorAll('[data-collection]').forEach(item => {
         item.addEventListener('mouseover', event => {
@@ -480,14 +519,14 @@ setTimeout(() => {
 
 
 
-// GENERATES RANDOM INTEGER BETWEEN TWO VALUES    -----------------------------------------------------
+// GENERATES RANDOM INTEGER BETWEEN TWO VALUES    ------------------------------------------------------------------------
 function randomIntFromInterval(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
 
 
-// GRADIENTS    ---------------------------------------------------------------------------------------
+// GRADIENTS    ----------------------------------------------------------------------------------------------------------
 const gradient0 = [];
 gradient0[0] = '#94ff3f';
 gradient0[1] = '#ffff00';
@@ -495,24 +534,24 @@ gradient0[2] = '#ccc';
 gradient0[3] = '#fff';
 
 const gradient1 = [];
-gradient1[0] = '#fff';
-gradient1[1] = '#ff9145';
-gradient1[2] = '#abff62';
-gradient1[3] = '#ff77be';
+gradient1[0] = '#ff77be';
+gradient1[1] = '#abff62';
+gradient1[2] = '#ff9145';
+gradient1[3] = '#fff';
 
 const gradient2 = [];
-gradient2[0] = '#fff';
-gradient2[1] = '#ffff00';
-gradient2[2] = '#ff96e0';
-gradient2[3] = '#b3b3b3';
+gradient2[0] = '#b3b3b3';
+gradient2[1] = '#ff96e0';
+gradient2[2] = '#ffff00';
+gradient2[3] = '#fff';
 
 const gradient3 = [];
-gradient3[0] = '#fff';
-gradient3[1] = '#ff7fdf';
-gradient3[2] = '#3fc1ff';
-gradient3[3] = '#bfffb4';
+gradient3[0] = '#bfffb4';
+gradient3[1] = '#3fc1ff';
+gradient3[2] = '#ff7fdf';
+gradient3[3] = '#fff';
 
 const gradient4 = [];
-gradient4[0] = '#fff';
+gradient4[0] = '#c465ff';
 gradient4[1] = '#f0008d';
-gradient4[2] = '#c465ff';
+gradient4[2] = '#fff';
