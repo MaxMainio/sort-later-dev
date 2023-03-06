@@ -276,8 +276,10 @@ function generateFollowUpFilePath(filePath, index, fileExtension) {
 
 function generateDataAttribute(prefferedName, workTitle) {
     var dataString = prefferedName + '-' + workTitle;
+    var dataString = dataString.replace(/\s+/g, '-').toLowerCase();
+    var dataString = dataString.replace(/[^a-zA-Z0-9]/g, '')
 
-    return dataString = dataString.replace(/\s+/g, '-').toLowerCase();
+    return dataString;
 }
 
 
@@ -287,7 +289,7 @@ function generateTitleCardWith(prefferedName, workTitle, description) {
 }
 
 function generateMultiTitleCardWith(prefferedName, workTitle, description) {
-    return '<h4>' + prefferedName + '</h4> <h5>' + workTitle + '</h5> <p>' + description + ' 1 </p>'
+    return '<h4>' + prefferedName + '</h4> <h5>' + workTitle + ' 1</h5> <p>' + description + '</p>'
 }
 
 function generateAltTextWith(prefferedName, workTitle, workType, yearCreated, description) {
@@ -334,23 +336,25 @@ function generateTitleTextWithOut(prefferedName, workTitle, workType, yearCreate
 
 
 // HOVER ALL OF SAME COLLECTION    --------------------------------------------------------------------
-document.querySelectorAll('[data-collection]').forEach(item => {
-    item.addEventListener('mouseover', event => {
-        var collection = event.target.closest('.submission').dataset.collection;
-
-        document.querySelectorAll('[data-collection=' + collection + ']').forEach((element) => {
-            element.classList.add('hovering');
-        });
+setTimeout(() => {
+    document.querySelectorAll('[data-collection]').forEach(item => {
+        item.addEventListener('mouseover', event => {
+            var collection = event.target.closest('.submission').dataset.collection;
+    
+            document.querySelectorAll('[data-collection=' + collection + ']').forEach((element) => {
+                element.classList.add('hovering');
+            });
+        })
+    
+        item.addEventListener('mouseout', event => {
+            var collection = event.target.closest('.submission').dataset.collection;
+    
+            document.querySelectorAll('[data-collection=' + collection + ']').forEach((element) => {
+                element.classList.remove('hovering');
+            });
+        })
     })
-
-    item.addEventListener('mouseout', event => {
-        var collection = event.target.closest('.submission').dataset.collection;
-
-        document.querySelectorAll('[data-collection=' + collection + ']').forEach((element) => {
-            element.classList.remove('hovering');
-        });
-    })
-})
+}, 1000);
 
 
 
