@@ -311,6 +311,7 @@ function generateSingular(singleSubmission) {
 
     var submissionElement = document.createElement('div');
     submissionElement.setAttribute('class', 'submission');
+    submissionElement.setAttribute('data-type', singleSubmission.workType);
 
     submissionElement.innerHTML = '<a href="' + singleSubmission.websiteLink + '" target="_blank"><img src="' + submissionFilePath + '" alt="' + submissionAltText + '" title="' + submissionTitleText + '" loading="lazy"></a>' + submissionTitleCard + '<button data-img="' + submissionFilePath + '" data-name="' + singleSubmission.prefferedName + '" data-title="' + singleSubmission.workTitle + '">Print a Poster</button>'
 
@@ -345,6 +346,7 @@ function generateMultiple(multiSubmission) {
     var submissionElement = document.createElement('div');
     submissionElement.setAttribute('class', 'submission');
     submissionElement.setAttribute('data-collection', dataAttribute);
+    submissionElement.setAttribute('data-type', multiSubmission.workType);
 
     submissionElement.innerHTML = '<a href="' + multiSubmission.websiteLink + '" target="_blank"><img src="' + firstFilePath + '" alt="' + submissionAltText + '" title="' + submissionTitleText + '" loading="lazy"></a>' + submissionTitleCard + '<button data-img="' + firstFilePath + '" data-name="' + multiSubmission.prefferedName + '" data-title="' + multiSubmission.workTitle + '">Print a Poster</button>'
 
@@ -357,6 +359,7 @@ function generateMultiple(multiSubmission) {
         var followUpElement = document.createElement('div');
         followUpElement.setAttribute('class', 'submission');
         followUpElement.setAttribute('data-collection', dataAttribute);
+        followUpElement.setAttribute('data-type', multiSubmission.workType);
 
         var followUpFilePath = generateFollowUpFilePath(multiSubmission.filePath, i, multiSubmission.fileExtension);
 
