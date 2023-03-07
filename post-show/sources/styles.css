@@ -149,7 +149,7 @@ aside{
     height: 100vh;
     position: fixed;
 
-    padding: 0 5vw;
+    padding: 0 calc(var(--folder-width) + 2vw);
     inset: 0;
 
     overflow-y: scroll;
@@ -217,7 +217,7 @@ aside{
 .web-title{
     position: relative;
     width: calc(100% + 2vw);
-    margin: -16px auto auto -1vw;
+    margin: -1vw auto auto -1vw;
 }
 
 
@@ -797,7 +797,7 @@ p::selection{
     .teams a{
         font-size: 1.25rem;
         line-height: 1.25rem;
-    }
+    } 
 
     h2{
         font-size: 4.75vw;
@@ -817,9 +817,33 @@ p::selection{
     :root{
         --stroke-width: 1px;
         --stroke-color: #000;
+
+        --folder-width: 6vw;
+    }
+
+    .date-year{
+        margin: -32px auto auto -7vw;
+    }
+
+    #work{
+        padding: 0 8vw;
+    }
+}
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 500px) {
+    #work{
+        padding: 0 10vw;
     }
 
     #submission-section{
-        grid-template-columns: repeat(1, minmax(0, 1fr));
+        grid-template-columns: 1fr;
     }
 }
