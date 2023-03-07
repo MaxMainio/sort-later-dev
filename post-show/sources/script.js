@@ -11,6 +11,7 @@ const falseFile = document.getElementById('false-file');
 const submissionSection = document.getElementById('submission-section');
 
 const printGradient = document.getElementById('print-gradient');
+const printDots = document.getElementById('print-dots')
 const printIMG = document.getElementById('work-img');
 const workTitle = document.getElementById('work-title');
 const studentName = document.getElementById('student-name');
@@ -50,6 +51,22 @@ window.addEventListener('afterprint', (event) => {
 
 
 
+function generateSelectedPoster(clickedButton){
+    var imgPath = clickedButton.dataset.img;
+
+    printIMG.src = imgPath;
+    workTitle.innerHTML = clickedButton.dataset.title.toString();
+    studentName.innerHTML = clickedButton.dataset.name.toString();
+
+    printDots.src = getRandomPrintDots();
+    printGradient.style.background = generatePrintGradient();
+
+
+    setTimeout(window.print(), 500);
+}
+
+
+
 // GENERATE STUDENT WORK
 function printPrep() {
     fetch('https://maxmainio.github.io/sort-later-dev/library/json/data.json')
@@ -67,7 +84,7 @@ function printPrep() {
         workTitle.innerHTML = selectedWork.workTitle.toString();
         studentName.innerHTML = selectedWork.prefferedName.toString();
 
-        document.getElementById('print-dots').src = getRandomPrintDots();
+        printDots.src = getRandomPrintDots();
         printGradient.style.background = generatePrintGradient();
     });
 }
@@ -295,7 +312,7 @@ function generateSingular(singleSubmission) {
     var submissionElement = document.createElement('div');
     submissionElement.setAttribute('class', 'submission');
 
-    submissionElement.innerHTML = '<a href="' + singleSubmission.websiteLink + '" target="_blank"><img src="' + submissionFilePath + '" alt="' + submissionAltText + '" title="' + submissionTitleText + '" loading="lazy"></a>' + submissionTitleCard
+    submissionElement.innerHTML = '<a href="' + singleSubmission.websiteLink + '" target="_blank"><img src="' + submissionFilePath + '" alt="' + submissionAltText + '" title="' + submissionTitleText + '" loading="lazy"></a>' + submissionTitleCard + '<button data-img="' + submissionFilePath + '" data-name="' + singleSubmission.prefferedName + '" data-title="' + singleSubmission.workTitle + '">Print a Poster</button>'
 
     submissionSection.appendChild(submissionElement);
 }
@@ -329,7 +346,7 @@ function generateMultiple(multiSubmission) {
     submissionElement.setAttribute('class', 'submission');
     submissionElement.setAttribute('data-collection', dataAttribute);
 
-    submissionElement.innerHTML = '<a href="' + multiSubmission.websiteLink + '" target="_blank"><img src="' + firstFilePath + '" alt="' + submissionAltText + '" title="' + submissionTitleText + '" loading="lazy"></a>' + submissionTitleCard
+    submissionElement.innerHTML = '<a href="' + multiSubmission.websiteLink + '" target="_blank"><img src="' + firstFilePath + '" alt="' + submissionAltText + '" title="' + submissionTitleText + '" loading="lazy"></a>' + submissionTitleCard + '<button data-img="' + firstFilePath + '" data-name="' + multiSubmission.prefferedName + '" data-title="' + multiSubmission.workTitle + '">Print a Poster</button>'
 
     submissionSection.appendChild(submissionElement);
 
@@ -343,7 +360,7 @@ function generateMultiple(multiSubmission) {
 
         var followUpFilePath = generateFollowUpFilePath(multiSubmission.filePath, i, multiSubmission.fileExtension);
 
-        followUpElement.innerHTML = '<a href="' + multiSubmission.websiteLink + '" target="_blank"><img src="' + followUpFilePath + '" alt="' + submissionAltText + '" title="' + submissionTitleText + '" loading="lazy"></a> <h4>' + multiSubmission.prefferedName + '</h4> <h5>' + multiSubmission.workTitle + ' ' + i + '</h5>'
+        followUpElement.innerHTML = '<a href="' + multiSubmission.websiteLink + '" target="_blank"><img src="' + followUpFilePath + '" alt="' + submissionAltText + '" title="' + submissionTitleText + '" loading="lazy"></a> <h4>' + multiSubmission.prefferedName + '</h4> <h5>' + multiSubmission.workTitle + ' ' + i + '</h5> <button data-img="' + followUpFilePath + '" data-name="' + multiSubmission.prefferedName + '" data-title="' + multiSubmission.workTitle + '">Print a Poster</button>'
 
         submissionSection.appendChild(followUpElement);
     }
@@ -449,6 +466,12 @@ setTimeout(() => {
             document.querySelectorAll('[data-collection=' + collection + ']').forEach((element) => {
                 element.classList.remove('hovering');
             });
+        })
+    })
+
+    document.querySelectorAll('button').forEach(item => {
+        item.addEventListener('click', event => {
+            generateSelectedPoster(event.target);
         })
     })
 }, 1000);

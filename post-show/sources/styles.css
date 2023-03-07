@@ -584,6 +584,24 @@ hr{
     display: none;
 }
 
+button{
+    margin-top: 1rem;
+    background-color: transparent;
+    border: none;
+    color: var(--type-primary);
+    mix-blend-mode: multiply;
+    cursor: pointer;
+}
+
+button:hover{
+    margin-top: 1rem;
+    background-color: var(--type-primary);
+    border: none;
+    color: var(--type-secondary);
+    mix-blend-mode: multiply;
+    cursor: pointer;
+}
+
 
 
 
