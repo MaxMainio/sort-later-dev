@@ -821,6 +821,10 @@ p::selection{
         font-size: 4.75vw;
         line-height: 4.75vw;
     }
+
+    button{
+        display: none;
+    }
 }
 
 
