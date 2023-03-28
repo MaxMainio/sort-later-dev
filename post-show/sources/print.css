@@ -166,6 +166,7 @@ h3{
 
     color: black;
     -webkit-text-fill-color: rgba(0, 0, 0, 0);
+    /* -webkit-text-fill-color: rgba(255, 255, 255, 1); */
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: black;
 }
