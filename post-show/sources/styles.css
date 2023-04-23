@@ -725,6 +725,20 @@ p::selection{
 
 
 /* MEDIA QUERIES STARTS HERE ------------------------------------------------------------------------------------------ */
+@media only screen and (min-width: 1760px) {
+    .date-year{
+        margin: -32px auto auto calc(-49vw + 800px);
+    }
+}
+
+
+
+
+
+
+
+
+
 @media only screen and (max-width: 1400px) {
     h1, h4, h5{
         font-size: 1.25rem;

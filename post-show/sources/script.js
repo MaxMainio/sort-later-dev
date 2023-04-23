@@ -310,7 +310,7 @@ function generateSingular(singleSubmission) {
     }
 
     var submissionElement = document.createElement('div');
-    submissionElement.setAttribute('class', 'submission');
+    submissionElement.setAttribute('class', 'submission ' + singleSubmission.workType);
     submissionElement.setAttribute('data-type', singleSubmission.workType);
 
     submissionElement.innerHTML = '<a href="' + singleSubmission.websiteLink + '" target="_blank"><img src="' + submissionFilePath + '" alt="' + submissionAltText + '" title="' + submissionTitleText + '" loading="lazy"></a>' + submissionTitleCard + '<button data-img="' + submissionFilePath + '" data-name="' + singleSubmission.prefferedName + '" data-title="' + singleSubmission.workTitle + '">Print a Poster</button>'
