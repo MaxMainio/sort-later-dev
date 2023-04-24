@@ -543,7 +543,19 @@ function parseFilters(clickedFilter){
         });
     } else {
         targettedElements.forEach(element => {
+            let targettedClasses = element.classList;
+
+            for (i = 0; i < targettedClasses.length; i++) {
+                for (j = 0; j < activeFilters.length; j++) {
+                    if (targettedClasses[i] === activeFilters[j]) {
+                        console.log('does match');
+                        return true;
+                    };
+                };
+            };
+            console.log('does not match');
             element.classList.add('hidden');
+            return false;
         });
     };
 };
