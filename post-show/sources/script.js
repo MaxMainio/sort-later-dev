@@ -511,12 +511,12 @@ function allFilterClick(){
 
 filterBtn.forEach(element => {
     element.addEventListener('click', event => {
-        parseFilters();
-        displayFilters();
+        toggleAll();
+        parseFilters(event.target);
     });
 });
 
-function parseFilters(){
+function toggleAll(){
     for (let i = 0; i < filterBtn.length; i++) {
         if (filterBtn[i].checked === false) {
             allBtn.checked = false;
@@ -527,18 +527,25 @@ function parseFilters(){
     return false;
 };
 
-function displayFilters(){
-    let checkedList = document.querySelectorAll('input[name="worktype"]:checked')
-    let allSubmissions = document.querySelectorAll('.sumission');
-    
+function parseFilters(clickedFilter){
+    let checkedList = document.querySelectorAll('input[name="worktype"]:checked')    
     let activeFilters = [];
+    let targettedElements = document.querySelectorAll('.' + clickedFilter.getAttribute('value') + '');
 
     checkedList.forEach(element => {
         let singleFilter = element.getAttribute('value');
         activeFilters.push(singleFilter);
     });
 
-    console.log(activeFilters);
+    if (clickedFilter.checked === true) {
+        targettedElements.forEach(element => {
+            element.classList.remove('hidden');
+        });
+    } else {
+        targettedElements.forEach(element => {
+            element.classList.add('hidden');
+        });
+    };
 };
 
 
