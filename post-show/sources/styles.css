@@ -499,6 +499,10 @@ hr{
     color: var(--type-primary);
 }
 
+.hidden{
+    display: none;
+}
+
 
 
 

@@ -493,10 +493,18 @@ function allFilterClick(){
     if (allBtn.checked === true) {
         filterBtn.forEach(element => {
             element.checked = true;
+
+            document.querySelectorAll('.submission').forEach(element => {
+                element.classList.remove('hidden');
+            });
         });
     } else {
         filterBtn.forEach(element => {
             element.checked = false;
+            
+            document.querySelectorAll('.submission').forEach(element => {
+                element.classList.add('hidden');
+            });
         });
     };
 };
@@ -504,6 +512,7 @@ function allFilterClick(){
 filterBtn.forEach(element => {
     element.addEventListener('click', event => {
         parseFilters();
+        displayFilters();
     });
 });
 
@@ -516,6 +525,20 @@ function parseFilters(){
     }
     allBtn.checked = true;
     return false;
+};
+
+function displayFilters(){
+    let checkedList = document.querySelectorAll('input[name="worktype"]:checked')
+    let allSubmissions = document.querySelectorAll('.sumission');
+    
+    let activeFilters = [];
+
+    checkedList.forEach(element => {
+        let singleFilter = element.getAttribute('value');
+        activeFilters.push(singleFilter);
+    });
+
+    console.log(activeFilters);
 };
 
 
