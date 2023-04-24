@@ -757,6 +757,17 @@ h4::selection{
     color: var(--type-secondary);
 }
 
+h4 a{
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    color: var(--type-primary);
+    text-decoration: none;
+}
+
+h4 a::selection{
+    color: var(--type-secondary);
+}
+
 h5{
     font-size: 1.5rem;
     line-height: 1.5rem;

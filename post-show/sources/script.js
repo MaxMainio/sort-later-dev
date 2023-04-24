@@ -300,13 +300,13 @@ function generateSingular(singleSubmission) {
     var submissionFilePath = generateFilePath(singleSubmission.filePath, singleSubmission.fileExtension);
 
     if (singleSubmission.workDescription != 'Null') {
-        var submissionTitleCard = generateTitleCardWith(singleSubmission.prefferedName, singleSubmission.workTitle, singleSubmission.workDescription);
+        var submissionTitleCard = generateTitleCardWith(singleSubmission.prefferedName, singleSubmission.workTitle, singleSubmission.workDescription, singleSubmission.websiteLink);
 
         var submissionAltText = generateAltTextWith(singleSubmission.prefferedName, singleSubmission.workTitle, singleSubmission.workType, singleSubmission.yearCreated, singleSubmission.workDescription);
 
         var submissionTitleText = generateTitleTextWith(singleSubmission.prefferedName, singleSubmission.workTitle, singleSubmission.workType, singleSubmission.yearCreated, singleSubmission.workDescription);
     } else {
-        var submissionTitleCard = generateTitleCardWithOut(singleSubmission.prefferedName, singleSubmission.workTitle);
+        var submissionTitleCard = generateTitleCardWithOut(singleSubmission.prefferedName, singleSubmission.workTitle, singleSubmission.websiteLink);
 
         var submissionAltText = generateAltTextWithOut(singleSubmission.prefferedName, singleSubmission.workTitle, singleSubmission.workType, singleSubmission.yearCreated);
 
@@ -330,13 +330,13 @@ function generateMultiple(multiSubmission) {
     var firstFilePath = generateFirstFilePath(multiSubmission.filePath, multiSubmission.fileExtension);
 
     if (multiSubmission.workDescription != 'Null') {
-        var submissionTitleCard = generateMultiTitleCardWith(multiSubmission.prefferedName, multiSubmission.workTitle, multiSubmission.workDescription);
+        var submissionTitleCard = generateMultiTitleCardWith(multiSubmission.prefferedName, multiSubmission.workTitle, multiSubmission.workDescription, multiSubmission.websiteLink);
 
         var submissionAltText = generateAltTextWith(multiSubmission.prefferedName, multiSubmission.workTitle, multiSubmission.workType, multiSubmission.yearCreated, multiSubmission.workDescription);
 
         var submissionTitleText = generateTitleTextWith(multiSubmission.prefferedName, multiSubmission.workTitle, multiSubmission.workType, multiSubmission.yearCreated, multiSubmission.workDescription);
     } else {
-        var submissionTitleCard = generateMultiTitleCardWithOut(multiSubmission.prefferedName, multiSubmission.workTitle);
+        var submissionTitleCard = generateMultiTitleCardWithOut(multiSubmission.prefferedName, multiSubmission.workTitle, multiSubmission.websiteLink);
 
         var submissionAltText = generateAltTextWithOut(multiSubmission.prefferedName, multiSubmission.workTitle, multiSubmission.workType, multiSubmission.yearCreated);
 
@@ -364,7 +364,7 @@ function generateMultiple(multiSubmission) {
 
         var followUpFilePath = generateFollowUpFilePath(multiSubmission.filePath, i, multiSubmission.fileExtension);
 
-        followUpElement.innerHTML = '<a href="' + multiSubmission.websiteLink + '" target="_blank"><img src="' + followUpFilePath + '" alt="' + submissionAltText + '" title="' + submissionTitleText + '" loading="lazy"></a> <h4>' + multiSubmission.prefferedName + '</h4> <h5>' + multiSubmission.workTitle + ' ' + i + '</h5> <button data-img="' + followUpFilePath + '" data-name="' + multiSubmission.prefferedName + '" data-title="' + multiSubmission.workTitle + '">Print a Poster</button>'
+        followUpElement.innerHTML = '<a href="' + multiSubmission.websiteLink + '" target="_blank"><img src="' + followUpFilePath + '" alt="' + submissionAltText + '" title="' + submissionTitleText + '" loading="lazy"></a> <h4><a href="' + multiSubmission.websiteLink + '" target="_blank">' + multiSubmission.prefferedName + '</a></h4> <h5>' + multiSubmission.workTitle + ' ' + i + '</h5> <button data-img="' + followUpFilePath + '" data-name="' + multiSubmission.prefferedName + '" data-title="' + multiSubmission.workTitle + '">Print a Poster</button>'
 
         submissionSection.appendChild(followUpElement);
     }
@@ -383,14 +383,14 @@ function generateFilePath(filePath, fileExtension) {
     return 'https://maxmainio.github.io/sort-later-dev/library/student-work/' + filePath + fileExtension;
 }
 
-function generateTitleCardWith(prefferedName, workTitle, description) {
+function generateTitleCardWith(prefferedName, workTitle, description, website) {
     description = description.split('\n').join('<br>');
 
-    return '<h4>' + prefferedName + '</h4> <h5>' + workTitle + '</h5> <p>' + description + '</p>'
+    return '<h4><a href="' + website + '" target="_blank">' + prefferedName + '</a></h4> <h5>' + workTitle + '</h5> <p>' + description + '</p>'
 }
 
-function generateTitleCardWithOut(prefferedName, workTitle) {
-    return '<h4>' + prefferedName + '</h4> <h5>' + workTitle + '</h5>'
+function generateTitleCardWithOut(prefferedName, workTitle, website) {
+    return '<h4><a href="' + website + '" target="_blank">' + prefferedName + '</a></h4> <h5>' + workTitle + '</h5>'
 }
 
 
@@ -404,14 +404,14 @@ function generateFollowUpFilePath(filePath, index, fileExtension) {
     return 'https://maxmainio.github.io/sort-later-dev/library/student-work/' + filePath + '-' + index + fileExtension;
 }
 
-function generateMultiTitleCardWith(prefferedName, workTitle, description) {
+function generateMultiTitleCardWith(prefferedName, workTitle, description, website) {
     description = description.split('\n').join('<br>');
 
-    return '<h4>' + prefferedName + '</h4> <h5>' + workTitle + ' 1</h5> <p>' + description + '</p>'
+    return '<h4><a href="' + website + '" target="_blank">' + prefferedName + '</a></h4> <h5>' + workTitle + ' 1</h5> <p>' + description + '</p>'
 }
 
-function generateMultiTitleCardWithOut(prefferedName, workTitle) {
-    return '<h4>' + prefferedName + '</h4> <h5>' + workTitle + ' 1 </h5>'
+function generateMultiTitleCardWithOut(prefferedName, workTitle, website) {
+    return '<h4><a href="' + website + '" target="_blank">' + prefferedName + '</a></h4> <h5>' + workTitle + ' 1 </h5>'
 }
 
 
