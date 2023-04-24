@@ -16,6 +16,10 @@ const printIMG = document.getElementById('work-img');
 const workTitle = document.getElementById('work-title');
 const studentName = document.getElementById('student-name');
 
+const allBtn = document.getElementById('all-check');
+const filterBtn = document.querySelectorAll('.filter-checks');
+
+
 
 
 
@@ -311,7 +315,6 @@ function generateSingular(singleSubmission) {
 
     var submissionElement = document.createElement('div');
     submissionElement.setAttribute('class', 'submission ' + singleSubmission.workType);
-    submissionElement.setAttribute('data-type', singleSubmission.workType);
 
     submissionElement.innerHTML = '<a href="' + singleSubmission.websiteLink + '" target="_blank"><img src="' + submissionFilePath + '" alt="' + submissionAltText + '" title="' + submissionTitleText + '" loading="lazy"></a>' + submissionTitleCard + '<button data-img="' + submissionFilePath + '" data-name="' + singleSubmission.prefferedName + '" data-title="' + singleSubmission.workTitle + '">Print a Poster</button>'
 
@@ -344,9 +347,8 @@ function generateMultiple(multiSubmission) {
 
     // FIRST OF COLLECTION
     var submissionElement = document.createElement('div');
-    submissionElement.setAttribute('class', 'submission');
+    submissionElement.setAttribute('class', 'submission ' + multiSubmission.workType);
     submissionElement.setAttribute('data-collection', dataAttribute);
-    submissionElement.setAttribute('data-type', multiSubmission.workType);
 
     submissionElement.innerHTML = '<a href="' + multiSubmission.websiteLink + '" target="_blank"><img src="' + firstFilePath + '" alt="' + submissionAltText + '" title="' + submissionTitleText + '" loading="lazy"></a>' + submissionTitleCard + '<button data-img="' + firstFilePath + '" data-name="' + multiSubmission.prefferedName + '" data-title="' + multiSubmission.workTitle + '">Print a Poster</button>'
 
@@ -357,9 +359,8 @@ function generateMultiple(multiSubmission) {
     // REST OF COLLECTION
     for (let i = 2; i < (multiAmount + 1); i ++) {
         var followUpElement = document.createElement('div');
-        followUpElement.setAttribute('class', 'submission');
+        followUpElement.setAttribute('class', 'submission ' + multiSubmission.workType);
         followUpElement.setAttribute('data-collection', dataAttribute);
-        followUpElement.setAttribute('data-type', multiSubmission.workType);
 
         var followUpFilePath = generateFollowUpFilePath(multiSubmission.filePath, i, multiSubmission.fileExtension);
 
@@ -478,6 +479,38 @@ setTimeout(() => {
         })
     })
 }, 1000);
+
+
+
+
+
+
+
+
+
+// CHECKBOXES    ---------------------------------------------------------------------------------------------------------
+function allFilterClick(){
+    if (allBtn.checked === true) {
+        filterBtn.forEach(element => {
+            element.checked = true;
+        });
+    } else {
+        filterBtn.forEach(element => {
+            element.checked = false;
+        });
+    };
+};
+
+filterBtn.forEach(element => {
+    element.addEventListener('click', event => {
+        console.log(event.target.value);
+        parseFilters();
+    });
+});
+
+function parseFilters(){
+
+};
 
 
 

@@ -611,11 +611,79 @@ button:hover{
 
 
 /* FILTERS ------------------------------------------------------------------------------------------------------------ */
-/* .filters input{
+.filters input{
     width: 1rem;
     height: 1rem;
     cursor: pointer;
-} */
+}
+
+.filters{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0 2rem;
+    column-gap: 2rem;
+    row-gap: 0.75rem;
+}
+
+.container {
+    display: block;
+    position: relative;
+    padding-left: 2rem;
+    cursor: pointer;
+    font-size: 1.2rem;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: var(--type-secondary);
+}
+
+.container:hover input ~ .checkmark {
+    background-color: #ddd;
+}
+
+.container input:checked ~ .checkmark {
+    background-color: var(--type-primary);
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
 
 
 
@@ -878,6 +946,14 @@ p::selection{
 
     #work{
         padding: 0 8vw;
+    }
+
+    #filters-section{
+        display: none;
+    }
+
+    .filters{
+        display: none;
     }
 }
 
