@@ -503,13 +503,19 @@ function allFilterClick(){
 
 filterBtn.forEach(element => {
     element.addEventListener('click', event => {
-        console.log(event.target.value);
         parseFilters();
     });
 });
 
 function parseFilters(){
-
+    for (let i = 0; i < filterBtn.length; i++) {
+        if (filterBtn[i].checked === false) {
+            allBtn.checked = false;
+            return true;
+        }
+    }
+    allBtn.checked = true;
+    return false;
 };
 
 
